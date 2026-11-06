@@ -1,0 +1,18 @@
+BAO CAO WAVELET HASH (hash 8x8 = 64 bit)
+So cap: 160 | tuong tu: 80 | khong tuong tu: 80
+Khoang cach Hamming TB - cap tuong tu: 2.16, cap khac nhau: 25.50
+Nguong toi uu (Youden) T = 7  (tuong tu neu Hamming <= T)
+Accuracy (do chinh xac)   = 0.931
+Sensitivity (do nhay)     = 0.950   (TP=76, FN=4)
+Specificity (do dac hieu) = 0.912   (TN=73, FP=7)
+AUC cua ROC               = 0.911
+  T=5  : acc=0.912 sens=0.900 spec=0.925
+  T=10 : acc=0.925 sens=0.950 spec=0.900
+  T=15 : acc=0.887 sens=0.950 spec=0.825
+
+SO SANH PHUONG PHAP
+wavelet-haar (LL)          AUC=0.911 acc=0.931 sens=0.950 spec=0.912 T*=7
+wavelet-detail             AUC=1.000 acc=1.000 sens=1.000 spec=1.000 T*=11
+average (aHash)            AUC=1.000 acc=1.000 sens=1.000 spec=1.000 T*=11
+difference (dHash)         AUC=1.000 acc=1.000 sens=1.000 spec=1.000 T*=10
+perceptual (pHash/DCT)     AUC=1.000 acc=1.000 sens=1.000 spec=1.000 T*=16

@@ -1,7 +1,6 @@
-﻿Phương pháp,Thời gian đo ở Bài 1 (ms),Tỷ lệ pixel cạnh (%)
-OpenCV Canny,0.4782200000022385,3.119579081632653
-Scikit-image Canny,14.264280000008966,2.493622448979592
-OpenCV – mặc định 100/200,,3.0239158163265305
-"OpenCV – tùy chỉnh σ1.4, 40/120",,3.1808035714285716
-Scikit-image – mặc định,,3.059948979591837
-Scikit-image – tùy chỉnh,,2.5051020408163267
+﻿Trường hợp,Tỷ lệ pixel cạnh (%)
+OpenCV,3.1725127551020407
+Scikit-image,2.493622448979592
+Ảnh nhiều nhiễu,3.117984693877551
+Ảnh tương phản thấp,1.1651785714285714
+Ảnh nhiều chi tiết,15.214604591836734

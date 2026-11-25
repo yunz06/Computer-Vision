@@ -1,0 +1,13 @@
+Tổng ảnh: 2594
+Tổng mask: 2594
+Cặp ảnh-mask: 2594
+Thiếu mask: 0
+Mask không có ảnh: 0
+Ảnh lỗi: 0
+Mask lỗi: 0
+Sai kích thước ảnh-mask: 0
+Mask rỗng: 0
+Mask có giá trị trung gian (ngoài 0/255): 0
+Ngưỡng nhị phân hóa mask: > 127
+Mẫu segmentation dùng được: 2594
+Mẫu detection dùng được: 2594

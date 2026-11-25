@@ -17,7 +17,7 @@ data:
   min_box_area_ratio: 0.001
   multi_component_boxes: false
   use_phash_grouping: true
-  phash_max_distance: 4
+  phash_max_distance: 2
 split:
   train: 0.70
   val: 0.15

@@ -93,12 +93,17 @@ def main():
         elif args.use_phash is True:
             use_phash = True
         r = prepare_splits(
-            cfg['paths']['images'], cfg['paths']['masks'], cfg['paths']['splits'],
-            sample_size=args.sample_size, seed=args.seed,
-            train=cfg['split']['train'], val=cfg['split']['val'],
-            mask_threshold=mask_thresh, min_area_ratio=min_area,
-            metadata_path=args.metadata, use_phash=use_phash,
-            phash_max_distance=data_cfg.get('phash_max_distance', 4),
+            cfg['paths']['images'],
+            cfg['paths']['masks'],
+            cfg['paths']['splits'],
+            args.sample_size,
+            args.seed,
+            cfg['split']['train'],
+            cfg['split']['val'],
+            mask_threshold=cfg['data']['mask_threshold'],
+            min_area_ratio=cfg['data']['min_box_area_ratio'],
+            use_phash=cfg['data']['use_phash_grouping'],
+            phash_max_distance=cfg['data']['phash_max_distance'],
         )
         print({k: len(v) for k, v in r.items() if isinstance(v, list)})
     elif args.cmd == 'baselines':

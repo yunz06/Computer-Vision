@@ -43,34 +43,55 @@ def _compute_dhash_fast(image_path):
     return (w, h), bits
 
 
-def _group_by_phash(records, max_distance=4):
-    # Union-Find theo dHash cho các mẫu chưa có lesion_id.
-    hashes = [(idx, r['_dhash']) for idx, r in enumerate(records) if r.get('_dhash') is not None]
-    parent = list(range(len(records)))
 
-    def find(x):
-        while parent[x] != x:
-            parent[x] = parent[parent[x]]
-            x = parent[x]
-        return x
+def _group_by_phash(records, max_distance=2):
+    """
+    Gom nhóm ảnh gần trùng bằng dHash và complete-link.
+    Ảnh mới chỉ được thêm vào nhóm nếu gần tất cả ảnh trong nhóm.
+    Tránh hiện tượng chaining của Union-Find.
+    """
+    hashes = {
+        idx: record.get('_dhash')
+        for idx, record in enumerate(records)
+    }
 
-    def union(a, b):
-        ra, rb = find(a), find(b)
-        if ra != rb:
-            parent[rb] = ra
+    valid_indices = sorted(
+        (idx for idx, value in hashes.items() if value is not None),
+        key=lambda idx: records[idx]['key']
+    )
 
-    for i in range(len(hashes)):
-        idx_i, hi = hashes[i]
-        for j in range(i + 1, len(hashes)):
-            idx_j, hj = hashes[j]
-            if (hi ^ hj).bit_count() <= max_distance:
-                union(idx_i, idx_j)
+    clusters = []
+
+    for idx in valid_indices:
+        current_hash = hashes[idx]
+        assigned = False
+
+        for cluster in clusters:
+            if all(
+                (current_hash ^ hashes[other]).bit_count() <= max_distance
+                for other in cluster
+            ):
+                cluster.append(idx)
+                assigned = True
+                break
+
+        if not assigned:
+            clusters.append([idx])
 
     groups = {}
-    for idx in range(len(records)):
-        root = find(idx)
-        groups[idx] = f'phash_{root}'
+
+    for cluster in clusters:
+        group_id = f"dhash_{min(cluster):05d}"
+        for idx in cluster:
+            groups[idx] = group_id
+
+    # Ảnh không tính được hash được giữ thành nhóm riêng.
+    for idx, value in hashes.items():
+        if value is None:
+            groups[idx] = f"dhash_single_{idx:05d}"
+
     return groups
+
 
 
 def _group_split(records, train_ratio, val_ratio, seed):
@@ -124,7 +145,7 @@ def prepare_splits(
     min_area_ratio=0.001,
     metadata_path=None,
     use_phash=False,
-    phash_max_distance=4,
+    phash_max_distance=2,
 ):
     if train <= 0 or val < 0 or train + val >= 1.0:
         raise ValueError('Tỷ lệ split không hợp lệ: train phải > 0, val >= 0 và train + val < 1.')
@@ -217,14 +238,24 @@ def prepare_splits(
 
     train_recs, val_recs, test_recs = _group_split(valid, train, val, seed)
 
-    used_metadata = any(r['key'] in lesion_map for r in valid)
-    policy = (
-        'group-based split using HAM10000 lesion_id' + (' + dhash' if use_phash else '')
-        if used_metadata else (
-            'group-based split using dhash near-duplicate grouping' if use_phash
-            else 'image-level random split; lesion-level grouping not inferred'
-        )
+    metadata_count = sum(
+        r['key'] in lesion_map for r in valid
     )
+
+    if metadata_count == len(valid) and valid:
+        policy = 'group-based split using lesion_id'
+    elif metadata_count > 0:
+        policy = (
+            f'mixed grouping using lesion_id and complete-link dHash '
+            f'(max_distance={phash_max_distance})'
+        )
+    elif use_phash:
+        policy = (
+            f'complete-link dHash grouping '
+            f'(max_distance={phash_max_distance}); lesion_id unavailable'
+        )
+    else:
+        policy = 'image-level random split; lesion-level grouping not inferred'
 
     def _clean(items):
         return [{k: v for k, v in x.items() if k in ('key', 'image', 'mask', 'group_id', 'width', 'height')} for x in items]

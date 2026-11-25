@@ -10,7 +10,7 @@ paths:
   figures: outputs/figures
   demo: outputs/demo
 image_size: 256
-detection_size: 512
+detection_size: 384
 sample_size: 100
 data:
   mask_threshold: 127
@@ -36,7 +36,7 @@ segmentation:
   largest_component: false
   hole_filling: false
 detection:
-  epochs: 20
+  epochs: 10
   batch_size: 2
   learning_rate: 0.0005
   momentum: 0.9
@@ -48,7 +48,7 @@ detection:
   trainable_backbone_layers: 3
   amp: true
   augment: true
-  model: fasterrcnn_resnet50_fpn_v2
+  model: fasterrcnn_mobilenet_v3_large_fpn
   pretrained: true
 evaluation:
   boundary_tolerance_px: 2

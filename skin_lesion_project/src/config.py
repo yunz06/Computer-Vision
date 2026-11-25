@@ -3,6 +3,7 @@ import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
 
+
 def load_config(path=None):
     path = Path(path) if path else ROOT / 'configs' / 'default.yaml'
     with path.open('r', encoding='utf-8') as f:
@@ -11,6 +12,14 @@ def load_config(path=None):
         cfg['paths'][key] = str((ROOT / value).resolve())
     return cfg
 
+
+def save_config(cfg, path):
+    path = Path(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open('w', encoding='utf-8') as f:
+        yaml.safe_dump(cfg, f, allow_unicode=True, sort_keys=False)
+
+
 def ensure_dirs(cfg):
-    for key in ('processed','splits','reports','checkpoints','results','figures','demo'):
+    for key in ('processed', 'splits', 'reports', 'checkpoints', 'results', 'figures', 'demo'):
         Path(cfg['paths'][key]).mkdir(parents=True, exist_ok=True)

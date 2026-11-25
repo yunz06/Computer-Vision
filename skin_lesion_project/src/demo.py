@@ -1,107 +1,114 @@
 from pathlib import Path
 from datetime import datetime
-import numpy as np
-import torch
-import cv2
-from PIL import Image
-from .models import UNet, build_detector
-from .data import letterbox, mask_to_box
-from .metrics import box_iou
-from .utils import device
+from .integration import load_models as _load_integration_models, run_integration
+from .visualization import render_panels
 
 
 def load_models(cfg):
-    dev = device()
-    seg_path = Path(cfg['paths']['checkpoints']) / 'unet_best.pt'
-    det_path = Path(cfg['paths']['checkpoints']) / 'fasterrcnn_best.pt'
-    if not det_path.exists():
-        det_path = Path(cfg['paths']['checkpoints']) / 'fasterrcnn_last.pt'
-    seg = det = None
-    if seg_path.exists():
-        seg = UNet().to(dev)
-        seg.load_state_dict(torch.load(seg_path, map_location=dev, weights_only=False)['model'])
-        seg.eval()
-    if det_path.exists():
-        state = torch.load(det_path, map_location=dev, weights_only=False)
-        det = build_detector(False, state.get('model_name', cfg['detection']['model']), cfg['detection_size']).to(dev)
-        det.load_state_dict(state['model'])
-        det.eval()
+    seg, det, dev, _ = _load_integration_models(cfg)
     return seg, det, dev
 
 
-def infer(image, seg, det, dev, cfg):
-    if image is None:
-        raise ValueError('Vui lòng chọn ảnh.')
-    original = np.asarray(image.convert('RGB'))
-    overlay = original.copy()
-    predicted_mask = None
-    restored_mask = None
-    if seg is not None:
-        lb, meta = letterbox(original, cfg['image_size'])
-        tensor = torch.from_numpy(lb.copy()).permute(2, 0, 1).float().unsqueeze(0).to(dev) / 255.0
-        with torch.no_grad():
-            predicted_mask = (torch.sigmoid(seg(tensor))[0, 0].cpu().numpy() >= 0.5).astype(np.uint8)
-        l, t = meta['left'], meta['top']
-        nw, nh = meta['new_width'], meta['new_height']
-        cropped = predicted_mask[t:t + nh, l:l + nw]
-        restored_mask = cv2.resize(cropped, (meta['original_width'], meta['original_height']), interpolation=cv2.INTER_NEAREST)
-        tint = overlay.copy()
-        tint[restored_mask > 0] = (255, 40, 40)
-        overlay = cv2.addWeighted(overlay, 0.65, tint, 0.35, 0)
+def format_status(result):
+    parts = []
+    scores = result.get('scores')
+    if scores is not None and len(scores):
+        parts.append(f"Confidence top-1: {float(scores[0]):.3f} (tổng {len(scores)} box)")
+    elif 'detection' in result.get('errors', {}):
+        parts.append(result['errors']['detection'])
+    else:
+        parts.append('Không có bbox vượt ngưỡng confidence.')
 
-    status = 'Chưa có mô hình Detection'
-    det_box_original = None
-    if det is not None:
-        det_image, meta = letterbox(original, cfg['detection_size'])
-        tensor = torch.from_numpy(det_image.copy()).permute(2, 0, 1).float().unsqueeze(0).to(dev) / 255.0
-        with torch.no_grad():
-            output = det(tensor)[0]
-        threshold = cfg['detection'].get('score_threshold', 0.5)
-        keep = torch.where(output['scores'] >= threshold)[0]
-        if len(keep):
-            idx = int(keep[0])
-            box = output['boxes'][idx].cpu().numpy()
-            scale, left, top = meta['scale'], meta['left'], meta['top']
-            x1 = max(0, min(original.shape[1] - 1, int(round((box[0] - left) / scale))))
-            y1 = max(0, min(original.shape[0] - 1, int(round((box[1] - top) / scale))))
-            x2 = max(x1 + 1, min(original.shape[1], int(round((box[2] - left) / scale))))
-            y2 = max(y1 + 1, min(original.shape[0], int(round((box[3] - top) / scale))))
-            det_box_original = np.array([x1, y1, x2, y2], dtype=np.float32)
-            cv2.rectangle(overlay, (x1, y1), (x2, y2), (0, 255, 0), 2)
-            status = f"Confidence: {float(output['scores'][idx]):.3f}"
-        else:
-            status = 'Không có bbox vượt ngưỡng confidence.'
+    if 'segmentation' in result.get('errors', {}):
+        parts.append(result['errors']['segmentation'])
 
-    if det_box_original is not None and restored_mask is not None:
-        mask_box = mask_to_box(restored_mask)
-        if mask_box is None:
-            status += ' | Box–Mask: mask rỗng'
-        else:
-            status += f' | Box–Mask IoU: {box_iou(det_box_original, mask_box):.3f}'
+    if result.get('box_mask_iou') is not None:
+        parts.append(f"Box–Mask IoU: {result['box_mask_iou']:.3f}")
+    parts.append(f"Trạng thái: {result['consistency_status']}")
+    parts.append(f"Thời gian suy luận: {result['inference_time_ms']:.1f} ms")
+    return ' | '.join(parts)
 
-    out_dir = Path(cfg['paths']['demo'])
+
+def save_result_files(result, out_dir):
+    if result is None:
+        raise ValueError('Chưa có kết quả để lưu. Vui lòng phân tích ảnh trước.')
+    out_dir = Path(out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
+    _, _, mask_img, overlay_img, combined_img = render_panels(result)
     stamp = datetime.now().strftime('%Y%m%d_%H%M%S_%f')
-    Image.fromarray(overlay).save(out_dir / f'{stamp}_overlay.png')
-    if restored_mask is not None:
-        Image.fromarray((restored_mask * 255).astype(np.uint8)).save(out_dir / f'{stamp}_mask.png')
-    mask_image = Image.fromarray((restored_mask * 255).astype(np.uint8)) if restored_mask is not None else None
-    return Image.fromarray(overlay), mask_image, status
+    combined_path = out_dir / f'{stamp}_combined.png'
+    overlay_path = out_dir / f'{stamp}_overlay.png'
+    combined_img.save(combined_path)
+    overlay_img.save(overlay_path)
+    saved = [str(combined_path), str(overlay_path)]
+    if result.get('binary_mask') is not None:
+        mask_path = out_dir / f'{stamp}_mask.png'
+        mask_img.save(mask_path)
+        saved.append(str(mask_path))
+    return saved
+
+
+def infer(image, seg, det, dev, cfg):
+    result = run_integration(image, seg, det, dev, cfg)
+    _, _, mask_img, overlay_img, _ = render_panels(result)
+    save_result_files(result, cfg['paths']['demo'])
+    mask_out = mask_img if result.get('binary_mask') is not None else None
+    return overlay_img, mask_out, format_status(result)
+
+
+def build_app(cfg):
+    import gradio as gr
+    seg, det, dev, load_errors = _load_integration_models(cfg)
+
+    def predict(image):
+        try:
+            result = run_integration(image, seg, det, dev, cfg)
+        except ValueError as exc:
+            return None, None, None, None, f'Ảnh đầu vào không hợp lệ: {exc}', None
+        orig_img, det_img, mask_img, overlay_img, _ = render_panels(result)
+        mask_out = mask_img if result.get('binary_mask') is not None else None
+        return orig_img, det_img, mask_out, overlay_img, format_status(result), result
+
+    def save_action(result_state):
+        try:
+            paths = save_result_files(result_state, cfg['paths']['demo'])
+            return 'Đã lưu:\n' + '\n'.join(paths)
+        except Exception as exc:
+            return f'Lỗi lưu kết quả: {exc}'
+
+    init_note = ''
+    if load_errors:
+        init_note = '\n\n> Cảnh báo nạp checkpoint: ' + '; '.join(f'{k}: {v}' for k, v in load_errors.items())
+
+    with gr.Blocks(title='ISIC 2018 – Detection & Segmentation') as app:
+        gr.Markdown(
+            '# ISIC 2018 – Phát hiện và phân đoạn tổn thương da\n'
+            '**Công cụ học tập/nghiên cứu — Không phải công cụ chẩn đoán y tế.**' + init_note
+        )
+        result_state = gr.State(value=None)
+        with gr.Row():
+            input_image = gr.Image(type='pil', label='Ảnh đầu vào (JPG/PNG)')
+        with gr.Row():
+            analyze_btn = gr.Button('Phân tích', variant='primary')
+            save_btn = gr.Button('Lưu kết quả')
+        with gr.Row():
+            panel_orig = gr.Image(label='Panel 1: Ảnh gốc')
+            panel_det = gr.Image(label='Panel 2: Bounding Box + Confidence')
+        with gr.Row():
+            panel_mask = gr.Image(label='Panel 3: Binary Mask')
+            panel_overlay = gr.Image(label='Panel 4: Overlay trên ảnh gốc')
+        info_box = gr.Textbox(label='Box–Mask IoU, Trạng thái nhất quán & Thời gian inference', interactive=False)
+        save_box = gr.Textbox(label='Trạng thái lưu file', interactive=False)
+
+        analyze_btn.click(
+            predict,
+            inputs=input_image,
+            outputs=[panel_orig, panel_det, panel_mask, panel_overlay, info_box, result_state],
+        )
+        save_btn.click(save_action, inputs=result_state, outputs=save_box)
+    return app
 
 
 def launch(cfg):
-    import gradio as gr
-    seg, det, dev = load_models(cfg)
-
-    def predict(image):
-        return infer(image, seg, det, dev, cfg)
-
-    with gr.Blocks(title='ISIC 2018 – Detection & Segmentation') as app:
-        gr.Markdown('# ISIC 2018 – Phát hiện và phân đoạn tổn thương da\n**Công cụ học tập/nghiên cứu, không phải công cụ chẩn đoán y khoa.**')
-        input_image = gr.Image(type='pil', label='Ảnh đầu vào')
-        button = gr.Button('Phân tích')
-        overlay = gr.Image(label='Overlay và bounding box')
-        mask = gr.Image(label='Mask dự đoán')
-        status = gr.Textbox(label='Detection và Box–Mask')
-        button.click(predict, inputs=input_image, outputs=[overlay, mask, status])
+    app = build_app(cfg)
     app.launch()

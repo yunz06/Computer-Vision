@@ -30,7 +30,7 @@ data/raw/images/   # ISIC_XXXXXXX.jpg
 data/raw/masks/    # ISIC_XXXXXXX_segmentation.png
 ```
 
-Nếu có `HAM10000_metadata.csv`, đặt trong `data/raw/` để `prepare` tự ghép `lesion_id` cho group split chống rò rỉ dữ liệu.
+Nếu có metadata phù hợp với ID ảnh, có thể truyền đường dẫn bằng `prepare --metadata <duong_dan_csv>` để nhóm theo `lesion_id`. Lưu ý metadata HAM10000 không mặc nhiên khớp ID của ISIC 2018 Task 1; chỉ dùng khi đã xác minh được ánh xạ. Khi không có metadata, pHash chỉ hỗ trợ phát hiện ảnh gần trùng, không chứng minh các ảnh thuộc cùng một tổn thương.
 
 ## 3. Pipeline đầy đủ (theo Official Plan)
 
@@ -58,7 +58,7 @@ D:\Python\.venv\Scripts\python.exe -m src.cli train-det
 :: D6 - Quét ngưỡng & hậu xử lý trên Validation ONLY
 D:\Python\.venv\Scripts\python.exe -m src.cli select-val
 
-:: D7 - Đánh giá cuối trên Test Set (ở kích thước ảnh gốc)
+:: D7 - Đánh giá cuối trên Test Set (ở kích thước ảnh gốc; tự dùng lựa chọn từ Validation nếu có)
 D:\Python\.venv\Scripts\python.exe -m src.cli evaluate --task seg
 D:\Python\.venv\Scripts\python.exe -m src.cli evaluate --task det
 D:\Python\.venv\Scripts\python.exe -m src.cli evaluate --task unet_box
@@ -72,7 +72,7 @@ Với smoke run nhanh 100 ảnh, có thể chạy `chay_thu_100_anh.cmd` (chỉ 
 ## 4. Dataset policy
 
 - **Mask binarization**: xác minh quy ước pixel, nhị phân hóa với ngưỡng `> 127`.
-- **Detection boxes**: tạo box cho từng connected component có diện tích `>= min_box_area_ratio * (H * W)` (cấu hình trong `configs/default.yaml`). Box là nhãn dẫn xuất từ segmentation mask, không phải annotation box độc lập do chuyên gia gán.
+- **Detection boxes**: mặc định tạo **một bounding box cho thành phần trắng lớn nhất** trong segmentation mask (`multi_component_boxes: false`). Các thành phần nhỏ còn lại vẫn được giữ trong Ground Truth của segmentation nhưng không được coi là đối tượng Detection độc lập. Bounding box là nhãn dẫn xuất từ segmentation mask, không phải annotation box độc lập do chuyên gia gán.
 - **Mask rỗng**: giữ trong segmentation nếu hợp lệ; tự động loại khỏi tập training detection và ghi log trong `audit` / `manifest.csv`.
 - **Hậu xử lý & Evaluation**: probability map của U-Net được nội suy tuyến tính (`INTER_LINEAR`) về kích thước ảnh gốc **trước** khi threshold; mọi metric Segmentation (`Dice`, `Mask IoU`, `Thresholded Jaccard@0.65`, `Failure Rate Jaccard < 0.65`, `Boundary F1`) và Detection (`AP@0.5`, `AP@0.5:0.95`, `Precision/Recall`, `Top-1 Box IoU`) đều tính ở tọa độ/kích thước gốc.
 

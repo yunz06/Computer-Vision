@@ -1,30 +1,34 @@
-# Báo cáo kiểm thử source
+# Báo cáo kiểm tra source
 
-## Kết quả đã kiểm tra
+## Kết quả kiểm tra trong lần rà soát này
 
-- Biên dịch toàn bộ `src`, `tests`, `app.py`: **PASS**.
-- Unit & integration tests (`pytest -v`): **17 PASS** (0 failed, 0 skipped):
-  - `tests/test_core.py`: `image_key`, `read_mask` ngưỡng `127`, `letterbox` & `unletterbox` (prob map linear, mask nearest, boxes), lọc box đa thành phần theo `min_area_ratio`, hậu xử lý `largest_component` + `hole_filling`, augmentation đồng bộ ảnh-mask, `binary_metrics` + `boundary_f1` + `segmentation_summary` (mean ± std, failure rate Jaccard < 0.65), `UNet` / `AttentionUNet` / `UNetResNet34` + 3 loss (`bce`, `dice`, `bce_dice`), `detection_ap` / `ap5095` / `P/R` / `top1_box_iou_summary` và cả 2 backbone Faster R-CNN.
-  - `tests/test_dataset.py`: `audit` (tách riêng `bad_images` vs `bad_masks`, mask rỗng, pixel convention), `eda`, `prepare` (group split chống rò rỉ theo `lesion_id` + `manifest.csv` + `train/val/test.txt`), `SegmentationDataset` & `DetectionDataset` (có augmentation), baselines (`otsu_morphology`, `kmeans_lab`, `watershed`, `center_box`).
-  - `tests/test_demo.py`: `integration` output chuẩn, render 4 panel + combined, nhánh rỗng / lỗi từng nhánh, validate ảnh đầu vào không hợp lệ, lưu file, dựng giao diện `gradio.Blocks`.
-  - `tests/test_e2e_pipeline.py`: smoke test tích hợp toàn luồng (`audit` → `eda` → `prepare` → `baselines` → `train_seg` → `train_det` → `select_on_validation` → `eval_seg` → `eval_det` → `eval_unet_box` → `integration`) trên 12 cặp ảnh/mask tổng hợp với CUDA GPU.
+- Bộ kiểm thử: **20 PASS, 0 FAIL**.
+- Môi trường rà soát hiện tại: Python runtime của phiên kiểm tra, PyTorch CPU; CUDA không khả dụng.
+- Đã chạy kiểm thử unit/integration trên dữ liệu tổng hợp.
+- Đã kiểm tra cú pháp Python cho toàn bộ source và tests.
 
-## Môi trường kiểm thử thực tế
+## Các điểm đã hiệu chỉnh
 
-- Python `3.12.10` (`D:\Python\.venv\Scripts\python.exe`)
-- PyTorch `2.15.0+cu134`, Torchvision `0.29.2+cu134`
-- GPU: `NVIDIA GeForce RTX 2050` (`4.0 GB` VRAM)
-- Gradio `5.50.0`
+- Không fallback sang chia image-level khi có nhóm trùng nhưng chỉ có dưới 3 group; dừng với thông báo rõ ràng để tránh rò rỉ giữa train/validation/test.
+- Detection mặc định chỉ dùng một bounding box từ thành phần trắng lớn nhất; đã thêm test cho mask có nhiều vùng trắng rời rạc.
+- Không tự tạo bounding box giả 1x1 khi mask không còn vùng hợp lệ.
+- Metric Detection ghép prediction với ground-truth chưa được ghép, tránh bỏ sót true positive khi nhiều box chồng lấn.
+- Ngưỡng segmentation, hậu xử lý và score threshold được chọn từ `val_selection.json` sẽ được dùng cho đánh giá và demo nếu có; tham số truyền trực tiếp khi gọi evaluate vẫn được ưu tiên.
+- Bổ sung test cho trường hợp group split không đủ nhóm và matching nhiều ground-truth.
 
-### Đo VRAM thực tế trên RTX 2050 (AMP bật)
+## Giới hạn xác minh
 
-- `UNet` 256×256, `batch_size=4`: **425.4 MB**
-- `UNet` 320×320, `batch_size=4`: **649.3 MB**
-- `Faster R-CNN MobileNetV3-Large-FPN` 512 px, `batch_size=2`: **442.6 MB**
-- `Faster R-CNN ResNet50-FPN v2` 512 px, `batch_size=2`: **1125.3 MB**
-- `Faster R-CNN ResNet50-FPN v2` 512 px, `batch_size=1`: **715.7 MB**
+- ZIP không chứa dataset ISIC; các kiểm thử hiện tại dùng dữ liệu tổng hợp.
+- Chưa chạy audit, EDA, huấn luyện, đánh giá hoặc demo trên toàn bộ ảnh ISIC thật trong lần rà soát này.
+- CUDA/GPU không khả dụng trong môi trường rà soát này, vì vậy chưa xác nhận lại huấn luyện trên RTX 2050.
+- Các thông số VRAM từng ghi trong báo cáo cũ không được đo lại trong lần rà soát này và không được xem là cam kết hiệu năng.
+- Ground-truth Detection được suy ra từ segmentation mask; đây không phải annotation bounding box độc lập do chuyên gia cung cấp.
 
-## Phạm vi chờ dữ liệu thật
+## Trước khi nộp
 
-- Thư mục `data/raw/masks/ISIC2018_Task1_Training_GroundTruth` đã có **2.594 mask PNG** (`{0, 255}`), `data/raw/images/` đang chờ tải xong ảnh `.jpg` để chạy thực nghiệm chính thức.
-- Các chỉ số trên dữ liệu tổng hợp chỉ xác nhận phần mềm và pipeline chạy đúng, không thay thế kết quả trên ISIC 2018 thật.
+1. Đặt đúng ảnh và mask ISIC 2018 vào `data/raw/images/` và `data/raw/masks/`.
+2. Chạy `kiem_tra_moi_truong.cmd`, sau đó `run_audit.cmd`.
+3. Kiểm tra `reports/audit.txt`, `reports/audit.json` và `reports/eda_report.md`.
+4. Chạy `chay_thu_100_anh.cmd` để smoke test.
+5. Chỉ khi smoke test thành công mới chạy `chay_toan_bo.cmd`.
+6. Giữ nguyên Test split cho đánh giá cuối; không dùng kết quả Test để chọn tham số.

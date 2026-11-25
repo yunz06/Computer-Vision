@@ -148,3 +148,23 @@ def test_detection_metrics_and_detectors():
         with torch.no_grad():
             out = det([torch.rand(3, 128, 128)])
         assert len(out) == 1 and 'boxes' in out[0] and 'scores' in out[0]
+
+
+
+def test_detection_metrics_match_best_unmatched_ground_truth():
+    # Prediction thứ hai vẫn phải được ghép với GT chưa dùng nếu còn IoU đạt ngưỡng.
+    predictions = [{
+        'boxes': torch.tensor([
+            [0., 0., 10., 10.],
+            [1., 0., 11., 10.],
+        ]),
+        'scores': torch.tensor([0.95, 0.90]),
+    }]
+    targets = [torch.tensor([
+        [0., 0., 10., 10.],
+        [2., 0., 12., 10.],
+    ])]
+    assert detection_ap(predictions, targets, 0.5) > 0.99
+    pr = detection_precision_recall(predictions, targets, 0.5, 0.5)
+    assert pr['precision'] == 1.0
+    assert pr['recall'] == 1.0

@@ -118,6 +118,7 @@ def main():
             args.limit, cfg['image_size'], records,
             mask_threshold=mask_thresh, min_area_ratio=min_area,
             boundary_tolerance_px=cfg.get('evaluation', {}).get('boundary_tolerance_px', 2),
+            cache_dir=cfg['paths'].get('processed'),
         )
         print('Số mẫu:', len(result))
     elif args.cmd == 'train-seg':

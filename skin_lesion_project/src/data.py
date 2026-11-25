@@ -32,6 +32,11 @@ def find_pairs(image_dir, mask_dir):
     return pairs, sorted(imgs.keys() - masks.keys()), sorted(masks.keys() - imgs.keys())
 
 
+def read_image_size(path):
+    with Image.open(path) as im:
+        return im.size  # (width, height)
+
+
 def read_rgb(path):
     with Image.open(path) as im:
         im.load()
@@ -49,17 +54,13 @@ def read_mask(path, threshold=127):
     return (arr > threshold).astype(np.uint8)
 
 
-def letterbox(image, size, mask=None, image_fill=(0, 0, 0)):
-    h, w = image.shape[:2]
+def letterbox_meta(w, h, size):
     scale = min(size / w, size / h)
     nw = max(1, int(round(w * scale)))
     nh = max(1, int(round(h * scale)))
-    resized = cv2.resize(image, (nw, nh), interpolation=cv2.INTER_LINEAR)
     left = (size - nw) // 2
     top = (size - nh) // 2
-    canvas = np.full((size, size, 3), image_fill, dtype=np.uint8)
-    canvas[top:top + nh, left:left + nw] = resized
-    meta = {
+    return {
         'original_width': w,
         'original_height': h,
         'scale': scale,
@@ -69,12 +70,57 @@ def letterbox(image, size, mask=None, image_fill=(0, 0, 0)):
         'new_height': nh,
         'size': size,
     }
+
+
+def letterbox(image, size, mask=None, image_fill=(0, 0, 0)):
+    h, w = image.shape[:2]
+    meta = letterbox_meta(w, h, size)
+    nw, nh, left, top = meta['new_width'], meta['new_height'], meta['left'], meta['top']
+    resized = cv2.resize(image, (nw, nh), interpolation=cv2.INTER_LINEAR)
+    canvas = np.full((size, size, 3), image_fill, dtype=np.uint8)
+    canvas[top:top + nh, left:left + nw] = resized
     if mask is None:
         return canvas, meta
     m = cv2.resize(mask.astype(np.uint8), (nw, nh), interpolation=cv2.INTER_NEAREST)
     mc = np.zeros((size, size), dtype=np.uint8)
     mc[top:top + nh, left:left + nw] = m
     return canvas, mc, meta
+
+
+def load_or_cache_letterbox(key, ip, mp, size, mask_threshold=127, cache_dir=None):
+    if cache_dir is not None:
+        base = Path(cache_dir) / str(size)
+        img_cache = base / 'images' / f'{key}.png'
+        msk_cache = base / 'masks' / f'{key}.png' if mp is not None else None
+        if img_cache.exists() and (msk_cache is None or msk_cache.exists()):
+            w, h = read_image_size(ip)
+            meta = letterbox_meta(w, h, size)
+            lb_img = read_rgb(img_cache)
+            if msk_cache is None:
+                return lb_img, meta
+            lb_mask = (read_mask_raw(msk_cache) > 0).astype(np.uint8)
+            return lb_img, lb_mask, meta
+
+    image = read_rgb(ip)
+    if mp is None:
+        lb_img, meta = letterbox(image, size)
+        if cache_dir is not None:
+            img_cache = Path(cache_dir) / str(size) / 'images' / f'{key}.png'
+            img_cache.parent.mkdir(parents=True, exist_ok=True)
+            Image.fromarray(lb_img).save(img_cache)
+        return lb_img, meta
+
+    mask = read_mask(mp, threshold=mask_threshold)
+    lb_img, lb_mask, meta = letterbox(image, size, mask)
+    if cache_dir is not None:
+        base = Path(cache_dir) / str(size)
+        img_cache = base / 'images' / f'{key}.png'
+        msk_cache = base / 'masks' / f'{key}.png'
+        img_cache.parent.mkdir(parents=True, exist_ok=True)
+        msk_cache.parent.mkdir(parents=True, exist_ok=True)
+        Image.fromarray(lb_img).save(img_cache)
+        Image.fromarray((lb_mask * 255).astype(np.uint8)).save(msk_cache)
+    return lb_img, lb_mask, meta
 
 
 def unletterbox_prob_map(prob_map, meta):
@@ -195,21 +241,22 @@ def augment_pair(image, mask, rng, allow_affine=True):
 
 
 class SegmentationDataset(Dataset):
-    def __init__(self, records, size=256, augment=False, mask_threshold=127, seed=42):
+    def __init__(self, records, size=256, augment=False, mask_threshold=127, seed=42, cache_dir=None):
         self.records = list(records)
         self.size = size
         self.augment = augment
         self.mask_threshold = mask_threshold
         self.rng = np.random.default_rng(seed)
+        self.cache_dir = cache_dir
 
     def __len__(self):
         return len(self.records)
 
     def __getitem__(self, idx):
-        _, ip, mp = self.records[idx]
-        image = read_rgb(ip)
-        mask = read_mask(mp, threshold=self.mask_threshold)
-        image, mask, _ = letterbox(image, self.size, mask)
+        key, ip, mp = self.records[idx]
+        image, mask, _ = load_or_cache_letterbox(
+            key, ip, mp, self.size, mask_threshold=self.mask_threshold, cache_dir=self.cache_dir
+        )
         if self.augment:
             image, mask = augment_pair(image, mask, self.rng, allow_affine=True)
         x = torch.from_numpy(image.copy()).permute(2, 0, 1).float() / 255.0
@@ -227,6 +274,7 @@ class DetectionDataset(Dataset):
         min_area_ratio=0.001,
         multi_component=True,
         seed=42,
+        cache_dir=None,
     ):
         self.records = []
         self.size = size
@@ -235,6 +283,7 @@ class DetectionDataset(Dataset):
         self.min_area_ratio = min_area_ratio
         self.multi_component = multi_component
         self.rng = np.random.default_rng(seed)
+        self.cache_dir = cache_dir
         for r in records:
             try:
                 m = read_mask(r[2], threshold=self.mask_threshold)
@@ -248,10 +297,10 @@ class DetectionDataset(Dataset):
         return len(self.records)
 
     def __getitem__(self, idx):
-        _, ip, mp = self.records[idx]
-        image = read_rgb(ip)
-        mask = read_mask(mp, threshold=self.mask_threshold)
-        image, mask, _ = letterbox(image, self.size, mask)
+        key, ip, mp = self.records[idx]
+        image, mask, _ = load_or_cache_letterbox(
+            key, ip, mp, self.size, mask_threshold=self.mask_threshold, cache_dir=self.cache_dir
+        )
         if self.augment:
             # Flip/rot90 trên ảnh + mask trước khi trích box đảm bảo đồng bộ tuyệt đối.
             image, mask = augment_pair(image, mask, self.rng, allow_affine=False)
@@ -259,8 +308,10 @@ class DetectionDataset(Dataset):
         if not self.multi_component and len(boxes) > 1:
             boxes = boxes[:1]
         if len(boxes) == 0:
-            # Fallback cực hi hữu khi mask rất nhỏ biến mất sau resize
-            boxes = np.array([[0.0, 0.0, 1.0, 1.0]], dtype=np.float32)
+            raise RuntimeError(
+                f'Mask của mẫu {key} không còn vùng hợp lệ sau tiền xử lý; '
+                'không thể tạo bounding box ground-truth.'
+            )
         areas = (boxes[:, 2] - boxes[:, 0]) * (boxes[:, 3] - boxes[:, 1])
         x = torch.from_numpy(image.copy()).permute(2, 0, 1).float() / 255.0
         target = {

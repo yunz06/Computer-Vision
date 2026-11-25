@@ -36,6 +36,7 @@ def run(
     use_augment = det_cfg.get('augment', True) if augment is None else augment
     seed = cfg.get('seed', 42)
 
+    cache_dir = cfg['paths'].get('processed')
     train_ds = DetectionDataset(
         train_records,
         size=det_size,
@@ -44,6 +45,7 @@ def run(
         min_area_ratio=min_area,
         multi_component=multi_comp,
         seed=seed,
+        cache_dir=cache_dir,
     )
     val_ds = DetectionDataset(
         val_records,
@@ -53,6 +55,7 @@ def run(
         min_area_ratio=min_area,
         multi_component=multi_comp,
         seed=seed,
+        cache_dir=cache_dir,
     )
     if len(train_ds) == 0:
         raise RuntimeError('Không có mask dương hợp lệ cho Detection.')

@@ -1,10 +1,12 @@
 import csv
 import json
 import random
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 import cv2
 import numpy as np
-from .data import find_pairs, read_rgb, read_mask, mask_to_boxes
+from PIL import Image
+from .data import find_pairs, read_mask, mask_to_boxes
 from .utils import save_json
 
 
@@ -25,16 +27,20 @@ def _load_lesion_metadata(metadata_path):
     return mapping
 
 
-def _compute_dhash(image):
-    gray = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)
+def _compute_dhash_fast(image_path):
+    with Image.open(image_path) as im:
+        w, h = im.size
+        im.draft('L', (64, 64))
+        im.load()
+        gray = np.asarray(im.convert('L'))
     if float(gray.std()) < 1e-3:
-        return None
+        return (w, h), None
     small = cv2.resize(gray, (9, 8), interpolation=cv2.INTER_AREA)
     diff = small[:, 1:] > small[:, :-1]
     bits = 0
     for b in diff.flatten():
         bits = (bits << 1) | int(b)
-    return bits
+    return (w, h), bits
 
 
 def _group_by_phash(records, max_distance=4):
@@ -73,14 +79,22 @@ def _group_split(records, train_ratio, val_ratio, seed):
         return [], [], []
     groups = [r['group_id'] for r in records]
     unique_groups = sorted(set(groups))
-    # Nếu mọi mẫu là group riêng lẻ hoặc ít hơn 3 group thì fallback shuffle theo tỷ lệ chính xác.
-    if len(unique_groups) == n or len(unique_groups) < 3:
+    # Mỗi ảnh là một nhóm riêng thì chia ngẫu nhiên tương đương group split.
+    if len(unique_groups) == n:
         rng = random.Random(seed)
         copied = list(records)
         rng.shuffle(copied)
         ntr = int(n * train_ratio)
         nval = int(n * val_ratio)
         return copied[:ntr], copied[ntr:ntr + nval], copied[ntr + nval:]
+
+    # Không được fallback sang chia từng ảnh khi có nhóm trùng:
+    # làm vậy có thể đưa cùng một lesion vào nhiều split.
+    if len(unique_groups) < 3:
+        raise ValueError(
+            f'Chỉ có {len(unique_groups)} nhóm dữ liệu; không thể tạo train/val/test '
+            'mà vẫn giữ nguyên group. Hãy kiểm tra metadata hoặc dữ liệu đầu vào.'
+        )
 
     rng = random.Random(seed)
     rng.shuffle(unique_groups)
@@ -125,18 +139,22 @@ def prepare_splits(
     valid = []
     manifest_rows = []
 
-    for k, ip, mp in pairs:
+    def _inspect_pair(item):
+        k, ip, mp = item
         try:
-            image = read_rgb(ip)
+            if use_phash and k not in lesion_map:
+                (w, h), dhash = _compute_dhash_fast(ip)
+            else:
+                with Image.open(ip) as im:
+                    w, h = im.size
+                dhash = None
             mask = read_mask(mp, threshold=mask_threshold)
-            h, w = image.shape[:2]
             if mask.shape != (h, w):
-                manifest_rows.append({
+                return {'ok': False, 'row': {
                     'image_id': k, 'image_path': str(ip.resolve()), 'mask_path': str(mp.resolve()),
                     'width': w, 'height': h, 'connected_components': 0, 'boxes': '[]',
                     'lesion_area_ratio': 0.0, 'group_id': k, 'valid': False, 'reason': 'size_mismatch',
-                })
-                continue
+                }}
             n_comp, _, _, _ = cv2.connectedComponentsWithStats(mask, connectivity=8)
             comp_count = max(0, int(n_comp) - 1)
             boxes = mask_to_boxes(mask, min_area_ratio=min_area_ratio, fallback_largest=False)
@@ -152,21 +170,29 @@ def prepare_splits(
                 'boxes': boxes.tolist(),
                 'lesion_area_ratio': round(area_ratio, 6),
                 'group_id': group_id,
-                '_dhash': _compute_dhash(image) if (use_phash and k not in lesion_map) else None,
+                '_dhash': dhash,
             }
-            valid.append(rec)
-            manifest_rows.append({
+            row = {
                 'image_id': k, 'image_path': rec['image'], 'mask_path': rec['mask'],
                 'width': w, 'height': h, 'connected_components': comp_count,
                 'boxes': json.dumps(rec['boxes']), 'lesion_area_ratio': rec['lesion_area_ratio'],
                 'group_id': group_id, 'valid': True, 'reason': 'empty_mask' if comp_count == 0 else 'ok',
-            })
+            }
+            return {'ok': True, 'rec': rec, 'row': row}
         except Exception as exc:
-            manifest_rows.append({
+            return {'ok': False, 'row': {
                 'image_id': k, 'image_path': str(ip.resolve()), 'mask_path': str(mp.resolve()),
                 'width': 0, 'height': 0, 'connected_components': 0, 'boxes': '[]',
                 'lesion_area_ratio': 0.0, 'group_id': k, 'valid': False, 'reason': str(exc),
-            })
+            }}
+
+    with ThreadPoolExecutor(max_workers=8) as pool:
+        for idx, res in enumerate(pool.map(_inspect_pair, pairs), 1):
+            if idx % 500 == 0 or idx == len(pairs):
+                print(f'[prepare] {idx}/{len(pairs)}', flush=True)
+            manifest_rows.append(res['row'])
+            if res['ok']:
+                valid.append(res['rec'])
 
     if use_phash and valid:
         unmapped_indices = [i for i, r in enumerate(valid) if r['key'] not in lesion_map]

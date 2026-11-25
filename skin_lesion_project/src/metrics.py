@@ -80,11 +80,13 @@ def detection_ap(predictions, targets, iou_threshold=0.5):
         best = -1
         best_iou = 0.0
         for j, g in enumerate(gt):
+            if (i, j) in matched:
+                continue
             value = box_iou(box, g)
             if value > best_iou:
                 best_iou = value
                 best = j
-        if best >= 0 and best_iou >= iou_threshold and (i, best) not in matched:
+        if best >= 0 and best_iou >= iou_threshold:
             tp.append(1)
             fp.append(0)
             matched.add((i, best))
@@ -123,11 +125,13 @@ def detection_precision_recall(predictions, targets, score_threshold=0.5, iou_th
             best = -1
             best_iou = 0.0
             for j, g in enumerate(gt):
+                if j in used:
+                    continue
                 v = box_iou(boxes[idx], g)
                 if v > best_iou:
                     best_iou = v
                     best = j
-            if best >= 0 and best_iou >= iou_threshold and best not in used:
+            if best >= 0 and best_iou >= iou_threshold:
                 tp += 1
                 used.add(best)
             else:

@@ -4,9 +4,8 @@ import numpy as np
 from sklearn.cluster import KMeans
 from .data import (
     find_pairs,
-    read_rgb,
     read_mask,
-    letterbox,
+    load_or_cache_letterbox,
     unletterbox_mask,
     postprocess_mask,
     mask_to_boxes,
@@ -81,6 +80,7 @@ def run(
     mask_threshold=127,
     min_area_ratio=0.001,
     boundary_tolerance_px=2,
+    cache_dir=None,
 ):
     pairs = records if records is not None else find_pairs(image_dir, mask_dir)[0]
     pairs = pairs[:limit] if limit else pairs
@@ -90,9 +90,10 @@ def run(
     center_preds, gt_boxes_list, top_ious = [], [], []
 
     for key, ip, mp in pairs:
-        image = read_rgb(ip)
         gt_orig = read_mask(mp, threshold=mask_threshold)
-        img_lb, _, meta = letterbox(image, size, gt_orig)
+        img_lb, _, meta = load_or_cache_letterbox(
+            key, ip, mp, size, mask_threshold=mask_threshold, cache_dir=cache_dir
+        )
         valid = np.zeros((size, size), dtype=bool)
         l, t = meta['left'], meta['top']
         valid[t:t + meta['new_height'], l:l + meta['new_width']] = True

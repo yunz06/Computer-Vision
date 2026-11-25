@@ -5,9 +5,8 @@ from .prepare import load_records
 from .data import (
     read_rgb,
     read_mask,
-    letterbox,
+    load_or_cache_letterbox,
     unletterbox_prob_map,
-    unletterbox_boxes,
     postprocess_mask,
     mask_to_boxes,
 )
@@ -67,18 +66,19 @@ def _load_det_model(cfg, checkpoint=None):
     return model, dev, size, state
 
 
-def _predict_seg_prob_maps(model, dev, size, records, mask_threshold=127):
+def _predict_seg_prob_maps(model, dev, size, records, mask_threshold=127, cache_dir=None):
     items = []
     with torch.no_grad():
         for key, ip, mp in records:
-            image = read_rgb(ip)
             gt_orig = read_mask(mp, threshold=mask_threshold)
-            lb, meta = letterbox(image, size)
+            lb, meta = load_or_cache_letterbox(
+                key, ip, None, size, mask_threshold=mask_threshold, cache_dir=cache_dir
+            )
             x = torch.from_numpy(lb.copy()).permute(2, 0, 1).float().unsqueeze(0).to(dev) / 255.0
             logits = model(x)
             prob_lb = torch.sigmoid(logits)[0, 0].cpu().numpy()
             prob_orig = unletterbox_prob_map(prob_lb, meta)
-            items.append((key, image, gt_orig, prob_orig))
+            items.append((key, ip, gt_orig, prob_orig))
     return items
 
 
@@ -91,23 +91,33 @@ def eval_seg(cfg, split='test', checkpoint=None, threshold=None, largest_compone
     data_cfg = cfg.get('data', {})
     eval_cfg = cfg.get('evaluation', {})
 
-    thresh = seg_cfg.get('threshold', 0.5) if threshold is None else float(threshold)
-    use_lc = seg_cfg.get('largest_component', False) if largest_component is None else bool(largest_component)
-    use_hf = seg_cfg.get('hole_filling', False) if hole_filling is None else bool(hole_filling)
+    selection_path = Path(cfg['paths']['results']) / 'val_selection.json'
+    selection = {}
+    if threshold is None and selection_path.exists():
+        try:
+            import json
+            selection = json.loads(selection_path.read_text(encoding='utf-8')).get('segmentation_best') or {}
+        except (OSError, ValueError):
+            selection = {}
+    thresh = float(threshold) if threshold is not None else float(selection.get('threshold', seg_cfg.get('threshold', 0.5)))
+    use_lc = bool(largest_component) if largest_component is not None else bool(selection.get('largest_component', seg_cfg.get('largest_component', False)))
+    use_hf = bool(hole_filling) if hole_filling is not None else bool(selection.get('hole_filling', seg_cfg.get('hole_filling', False)))
     mask_thresh = data_cfg.get('mask_threshold', 127)
     tol_px = eval_cfg.get('boundary_tolerance_px', 2)
 
-    items = _predict_seg_prob_maps(model, dev, size, records, mask_threshold=mask_thresh)
+    items = _predict_seg_prob_maps(
+        model, dev, size, records, mask_threshold=mask_thresh, cache_dir=cfg['paths'].get('processed')
+    )
     rows = []
     qualitative_records = []
-    for key, image, gt_orig, prob_orig in items:
+    for key, ip, gt_orig, prob_orig in items:
         pred = (prob_orig >= thresh).astype(np.uint8)
         if use_lc or use_hf:
             pred = postprocess_mask(pred, largest_component=use_lc, hole_filling=use_hf)
         m = binary_metrics(pred, gt_orig, boundary_tolerance_px=tol_px)
         m['key'] = key
         rows.append(m)
-        qualitative_records.append({'key': key, 'image': image, 'gt': gt_orig, 'pred': pred, 'dice': m['dice'], 'iou': m['iou']})
+        qualitative_records.append({'key': key, 'ip': ip, 'gt': gt_orig, 'pred': pred, 'dice': m['dice'], 'iou': m['iou']})
 
     result = segmentation_summary(rows)
     result.update({
@@ -123,10 +133,16 @@ def eval_seg(cfg, split='test', checkpoint=None, threshold=None, largest_compone
     save_json(result, Path(cfg['paths']['results']) / out_name)
     save_json(rows, Path(cfg['paths']['results']) / f'seg_{split}_per_image.json')
     if save_qualitative and qualitative_records:
+        k_qual = eval_cfg.get('qualitative_count', 3)
+        ordered = sorted(qualitative_records, key=lambda r: r['dice'])
+        n = len(ordered)
+        selected_idx = set(range(min(k_qual, n))) | {n // 2} | set(range(max(0, n - min(k_qual, n)), n))
+        for idx in selected_idx:
+            ordered[idx]['image'] = read_rgb(ordered[idx]['ip'])
         save_seg_qualitative_grid(
-            qualitative_records,
+            [ordered[idx] for idx in sorted(selected_idx)],
             Path(cfg['paths']['figures']) / f'seg_{split}_qualitative.png',
-            k=eval_cfg.get('qualitative_count', 3),
+            k=k_qual,
         )
     return result
 
@@ -140,7 +156,17 @@ def eval_det(cfg, split='test', checkpoint=None, score_threshold=None, save_qual
     data_cfg = cfg.get('data', {})
     eval_cfg = cfg.get('evaluation', {})
 
-    score_thresh = det_cfg.get('score_threshold', 0.5) if score_threshold is None else float(score_threshold)
+    selection_path = Path(cfg['paths']['results']) / 'val_selection.json'
+    selected_score = None
+    if score_threshold is None and selection_path.exists():
+        try:
+            import json
+            selected_score = (json.loads(selection_path.read_text(encoding='utf-8')).get('detection_best') or {}).get('score_threshold')
+        except (OSError, ValueError):
+            selected_score = None
+    score_thresh = float(score_threshold) if score_threshold is not None else float(
+        selected_score if selected_score is not None else det_cfg.get('score_threshold', 0.5)
+    )
     mask_thresh = data_cfg.get('mask_threshold', 127)
     min_area = data_cfg.get('min_box_area_ratio', 0.001)
     multi_comp = data_cfg.get('multi_component_boxes', True)
@@ -149,9 +175,9 @@ def eval_det(cfg, split='test', checkpoint=None, score_threshold=None, save_qual
     per_image = []
     qualitative_records = []
 
+    cache_dir = cfg['paths'].get('processed')
     with torch.no_grad():
         for key, ip, mp in records:
-            image = read_rgb(ip)
             gt_mask = read_mask(mp, threshold=mask_thresh)
             gt_boxes = mask_to_boxes(gt_mask, min_area_ratio=min_area, fallback_largest=True)
             if len(gt_boxes) == 0:
@@ -159,7 +185,7 @@ def eval_det(cfg, split='test', checkpoint=None, score_threshold=None, save_qual
             if not multi_comp and len(gt_boxes) > 1:
                 gt_boxes = gt_boxes[:1]
 
-            lb, meta = letterbox(image, size)
+            lb, meta = load_or_cache_letterbox(key, ip, None, size, mask_threshold=mask_thresh, cache_dir=cache_dir)
             x = torch.from_numpy(lb.copy()).permute(2, 0, 1).float().to(dev) / 255.0
             out = model([x])[0]
             raw_boxes = out['boxes'].detach().cpu().numpy()
@@ -179,7 +205,7 @@ def eval_det(cfg, split='test', checkpoint=None, score_threshold=None, save_qual
             })
             qualitative_records.append({
                 'key': key,
-                'image': image,
+                'ip': ip,
                 'gt_boxes': gt_boxes,
                 'pred_boxes': boxes_arr[scores_arr >= score_thresh] if len(boxes_arr) else boxes_arr,
                 'pred_scores': scores_arr[scores_arr >= score_thresh] if len(scores_arr) else scores_arr,
@@ -200,10 +226,18 @@ def eval_det(cfg, split='test', checkpoint=None, score_threshold=None, save_qual
     save_json(result, Path(cfg['paths']['results']) / out_name)
     save_json(per_image, Path(cfg['paths']['results']) / f'det_{split}_per_image.json')
     if save_qualitative and qualitative_records:
+        k_qual = eval_cfg.get('qualitative_count', 3)
+        ordered = sorted(qualitative_records, key=lambda r: r['top1_iou'])
+        n = len(ordered)
+        selected_idx = {0, n // 2, n - 1}
+        if k_qual > 1 and n >= 5:
+            selected_idx.add(1)
+        for idx in selected_idx:
+            ordered[idx]['image'] = read_rgb(ordered[idx]['ip'])
         save_det_qualitative_grid(
-            qualitative_records,
+            [ordered[idx] for idx in sorted(selected_idx)],
             Path(cfg['paths']['figures']) / f'det_{split}_qualitative.png',
-            k=eval_cfg.get('qualitative_count', 3),
+            k=k_qual,
         )
     return result
 
@@ -216,13 +250,23 @@ def eval_unet_box(cfg, split='test', checkpoint=None):
     model, dev, size, state = _load_seg_model(cfg, checkpoint)
     seg_cfg = cfg['segmentation']
     data_cfg = cfg.get('data', {})
-    thresh = seg_cfg.get('threshold', 0.5)
-    use_lc = seg_cfg.get('largest_component', False)
-    use_hf = seg_cfg.get('hole_filling', False)
+    selection_path = Path(cfg['paths']['results']) / 'val_selection.json'
+    selected_seg = {}
+    if selection_path.exists():
+        try:
+            import json
+            selected_seg = json.loads(selection_path.read_text(encoding='utf-8')).get('segmentation_best') or {}
+        except (OSError, ValueError):
+            selected_seg = {}
+    thresh = float(selected_seg.get('threshold', seg_cfg.get('threshold', 0.5)))
+    use_lc = bool(selected_seg.get('largest_component', seg_cfg.get('largest_component', False)))
+    use_hf = bool(selected_seg.get('hole_filling', seg_cfg.get('hole_filling', False)))
     mask_thresh = data_cfg.get('mask_threshold', 127)
     min_area = data_cfg.get('min_box_area_ratio', 0.001)
 
-    items = _predict_seg_prob_maps(model, dev, size, records, mask_threshold=mask_thresh)
+    items = _predict_seg_prob_maps(
+        model, dev, size, records, mask_threshold=mask_thresh, cache_dir=cfg['paths'].get('processed')
+    )
     preds, gts, top_ious = [], [], []
     for _, _, gt_orig, prob_orig in items:
         gt_boxes = mask_to_boxes(gt_orig, min_area_ratio=min_area, fallback_largest=True)
@@ -273,7 +317,9 @@ def select_on_validation(cfg, limit=0):
     seg_ckpt = Path(cfg['paths']['checkpoints']) / 'unet_best.pt'
     if seg_ckpt.exists():
         seg_model, dev, size, _ = _load_seg_model(cfg, seg_ckpt)
-        items = _predict_seg_prob_maps(seg_model, dev, size, records, mask_threshold=mask_thresh)
+        items = _predict_seg_prob_maps(
+            seg_model, dev, size, records, mask_threshold=mask_thresh, cache_dir=cfg['paths'].get('processed')
+        )
         best_seg = None
         seg_sweep = []
         for th in (0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7):
@@ -304,15 +350,17 @@ def select_on_validation(cfg, limit=0):
         det_ckpt = Path(cfg['paths']['checkpoints']) / 'fasterrcnn_last.pt'
     if det_ckpt.exists():
         det_model, dev, det_size, _ = _load_det_model(cfg, det_ckpt)
+        cache_dir = cfg['paths'].get('processed')
         preds, gts = [], []
         with torch.no_grad():
-            for _, ip, mp in records:
-                image = read_rgb(ip)
+            for key, ip, mp in records:
                 gt_mask = read_mask(mp, threshold=mask_thresh)
                 gt_boxes = mask_to_boxes(gt_mask, min_area_ratio=min_area, fallback_largest=True)
                 if len(gt_boxes) == 0:
                     continue
-                lb, meta = letterbox(image, det_size)
+                lb, meta = load_or_cache_letterbox(
+                    key, ip, None, det_size, mask_threshold=mask_thresh, cache_dir=cache_dir
+                )
                 x = torch.from_numpy(lb.copy()).permute(2, 0, 1).float().to(dev) / 255.0
                 out = det_model([x])[0]
                 raw_boxes = out['boxes'].detach().cpu().numpy()

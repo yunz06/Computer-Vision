@@ -1,4 +1,5 @@
 import time
+import json
 from pathlib import Path
 import numpy as np
 import torch
@@ -130,8 +131,20 @@ def run_integration(image, seg, det, dev, cfg):
     seg_cfg = cfg.get('segmentation', {})
     det_cfg = cfg.get('detection', {})
     eval_cfg = cfg.get('evaluation', {})
-    seg_thresh = float(seg_cfg.get('threshold', 0.5))
-    det_thresh = float(det_cfg.get('score_threshold', 0.5))
+    selection = {}
+    results_dir = cfg.get('paths', {}).get('results')
+    selection_path = Path(results_dir) / 'val_selection.json' if results_dir else None
+    if selection_path is not None and selection_path.exists():
+        try:
+            selection = json.loads(selection_path.read_text(encoding='utf-8'))
+        except (OSError, ValueError):
+            selection = {}
+    seg_selection = selection.get('segmentation_best') or {}
+    det_selection = selection.get('detection_best') or {}
+    seg_thresh = float(seg_selection.get('threshold', seg_cfg.get('threshold', 0.5)))
+    det_thresh = float(det_selection.get('score_threshold', det_cfg.get('score_threshold', 0.5)))
+    seg_largest_component = bool(seg_selection.get('largest_component', seg_cfg.get('largest_component', False)))
+    seg_hole_filling = bool(seg_selection.get('hole_filling', seg_cfg.get('hole_filling', False)))
     iou_thresh = float(eval_cfg.get('consistency_iou_threshold', 0.5))
 
     prob_map = None
@@ -149,11 +162,11 @@ def run_integration(image, seg, det, dev, cfg):
                 prob_lb = torch.sigmoid(logits)[0, 0].detach().cpu().numpy()
             prob_map = unletterbox_prob_map(prob_lb, meta)
             binary_mask = (prob_map >= seg_thresh).astype(np.uint8)
-            if seg_cfg.get('largest_component', False) or seg_cfg.get('hole_filling', False):
+            if seg_largest_component or seg_hole_filling:
                 binary_mask = postprocess_mask(
                     binary_mask,
-                    largest_component=seg_cfg.get('largest_component', False),
-                    hole_filling=seg_cfg.get('hole_filling', False),
+                    largest_component=seg_largest_component,
+                    hole_filling=seg_hole_filling,
                 )
             mask_bbox = mask_to_box(binary_mask)
         except Exception as exc:

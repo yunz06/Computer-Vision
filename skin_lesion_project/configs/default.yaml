@@ -15,7 +15,7 @@ sample_size: 100
 data:
   mask_threshold: 127
   min_box_area_ratio: 0.001
-  multi_component_boxes: true
+  multi_component_boxes: false
   use_phash_grouping: true
   phash_max_distance: 4
 split:

@@ -1,8 +1,9 @@
 from pathlib import Path
 from collections import Counter
+from concurrent.futures import ThreadPoolExecutor
 import cv2
 import numpy as np
-from .data import find_pairs, read_rgb, read_mask, mask_to_boxes
+from .data import find_pairs, read_image_size, read_mask, mask_to_boxes
 from .utils import save_json
 
 
@@ -58,7 +59,28 @@ def _save_eda_plot(widths, heights, area_ratios, comp_counts, out_path):
         print(f'Không vẽ được biểu đồ EDA: {exc}')
 
 
-def run_eda(image_dir, mask_dir, report_dir, figure_dir, mask_threshold=127, min_area_ratio=0.001, limit=0):
+def _eda_one(item, mask_threshold, min_area_ratio):
+    key, ip, mp = item
+    try:
+        w, h = read_image_size(ip)
+        m = read_mask(mp, threshold=mask_threshold)
+    except Exception as e:
+        return {'ok': False, 'key': key, 'reason': str(e)}
+    if m.shape != (h, w):
+        return {'ok': False, 'key': key, 'reason': f'size_mismatch {m.shape} vs {(h, w)}'}
+    n_comp, _, _, _ = cv2.connectedComponentsWithStats(m, connectivity=8)
+    boxes = mask_to_boxes(m, min_area_ratio=min_area_ratio, fallback_largest=False)
+    return {
+        'ok': True,
+        'w': w,
+        'h': h,
+        'area_ratio': float(m.mean()),
+        'comp': max(0, int(n_comp) - 1),
+        'boxes': int(len(boxes)),
+    }
+
+
+def run_eda(image_dir, mask_dir, report_dir, figure_dir, mask_threshold=127, min_area_ratio=0.001, limit=0, workers=8):
     pairs, _, _ = find_pairs(image_dir, mask_dir)
     if limit and limit > 0:
         pairs = pairs[:limit]
@@ -67,28 +89,19 @@ def run_eda(image_dir, mask_dir, report_dir, figure_dir, mask_threshold=127, min
     area_ratios, comp_counts, filtered_box_counts = [], [], []
     invalid_samples = []
 
-    for key, ip, mp in pairs:
-        try:
-            img = read_rgb(ip)
-            m = read_mask(mp, threshold=mask_threshold)
-        except Exception as e:
-            invalid_samples.append({'key': key, 'reason': str(e)})
-            continue
-        h, w = img.shape[:2]
-        if m.shape != (h, w):
-            invalid_samples.append({'key': key, 'reason': f'size_mismatch {m.shape} vs {(h, w)}'})
-            continue
-
-        widths.append(w)
-        heights.append(h)
-        aspect_ratios.append(w / max(1, h))
-        ratio = float(m.mean())
-        area_ratios.append(ratio)
-
-        n_comp, _, _, _ = cv2.connectedComponentsWithStats(m, connectivity=8)
-        comp_counts.append(max(0, n_comp - 1))
-        boxes = mask_to_boxes(m, min_area_ratio=min_area_ratio, fallback_largest=False)
-        filtered_box_counts.append(int(len(boxes)))
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        for idx, res in enumerate(pool.map(lambda it: _eda_one(it, mask_threshold, min_area_ratio), pairs), 1):
+            if idx % 500 == 0 or idx == len(pairs):
+                print(f'[eda] {idx}/{len(pairs)}', flush=True)
+            if not res['ok']:
+                invalid_samples.append({'key': res['key'], 'reason': res['reason']})
+                continue
+            widths.append(res['w'])
+            heights.append(res['h'])
+            aspect_ratios.append(res['w'] / max(1, res['h']))
+            area_ratios.append(res['area_ratio'])
+            comp_counts.append(res['comp'])
+            filtered_box_counts.append(res['boxes'])
 
     summary = {
         'sample_count': len(widths),

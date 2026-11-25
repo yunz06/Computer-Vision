@@ -46,8 +46,9 @@ def run(
     dev = device()
     use_amp = dev.type == 'cuda' and bool(seg_cfg.get('amp', True))
 
-    train_ds = SegmentationDataset(tr, size, augment=use_augment, mask_threshold=mask_thresh, seed=seed)
-    val_ds = SegmentationDataset(va, size, augment=False, mask_threshold=mask_thresh, seed=seed) if va else None
+    cache_dir = cfg['paths'].get('processed')
+    train_ds = SegmentationDataset(tr, size, augment=use_augment, mask_threshold=mask_thresh, seed=seed, cache_dir=cache_dir)
+    val_ds = SegmentationDataset(va, size, augment=False, mask_threshold=mask_thresh, seed=seed, cache_dir=cache_dir) if va else None
     train_loader = DataLoader(train_ds, batch_size=bs, shuffle=True, num_workers=seg_cfg.get('num_workers', 0))
     val_loader = DataLoader(val_ds, batch_size=1, shuffle=False, num_workers=0) if val_ds is not None else []
 

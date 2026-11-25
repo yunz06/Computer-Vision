@@ -5,7 +5,7 @@ from PIL import Image
 from src.data import find_pairs, SegmentationDataset, DetectionDataset
 from src.audit import run_audit
 from src.eda import run_eda
-from src.prepare import prepare_splits, load_records
+from src.prepare import prepare_splits, load_records, _group_split
 from src.baselines import run as run_baselines
 
 
@@ -98,3 +98,43 @@ def test_datasets_and_baselines(tmp_path):
     assert len(res) == 5
     summary = json.loads((tmp_path / 'results' / 'baseline_summary.json').read_text(encoding='utf-8'))
     assert 'otsu_morphology' in summary and 'kmeans_lab' in summary and 'watershed' in summary and 'center_box' in summary
+
+
+
+def test_group_split_refuses_to_break_small_repeated_groups():
+    records = [
+        {'key': 'a', 'group_id': 'lesion_a'},
+        {'key': 'b', 'group_id': 'lesion_a'},
+        {'key': 'c', 'group_id': 'lesion_b'},
+        {'key': 'd', 'group_id': 'lesion_b'},
+    ]
+    try:
+        _group_split(records, 0.7, 0.15, 42)
+    except ValueError as exc:
+        assert 'không thể tạo train/val/test' in str(exc)
+    else:
+        raise AssertionError('Không được chia rời các ảnh thuộc cùng group.')
+
+
+def test_detection_uses_one_box_for_largest_mask_component(tmp_path):
+    im = tmp_path / 'images'
+    ma = tmp_path / 'masks'
+    im.mkdir()
+    ma.mkdir()
+    image = np.full((100, 100, 3), 180, dtype=np.uint8)
+    mask = np.zeros((100, 100), dtype=np.uint8)
+    mask[10:50, 10:50] = 255       # vùng chính
+    mask[70:80, 70:80] = 255       # vùng rời nhỏ hơn
+    Image.fromarray(image).save(im / 'ISIC_0000001.jpg')
+    Image.fromarray(mask).save(ma / 'ISIC_0000001_segmentation.png')
+    pairs, _, _ = find_pairs(im, ma)
+
+    ds = DetectionDataset(pairs, size=100, augment=False, multi_component=False)
+    _, target = ds[0]
+    assert target['boxes'].shape == (1, 4)
+    assert torch_allclose(target['boxes'][0], [10, 10, 50, 50])
+
+
+def torch_allclose(actual, expected):
+    import torch
+    return torch.allclose(actual, torch.tensor(expected, dtype=actual.dtype))

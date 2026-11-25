@@ -1,5 +1,6 @@
 from pathlib import Path
 from collections import Counter
+from concurrent.futures import ThreadPoolExecutor
 import cv2
 import numpy as np
 from PIL import Image
@@ -7,7 +8,41 @@ from .data import find_pairs, read_mask_raw, read_rgb, IMAGE_EXTS
 from .utils import save_json
 
 
-def run_audit(image_dir, mask_dir, report_dir, mask_threshold=127):
+def _audit_one(item, mask_threshold):
+    key, ip, mp = item
+    try:
+        with Image.open(ip) as im:
+            im_size = im.size
+        image_shape = read_rgb(ip).shape[:2]
+    except Exception as e:
+        return {'status': 'bad_image', 'key': key, 'error': str(e)}
+
+    try:
+        raw_m = read_mask_raw(mp)
+        uniq = np.unique(raw_m)
+        is_binary_0_255 = set(int(v) for v in uniq).issubset({0, 255})
+        m = (raw_m > mask_threshold).astype(np.uint8)
+        n, _, _, _ = cv2.connectedComponentsWithStats(m, 8)
+        return {
+            'status': 'ok',
+            'key': key,
+            'im_size': str(im_size),
+            'size_mismatch': m.shape != image_shape,
+            'image_shape': list(image_shape),
+            'mask_shape': list(m.shape),
+            'empty': not bool(m.any()),
+            'components': max(0, int(n) - 1),
+            'is_binary_0_255': is_binary_0_255,
+            'uniq_sample': [int(v) for v in uniq[:10]],
+            'min': int(uniq.min()),
+            'max': int(uniq.max()),
+            'unique_count': int(len(uniq)),
+        }
+    except Exception as e:
+        return {'status': 'bad_mask', 'key': key, 'error': str(e)}
+
+
+def run_audit(image_dir, mask_dir, report_dir, mask_threshold=127, workers=8):
     pairs, missing_masks, orphan_masks = find_pairs(image_dir, mask_dir)
     bad_images = []
     bad_masks = []
@@ -18,31 +53,35 @@ def run_audit(image_dir, mask_dir, report_dir, mask_threshold=127):
     components = Counter()
     pixel_values_seen = set()
 
-    for key, ip, mp in pairs:
-        try:
-            with Image.open(ip) as im:
-                sizes[str(im.size)] += 1
-            image_shape = read_rgb(ip).shape[:2]
-        except Exception as e:
-            bad_images.append({'key': key, 'error': str(e)})
-            continue
-
-        try:
-            raw_m = read_mask_raw(mp)
-            uniq = np.unique(raw_m)
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        for idx, res in enumerate(pool.map(lambda it: _audit_one(it, mask_threshold), pairs), 1):
+            if idx % 500 == 0 or idx == len(pairs):
+                print(f'[audit] {idx}/{len(pairs)}', flush=True)
+            if res['status'] == 'bad_image':
+                bad_images.append({'key': res['key'], 'error': res['error']})
+                continue
+            if res['status'] == 'bad_mask':
+                bad_masks.append({'key': res['key'], 'error': res['error']})
+                continue
+            sizes[res['im_size']] += 1
             if len(pixel_values_seen) < 32:
-                pixel_values_seen.update(int(v) for v in uniq[:10])
-            if not set(int(v) for v in uniq).issubset({0, 255}):
-                non_binary_masks.append({'key': key, 'unique_count': int(len(uniq)), 'min': int(uniq.min()), 'max': int(uniq.max())})
-            m = (raw_m > mask_threshold).astype(np.uint8)
-            if m.shape != image_shape:
-                size_mismatch.append({'key': key, 'image_shape': list(image_shape), 'mask_shape': list(m.shape)})
-            if not m.any():
-                empty.append(key)
-            n, _, _, _ = cv2.connectedComponentsWithStats(m, 8)
-            components[str(max(0, n - 1))] += 1
-        except Exception as e:
-            bad_masks.append({'key': key, 'error': str(e)})
+                pixel_values_seen.update(res['uniq_sample'])
+            if not res['is_binary_0_255']:
+                non_binary_masks.append({
+                    'key': res['key'],
+                    'unique_count': res['unique_count'],
+                    'min': res['min'],
+                    'max': res['max'],
+                })
+            if res['size_mismatch']:
+                size_mismatch.append({
+                    'key': res['key'],
+                    'image_shape': res['image_shape'],
+                    'mask_shape': res['mask_shape'],
+                })
+            if res['empty']:
+                empty.append(res['key'])
+            components[str(res['components'])] += 1
 
     bad_img_keys = {x['key'] for x in bad_images}
     bad_mask_keys = {x['key'] for x in bad_masks}

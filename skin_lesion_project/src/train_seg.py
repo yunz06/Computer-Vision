@@ -7,7 +7,7 @@ from .models import build_segmentation_model
 from .losses import segmentation_loss
 from .metrics import binary_metrics
 from .utils import device, save_json, save_loss_plot
-
+from tqdm.auto import tqdm
 
 def run(
     cfg,
@@ -68,26 +68,66 @@ def run(
         losses = []
         if dev.type == 'cuda':
             torch.cuda.reset_peak_memory_stats(dev)
-        for x, y in train_loader:
+        train_bar = tqdm(
+            train_loader,
+            desc=f'Epoch {ep}/{n_epochs} [Train]',
+            unit='batch',
+            dynamic_ncols=True
+        )
+
+        for x, y in train_bar:
             x = x.to(dev)
             y = y.to(dev)
+
             opt.zero_grad(set_to_none=True)
+
             with torch.autocast(device_type=dev.type, enabled=use_amp):
                 logits = model(x)
                 loss = segmentation_loss(logits, y, loss_name)
+
             scaler.scale(loss).backward()
             scaler.step(opt)
             scaler.update()
-            losses.append(float(loss.detach().cpu()))
+
+            loss_value = float(loss.detach().cpu())
+            losses.append(loss_value)
+
+            train_bar.set_postfix(
+                loss=f'{loss_value:.4f}',
+                avg_loss=f'{sum(losses) / len(losses):.4f}'
+            )
 
         max_vram_mb = round(torch.cuda.max_memory_allocated(dev) / (1024 ** 2), 1) if dev.type == 'cuda' else 0.0
         model.eval()
         vals = []
+        val_bar = tqdm(
+            val_loader,
+            desc=f'Epoch {ep}/{n_epochs} [Val]',
+            unit='image',
+            dynamic_ncols=True
+        )
+
         with torch.no_grad():
-            for x, y in val_loader:
+            for x, y in val_bar:
                 logits = model(x.to(dev))
-                pred = torch.sigmoid(logits).cpu().numpy()[0, 0] >= threshold
-                vals.append(binary_metrics(pred, y.numpy()[0, 0], boundary_tolerance_px=tol_px))
+
+                pred = (
+                    torch.sigmoid(logits)
+                    .cpu()
+                    .numpy()[0, 0] >= threshold
+                )
+
+                metric = binary_metrics(
+                    pred,
+                    y.numpy()[0, 0],
+                    boundary_tolerance_px=tol_px
+                )
+
+                vals.append(metric)
+
+                val_bar.set_postfix(
+                    dice=f'{sum(v["dice"] for v in vals) / len(vals):.4f}'
+                )
 
         dice = sum(v['dice'] for v in vals) / len(vals) if vals else 0.0
         iou = sum(v['iou'] for v in vals) / len(vals) if vals else 0.0
@@ -99,7 +139,7 @@ def run(
             'max_vram_mb': max_vram_mb,
         }
         history.append(row)
-        print(row)
+        print(row, flush=True)
 
         state = {
             'model': model.state_dict(),

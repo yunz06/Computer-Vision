@@ -82,10 +82,18 @@ def _predict_seg_prob_maps(model, dev, size, records, mask_threshold=127, cache_
     return items
 
 
-def eval_seg(cfg, split='test', checkpoint=None, threshold=None, largest_component=None, hole_filling=None, save_qualitative=True):
-    records = load_records(Path(cfg['paths']['splits']) / 'split.json', split)
+
+def eval_seg(cfg, split='test', checkpoint=None, threshold=None,
+             largest_component=None, hole_filling=None,
+             save_qualitative=True):
+    import gc
+
+    records = load_records(
+        Path(cfg['paths']['splits']) / 'split.json', split
+    )
     if not records:
         raise RuntimeError(f'Split "{split}" rỗng.')
+
     model, dev, size, state = _load_seg_model(cfg, checkpoint)
     seg_cfg = cfg['segmentation']
     data_cfg = cfg.get('data', {})
@@ -93,31 +101,110 @@ def eval_seg(cfg, split='test', checkpoint=None, threshold=None, largest_compone
 
     selection_path = Path(cfg['paths']['results']) / 'val_selection.json'
     selection = {}
+
     if threshold is None and selection_path.exists():
         try:
             import json
-            selection = json.loads(selection_path.read_text(encoding='utf-8')).get('segmentation_best') or {}
+            selection = (
+                json.loads(selection_path.read_text(encoding='utf-8'))
+                .get('segmentation_best') or {}
+            )
         except (OSError, ValueError):
             selection = {}
-    thresh = float(threshold) if threshold is not None else float(selection.get('threshold', seg_cfg.get('threshold', 0.5)))
-    use_lc = bool(largest_component) if largest_component is not None else bool(selection.get('largest_component', seg_cfg.get('largest_component', False)))
-    use_hf = bool(hole_filling) if hole_filling is not None else bool(selection.get('hole_filling', seg_cfg.get('hole_filling', False)))
+
+    thresh = float(
+        threshold if threshold is not None
+        else selection.get('threshold', seg_cfg.get('threshold', 0.5))
+    )
+    use_lc = (
+        bool(largest_component) if largest_component is not None
+        else bool(selection.get(
+            'largest_component',
+            seg_cfg.get('largest_component', False)
+        ))
+    )
+    use_hf = (
+        bool(hole_filling) if hole_filling is not None
+        else bool(selection.get(
+            'hole_filling',
+            seg_cfg.get('hole_filling', False)
+        ))
+    )
+
     mask_thresh = data_cfg.get('mask_threshold', 127)
     tol_px = eval_cfg.get('boundary_tolerance_px', 2)
+    cache_dir = cfg['paths'].get('processed')
 
-    items = _predict_seg_prob_maps(
-        model, dev, size, records, mask_threshold=mask_thresh, cache_dir=cfg['paths'].get('processed')
-    )
     rows = []
-    qualitative_records = []
-    for key, ip, gt_orig, prob_orig in items:
+    # Chỉ lưu thông tin đường dẫn và điểm số, không giữ mask ảnh trong RAM.
+    candidates = []
+
+    for idx, (key, ip, mp) in enumerate(records):
+        gt_orig = read_mask(mp, threshold=mask_thresh)
+
+        lb, meta = load_or_cache_letterbox(
+            key, ip, None, size,
+            mask_threshold=mask_thresh,
+            cache_dir=cache_dir
+        )
+
+        x = (
+            torch.from_numpy(lb.copy())
+            .permute(2, 0, 1)
+            .float()
+            .unsqueeze(0)
+            .to(dev) / 255.0
+        )
+
+        with torch.no_grad():
+            logits = model(x)
+            prob_lb = torch.sigmoid(logits)[0, 0].cpu().numpy()
+
+        del x, logits, lb
+
+        prob_orig = unletterbox_prob_map(prob_lb, meta)
+        del prob_lb
+
         pred = (prob_orig >= thresh).astype(np.uint8)
+
         if use_lc or use_hf:
-            pred = postprocess_mask(pred, largest_component=use_lc, hole_filling=use_hf)
-        m = binary_metrics(pred, gt_orig, boundary_tolerance_px=tol_px)
+            pred = postprocess_mask(
+                pred,
+                largest_component=use_lc,
+                hole_filling=use_hf
+            )
+
+        m = binary_metrics(
+            pred, gt_orig,
+            boundary_tolerance_px=tol_px
+        )
         m['key'] = key
         rows.append(m)
-        qualitative_records.append({'key': key, 'ip': ip, 'gt': gt_orig, 'pred': pred, 'dice': m['dice'], 'iou': m['iou']})
+
+        candidates.append({
+            'index': idx,
+            'key': key,
+            'ip': ip,
+            'mp': mp,
+            'dice': m['dice'],
+            'iou': m['iou'],
+        })
+
+        # Giải phóng các mảng lớn trước khi đọc ảnh tiếp theo.
+        del gt_orig, prob_orig, pred
+        gc.collect()
+
+        if dev.type == 'cuda':
+            torch.cuda.empty_cache()
+
+        print(
+            f'\r[eval-seg] {idx + 1}/{len(records)} '
+            f'Dice={m["dice"]:.4f} IoU={m["iou"]:.4f}',
+            end='',
+            flush=True
+        )
+
+    print()
 
     result = segmentation_summary(rows)
     result.update({
@@ -129,21 +216,89 @@ def eval_seg(cfg, split='test', checkpoint=None, threshold=None, largest_compone
         'hole_filling': use_hf,
         'boundary_tolerance_px': tol_px,
     })
-    out_name = 'seg_test_metrics.json' if split == 'test' else f'seg_{split}_metrics.json'
-    save_json(result, Path(cfg['paths']['results']) / out_name)
-    save_json(rows, Path(cfg['paths']['results']) / f'seg_{split}_per_image.json')
-    if save_qualitative and qualitative_records:
+
+    out_name = (
+        'seg_test_metrics.json'
+        if split == 'test'
+        else f'seg_{split}_metrics.json'
+    )
+
+    save_json(
+        result,
+        Path(cfg['paths']['results']) / out_name
+    )
+    save_json(
+        rows,
+        Path(cfg['paths']['results']) / f'seg_{split}_per_image.json'
+    )
+
+    # Chỉ nạp lại một số ảnh cần thiết để tạo hình minh họa.
+    if save_qualitative and candidates:
         k_qual = eval_cfg.get('qualitative_count', 3)
-        ordered = sorted(qualitative_records, key=lambda r: r['dice'])
+        ordered = sorted(candidates, key=lambda r: r['dice'])
         n = len(ordered)
-        selected_idx = set(range(min(k_qual, n))) | {n // 2} | set(range(max(0, n - min(k_qual, n)), n))
-        for idx in selected_idx:
-            ordered[idx]['image'] = read_rgb(ordered[idx]['ip'])
+
+        selected_idx = (
+            set(range(min(k_qual, n)))
+            | {n // 2}
+            | set(range(max(0, n - min(k_qual, n)), n))
+        )
+
+        qualitative_records = []
+
+        for idx in sorted(selected_idx):
+            item = ordered[idx]
+            gt_orig = read_mask(
+                item['mp'], threshold=mask_thresh
+            )
+
+            lb, meta = load_or_cache_letterbox(
+                item['key'], item['ip'], None, size,
+                mask_threshold=mask_thresh,
+                cache_dir=cache_dir
+            )
+
+            x = (
+                torch.from_numpy(lb.copy())
+                .permute(2, 0, 1)
+                .float()
+                .unsqueeze(0)
+                .to(dev) / 255.0
+            )
+
+            with torch.no_grad():
+                logits = model(x)
+                prob_lb = torch.sigmoid(logits)[0, 0].cpu().numpy()
+
+            prob_orig = unletterbox_prob_map(prob_lb, meta)
+            pred = (prob_orig >= thresh).astype(np.uint8)
+
+            if use_lc or use_hf:
+                pred = postprocess_mask(
+                    pred,
+                    largest_component=use_lc,
+                    hole_filling=use_hf
+                )
+
+            qualitative_records.append({
+                'key': item['key'],
+                'ip': item['ip'],
+                'image': read_rgb(item['ip']),
+                'gt': gt_orig,
+                'pred': pred,
+                'dice': item['dice'],
+                'iou': item['iou'],
+            })
+
+            del gt_orig, prob_orig, pred, x, logits, lb
+            gc.collect()
+
         save_seg_qualitative_grid(
-            [ordered[idx] for idx in sorted(selected_idx)],
+            qualitative_records,
             Path(cfg['paths']['figures']) / f'seg_{split}_qualitative.png',
             k=k_qual,
         )
+
     return result
 
 

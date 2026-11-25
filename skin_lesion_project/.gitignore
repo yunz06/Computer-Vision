@@ -1,0 +1,10 @@
+__pycache__/
+.pytest_cache/
+.venv/
+*.py[cod]
+data/raw/**
+data/processed/**
+outputs/checkpoints/*
+outputs/results/*
+outputs/figures/*
+outputs/demo/*

@@ -1,0 +1,20 @@
+# Dataset
+data/raw/
+data/processed/
+
+# Model checkpoints
+outputs/checkpoints/
+*.pth
+*.pt
+*.ckpt
+*.onnx
+
+# Cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Logs
+*.log

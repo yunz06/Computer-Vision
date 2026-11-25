@@ -1,0 +1,35 @@
+seed: 42
+paths:
+  images: data/raw/images
+  masks: data/raw/masks
+  processed: data/processed
+  splits: data/splits
+  reports: reports
+  checkpoints: outputs/checkpoints
+  results: outputs/results
+  figures: outputs/figures
+  demo: outputs/demo
+image_size: 256
+detection_size: 512
+sample_size: 100
+split:
+  train: 0.70
+  val: 0.15
+  test: 0.15
+segmentation:
+  epochs: 40
+  batch_size: 4
+  learning_rate: 0.0003
+  num_workers: 0
+  loss: bce_dice
+  threshold: 0.5
+  amp: true
+detection:
+  epochs: 20
+  batch_size: 1
+  learning_rate: 0.0001
+  num_workers: 0
+  score_threshold: 0.5
+  amp: true
+  model: fasterrcnn_resnet50_fpn_v2
+  pretrained: true

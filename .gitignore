@@ -17,4 +17,4 @@ __pycache__/
 venv/
 
 # Logs
-*.log
+*.log.DS_Store

@@ -1,0 +1,56 @@
+{
+  "count": 388,
+  "otsu_dice": 0.22340121079488695,
+  "kmeans_lab_dice": 0.5621584194030759,
+  "watershed_dice": 0.20874973838645203,
+  "center_box_iou": 0.3958152938949299,
+  "otsu_morphology": {
+    "mean_dice": 0.22340121079488695,
+    "std_dice": 0.3058811692245387,
+    "mean_iou": 0.16916849299444822,
+    "std_iou": 0.25512266879685563,
+    "mean_thresholded_jaccard_065": 0.06162453739960059,
+    "std_thresholded_jaccard_065": 0.2141347866316168,
+    "mean_boundary_f1": 0.002588611871308005,
+    "std_boundary_f1": 0.01999911289683218,
+    "failure_rate_jaccard_below_0_65": 0.9226804123711341,
+    "failure_rate_dice_below_0_65": 0.845360824742268,
+    "count": 388
+  },
+  "kmeans_lab": {
+    "mean_dice": 0.5621584194030759,
+    "std_dice": 0.3075808490248078,
+    "mean_iou": 0.4522897998709931,
+    "std_iou": 0.29079496920579945,
+    "mean_thresholded_jaccard_065": 0.249272454475313,
+    "std_thresholded_jaccard_065": 0.3686655359151353,
+    "mean_boundary_f1": 0.03303367076253979,
+    "std_boundary_f1": 0.08380276339995453,
+    "failure_rate_jaccard_below_0_65": 0.6829896907216495,
+    "failure_rate_dice_below_0_65": 0.5077319587628866,
+    "count": 388
+  },
+  "watershed": {
+    "mean_dice": 0.20874973838645203,
+    "std_dice": 0.29070121430232904,
+    "mean_iou": 0.1549243356521292,
+    "std_iou": 0.23951088346009097,
+    "mean_thresholded_jaccard_065": 0.05295637066442222,
+    "std_thresholded_jaccard_065": 0.1987829267057835,
+    "mean_boundary_f1": 0.0065971416700516435,
+    "std_boundary_f1": 0.038697031200701525,
+    "failure_rate_jaccard_below_0_65": 0.9329896907216495,
+    "failure_rate_dice_below_0_65": 0.8737113402061856,
+    "count": 388
+  },
+  "center_box": {
+    "count": 388,
+    "ap50": 0.1202153720526692,
+    "ap5095": 0.026185115243028256,
+    "top1_box_iou": 0.3958152938949299,
+    "top1_box_iou_std": 0.1941299303959337,
+    "top1_iou_at_0_5": 0.33762886597938147,
+    "top1_iou_at_0_75": 0.02577319587628866,
+    "top1_iou_at_0_9": 0.0
+  }
+}

@@ -1,0 +1,286 @@
+{
+  "split": "val",
+  "count": 389,
+  "segmentation_best": {
+    "threshold": 0.5,
+    "largest_component": false,
+    "hole_filling": false,
+    "mean_dice": 0.8742593345405816,
+    "mean_iou": 0.7990394634026995,
+    "mean_thresholded_jaccard_065": 0.7338015402252305
+  },
+  "segmentation_sweep": [
+    {
+      "threshold": 0.3,
+      "largest_component": false,
+      "hole_filling": false,
+      "mean_dice": 0.8720150897507071,
+      "mean_iou": 0.7958170761006439,
+      "mean_thresholded_jaccard_065": 0.7322197515143494
+    },
+    {
+      "threshold": 0.3,
+      "largest_component": true,
+      "hole_filling": false,
+      "mean_dice": 0.8709576560581542,
+      "mean_iou": 0.7965676989246714,
+      "mean_thresholded_jaccard_065": 0.7392361759326513
+    },
+    {
+      "threshold": 0.3,
+      "largest_component": true,
+      "hole_filling": true,
+      "mean_dice": 0.8710270118064863,
+      "mean_iou": 0.7966905231133096,
+      "mean_thresholded_jaccard_065": 0.7393686623506164
+    },
+    {
+      "threshold": 0.35,
+      "largest_component": false,
+      "hole_filling": false,
+      "mean_dice": 0.8731024196641429,
+      "mean_iou": 0.7973623484478304,
+      "mean_thresholded_jaccard_065": 0.7330378517289585
+    },
+    {
+      "threshold": 0.35,
+      "largest_component": true,
+      "hole_filling": false,
+      "mean_dice": 0.8716511577687658,
+      "mean_iou": 0.7976368856113325,
+      "mean_thresholded_jaccard_065": 0.7382942930598796
+    },
+    {
+      "threshold": 0.35,
+      "largest_component": true,
+      "hole_filling": true,
+      "mean_dice": 0.8717214830858349,
+      "mean_iou": 0.7977690415282616,
+      "mean_thresholded_jaccard_065": 0.7383787377503165
+    },
+    {
+      "threshold": 0.4,
+      "largest_component": false,
+      "hole_filling": false,
+      "mean_dice": 0.8737993357505854,
+      "mean_iou": 0.7983480446736695,
+      "mean_thresholded_jaccard_065": 0.730115613145006
+    },
+    {
+      "threshold": 0.4,
+      "largest_component": true,
+      "hole_filling": false,
+      "mean_dice": 0.8719717752256885,
+      "mean_iou": 0.7981681854043351,
+      "mean_thresholded_jaccard_065": 0.7352538542578773
+    },
+    {
+      "threshold": 0.4,
+      "largest_component": true,
+      "hole_filling": true,
+      "mean_dice": 0.8720568361386997,
+      "mean_iou": 0.7982962141874532,
+      "mean_thresholded_jaccard_065": 0.7353162893572067
+    },
+    {
+      "threshold": 0.45,
+      "largest_component": false,
+      "hole_filling": false,
+      "mean_dice": 0.8741584116353995,
+      "mean_iou": 0.7988662804777693,
+      "mean_thresholded_jaccard_065": 0.728612549696941
+    },
+    {
+      "threshold": 0.45,
+      "largest_component": true,
+      "hole_filling": false,
+      "mean_dice": 0.8712090113680765,
+      "mean_iou": 0.7978323033070814,
+      "mean_thresholded_jaccard_065": 0.7336728625263189
+    },
+    {
+      "threshold": 0.45,
+      "largest_component": true,
+      "hole_filling": true,
+      "mean_dice": 0.8712723777737837,
+      "mean_iou": 0.7979229473470282,
+      "mean_thresholded_jaccard_065": 0.7337576012882449
+    },
+    {
+      "threshold": 0.5,
+      "largest_component": false,
+      "hole_filling": false,
+      "mean_dice": 0.8742593345405816,
+      "mean_iou": 0.7990394634026995,
+      "mean_thresholded_jaccard_065": 0.7338015402252305
+    },
+    {
+      "threshold": 0.5,
+      "largest_component": true,
+      "hole_filling": false,
+      "mean_dice": 0.8708628111338909,
+      "mean_iou": 0.7974295885804192,
+      "mean_thresholded_jaccard_065": 0.7351881474994547
+    },
+    {
+      "threshold": 0.5,
+      "largest_component": true,
+      "hole_filling": true,
+      "mean_dice": 0.870961208821526,
+      "mean_iou": 0.7975558987948878,
+      "mean_thresholded_jaccard_065": 0.7352455480328406
+    },
+    {
+      "threshold": 0.55,
+      "largest_component": false,
+      "hole_filling": false,
+      "mean_dice": 0.8741121628626558,
+      "mean_iou": 0.7988708586030824,
+      "mean_thresholded_jaccard_065": 0.7337922946422687
+    },
+    {
+      "threshold": 0.55,
+      "largest_component": true,
+      "hole_filling": false,
+      "mean_dice": 0.8704102196844734,
+      "mean_iou": 0.796891913156337,
+      "mean_thresholded_jaccard_065": 0.7349778265842489
+    },
+    {
+      "threshold": 0.55,
+      "largest_component": true,
+      "hole_filling": true,
+      "mean_dice": 0.870537385036293,
+      "mean_iou": 0.7970437936495085,
+      "mean_thresholded_jaccard_065": 0.7350681036152149
+    },
+    {
+      "threshold": 0.6,
+      "largest_component": false,
+      "hole_filling": false,
+      "mean_dice": 0.8736440896131747,
+      "mean_iou": 0.7982298871293592,
+      "mean_thresholded_jaccard_065": 0.730064154723598
+    },
+    {
+      "threshold": 0.6,
+      "largest_component": true,
+      "hole_filling": false,
+      "mean_dice": 0.8696975349298673,
+      "mean_iou": 0.7959562944036861,
+      "mean_thresholded_jaccard_065": 0.7327333523895828
+    },
+    {
+      "threshold": 0.6,
+      "largest_component": true,
+      "hole_filling": true,
+      "mean_dice": 0.8698293789078527,
+      "mean_iou": 0.7961044956295144,
+      "mean_thresholded_jaccard_065": 0.7345061411074729
+    },
+    {
+      "threshold": 0.65,
+      "largest_component": false,
+      "hole_filling": false,
+      "mean_dice": 0.8728151075556709,
+      "mean_iou": 0.7970541616005387,
+      "mean_thresholded_jaccard_065": 0.7310048576125443
+    },
+    {
+      "threshold": 0.65,
+      "largest_component": true,
+      "hole_filling": false,
+      "mean_dice": 0.8685343575264185,
+      "mean_iou": 0.7944909234324611,
+      "mean_thresholded_jaccard_065": 0.7318395831606239
+    },
+    {
+      "threshold": 0.65,
+      "largest_component": true,
+      "hole_filling": true,
+      "mean_dice": 0.8686973975131032,
+      "mean_iou": 0.7946905238529909,
+      "mean_thresholded_jaccard_065": 0.7319358529769611
+    },
+    {
+      "threshold": 0.7,
+      "largest_component": false,
+      "hole_filling": false,
+      "mean_dice": 0.8716219255696612,
+      "mean_iou": 0.7952973567486491,
+      "mean_thresholded_jaccard_065": 0.7264095600618385
+    },
+    {
+      "threshold": 0.7,
+      "largest_component": true,
+      "hole_filling": false,
+      "mean_dice": 0.8686261704754819,
+      "mean_iou": 0.7935976190670977,
+      "mean_thresholded_jaccard_065": 0.727119313008437
+    },
+    {
+      "threshold": 0.7,
+      "largest_component": true,
+      "hole_filling": true,
+      "mean_dice": 0.8687917227931077,
+      "mean_iou": 0.7937831819939319,
+      "mean_thresholded_jaccard_065": 0.7288809201132894
+    }
+  ],
+  "detection_best": {
+    "score_threshold": 0.6,
+    "precision": 0.9714285714285714,
+    "recall": 0.961439588688946,
+    "f1": 0.9664082687338501
+  },
+  "detection_sweep": [
+    {
+      "score_threshold": 0.1,
+      "precision": 0.8710407239819005,
+      "recall": 0.9897172236503856,
+      "f1": 0.9265944645006017
+    },
+    {
+      "score_threshold": 0.2,
+      "precision": 0.9225181598062954,
+      "recall": 0.9794344473007712,
+      "f1": 0.9501246882793017
+    },
+    {
+      "score_threshold": 0.3,
+      "precision": 0.9404466501240695,
+      "recall": 0.974293059125964,
+      "f1": 0.9570707070707071
+    },
+    {
+      "score_threshold": 0.4,
+      "precision": 0.952020202020202,
+      "recall": 0.9691516709511568,
+      "f1": 0.9605095541401274
+    },
+    {
+      "score_threshold": 0.5,
+      "precision": 0.959079283887468,
+      "recall": 0.9640102827763496,
+      "f1": 0.9615384615384615
+    },
+    {
+      "score_threshold": 0.6,
+      "precision": 0.9714285714285714,
+      "recall": 0.961439588688946,
+      "f1": 0.9664082687338501
+    },
+    {
+      "score_threshold": 0.7,
+      "precision": 0.9763157894736842,
+      "recall": 0.9537275064267352,
+      "f1": 0.9648894668400521
+    },
+    {
+      "score_threshold": 0.8,
+      "precision": 0.981029810298103,
+      "recall": 0.9305912596401028,
+      "f1": 0.9551451187335093
+    }
+  ]
+}

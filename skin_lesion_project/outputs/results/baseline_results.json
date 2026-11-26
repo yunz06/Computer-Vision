@@ -1,0 +1,3882 @@
+[
+  {
+    "key": "isic_0010262",
+    "otsu_dice": 0.23828238116986072,
+    "otsu_iou": 0.13525571784255946,
+    "kmeans_lab_dice": 0.8437034831796235,
+    "kmeans_lab_iou": 0.7296601441815728,
+    "watershed_dice": 0.24351412662482624,
+    "watershed_iou": 0.13863711078859411,
+    "center_box_iou": 0.6771956162734939
+  },
+  {
+    "key": "isic_0011211",
+    "otsu_dice": 0.06178347974497195,
+    "otsu_iou": 0.03187645915697204,
+    "kmeans_lab_dice": 0.93131781973281,
+    "kmeans_lab_iou": 0.871463786829482,
+    "watershed_dice": 0.09662003649345959,
+    "watershed_iou": 0.050762348215410404,
+    "center_box_iou": 0.45566487050224097
+  },
+  {
+    "key": "isic_0012742",
+    "otsu_dice": 0.16744030443865796,
+    "otsu_iou": 0.09136963169391774,
+    "kmeans_lab_dice": 0.14520009712418816,
+    "kmeans_lab_iou": 0.07828342933351821,
+    "watershed_dice": 0.18518665923906474,
+    "watershed_iou": 0.10204171144300962,
+    "center_box_iou": 0.04029654255318881
+  },
+  {
+    "key": "isic_0013219",
+    "otsu_dice": 1.1072848268747912e-12,
+    "otsu_iou": 1.1072848268747912e-12,
+    "kmeans_lab_dice": 0.8594575258296723,
+    "kmeans_lab_iou": 0.7535515294640848,
+    "watershed_dice": 1.1072848268747912e-12,
+    "watershed_iou": 1.1072848268747912e-12,
+    "center_box_iou": 0.0805046542553138
+  },
+  {
+    "key": "isic_0009297",
+    "otsu_dice": 1.521685540639424e-13,
+    "otsu_iou": 1.521685540639424e-13,
+    "kmeans_lab_dice": 0.5659371788384642,
+    "kmeans_lab_iou": 0.39463904264677885,
+    "watershed_dice": 1.5335870908770686e-13,
+    "watershed_iou": 1.5335870908770686e-13,
+    "center_box_iou": 0.2449558737212732
+  },
+  {
+    "key": "isic_0012395",
+    "otsu_dice": 0.1724150283289891,
+    "otsu_iou": 0.0943403622822968,
+    "kmeans_lab_dice": 0.9468135011255325,
+    "kmeans_lab_iou": 0.8989988972868463,
+    "watershed_dice": 0.1756553403122308,
+    "watershed_iou": 0.09628407624600292,
+    "center_box_iou": 0.6137728226559324
+  },
+  {
+    "key": "isic_0013053",
+    "otsu_dice": 3.188856858592314e-13,
+    "otsu_iou": 3.188856858592314e-13,
+    "kmeans_lab_dice": 2.801426486366073e-13,
+    "kmeans_lab_iou": 2.801426486366073e-13,
+    "watershed_dice": 3.36651595896777e-13,
+    "watershed_iou": 3.36651595896777e-13,
+    "center_box_iou": 0.1120572836955368
+  },
+  {
+    "key": "isic_0009980",
+    "otsu_dice": 1.4468974178666585e-13,
+    "otsu_iou": 1.4468974178666585e-13,
+    "kmeans_lab_dice": 0.8931035858162902,
+    "kmeans_lab_iou": 0.8068538070700433,
+    "watershed_dice": 1.4468974178666585e-13,
+    "watershed_iou": 1.4468974178666585e-13,
+    "center_box_iou": 0.26764171773792494
+  },
+  {
+    "key": "isic_0012135",
+    "otsu_dice": 0.35505047557946984,
+    "otsu_iou": 0.21584277833991625,
+    "kmeans_lab_dice": 0.39611169002305396,
+    "kmeans_lab_iou": 0.24696962223562852,
+    "watershed_dice": 0.36602342712263447,
+    "watershed_iou": 0.22400775702582876,
+    "center_box_iou": 0.09929491904019822
+  },
+  {
+    "key": "isic_0008294",
+    "otsu_dice": 5.412309757309101e-13,
+    "otsu_iou": 5.412309757309101e-13,
+    "kmeans_lab_dice": 0.14500130222876226,
+    "kmeans_lab_iou": 0.07816787278776953,
+    "watershed_dice": 5.412309757309101e-13,
+    "watershed_iou": 5.412309757309101e-13,
+    "center_box_iou": 0.17826961031324942
+  },
+  {
+    "key": "isic_0001131",
+    "otsu_dice": 0.006712714979642075,
+    "otsu_iou": 0.003367660562587028,
+    "kmeans_lab_dice": 0.18839092499350213,
+    "kmeans_lab_iou": 0.10399093689285224,
+    "watershed_dice": 0.0011819962777129126,
+    "watershed_iou": 0.0005913476242156826,
+    "center_box_iou": 0.4356230308025577
+  },
+  {
+    "key": "isic_0011085",
+    "otsu_dice": 0.5641779083748583,
+    "otsu_iou": 0.39293023255880394,
+    "kmeans_lab_dice": 0.6376414084427638,
+    "kmeans_lab_iou": 0.46804227051133385,
+    "watershed_dice": 0.49015606540082934,
+    "watershed_iou": 0.3246402188789881,
+    "center_box_iou": 0.5558787734866198
+  },
+  {
+    "key": "isic_0014697",
+    "otsu_dice": 0.47074093448224447,
+    "otsu_iou": 0.30782288305276645,
+    "kmeans_lab_dice": 0.7373407257013722,
+    "kmeans_lab_iou": 0.5839585870154475,
+    "watershed_dice": 0.3798354007722806,
+    "watershed_iou": 0.234442476371443,
+    "center_box_iou": 0.6144583581149571
+  },
+  {
+    "key": "isic_0013207",
+    "otsu_dice": 3.587572648344842e-13,
+    "otsu_iou": 3.587572648344842e-13,
+    "kmeans_lab_dice": 2.1960164262023856e-13,
+    "kmeans_lab_iou": 2.1960164262023856e-13,
+    "watershed_dice": 3.520097999527068e-13,
+    "watershed_iou": 3.520097999527068e-13,
+    "center_box_iou": 0.23887300531913308
+  },
+  {
+    "key": "isic_0006651",
+    "otsu_dice": 3.5244774962099446e-13,
+    "otsu_iou": 3.5244774962099446e-13,
+    "kmeans_lab_dice": 0.2396742775564786,
+    "kmeans_lab_iou": 0.13615336894800537,
+    "watershed_dice": 3.5244774962099446e-13,
+    "watershed_iou": 3.5244774962099446e-13,
+    "center_box_iou": 0.14336210569502564
+  },
+  {
+    "key": "isic_0013027",
+    "otsu_dice": 2.0779652564165947e-12,
+    "otsu_iou": 2.0779652564165947e-12,
+    "kmeans_lab_dice": 0.05723354792574851,
+    "kmeans_lab_iou": 0.029459818942614572,
+    "watershed_dice": 2.0779652564165947e-12,
+    "watershed_iou": 2.0779652564165947e-12,
+    "center_box_iou": 0.0275669415110692
+  },
+  {
+    "key": "isic_0013216",
+    "otsu_dice": 2.0082418244471294e-13,
+    "otsu_iou": 2.0082418244471294e-13,
+    "kmeans_lab_dice": 0.4610135597282516,
+    "kmeans_lab_iou": 0.2995566092491937,
+    "watershed_dice": 2.0201163182971994e-13,
+    "watershed_iou": 2.0201163182971994e-13,
+    "center_box_iou": 0.30749493036423625
+  },
+  {
+    "key": "isic_0011105",
+    "otsu_dice": 2.408303831610816e-13,
+    "otsu_iou": 2.408303831610816e-13,
+    "kmeans_lab_dice": 0.6354001321121777,
+    "kmeans_lab_iou": 0.46563109601920244,
+    "watershed_dice": 2.408303831610816e-13,
+    "watershed_iou": 2.408303831610816e-13,
+    "center_box_iou": 0.3699296673025642
+  },
+  {
+    "key": "isic_0013459",
+    "otsu_dice": 4.2776063883483014e-14,
+    "otsu_iou": 4.2776063883483014e-14,
+    "kmeans_lab_dice": 0.0021840300696339045,
+    "kmeans_lab_iou": 0.0010932088353207891,
+    "watershed_dice": 4.2776063883483014e-14,
+    "watershed_iou": 4.2776063883483014e-14,
+    "center_box_iou": 0.6445956469122116
+  },
+  {
+    "key": "isic_0013674",
+    "otsu_dice": 3.76124376808909e-14,
+    "otsu_iou": 3.76124376808909e-14,
+    "kmeans_lab_dice": 0.754686453771184,
+    "kmeans_lab_iou": 0.6060212354202762,
+    "watershed_dice": 3.76124376808909e-14,
+    "watershed_iou": 3.76124376808909e-14,
+    "center_box_iou": 0.5804040676576838
+  },
+  {
+    "key": "isic_0012551",
+    "otsu_dice": 0.1984088882794508,
+    "otsu_iou": 0.11012981080383466,
+    "kmeans_lab_dice": 0.7754373096487447,
+    "kmeans_lab_iou": 0.6332361060472634,
+    "watershed_dice": 0.19186549408411854,
+    "watershed_iou": 0.10611240118286291,
+    "center_box_iou": 0.20478255412941235
+  },
+  {
+    "key": "isic_0015985",
+    "otsu_dice": 0.14876123888828588,
+    "otsu_iou": 0.08035767293427881,
+    "kmeans_lab_dice": 0.8717916806493263,
+    "kmeans_lab_iou": 0.7727222585551627,
+    "watershed_dice": 0.19288364013023157,
+    "watershed_iou": 0.10673559512487647,
+    "center_box_iou": 0.1196780781297779
+  },
+  {
+    "key": "isic_0012836",
+    "otsu_dice": 9.655864972374901e-13,
+    "otsu_iou": 9.655864972374901e-13,
+    "kmeans_lab_dice": 0.7326229317628037,
+    "kmeans_lab_iou": 0.5780623226692728,
+    "watershed_dice": 9.655864972374901e-13,
+    "watershed_iou": 9.655864972374901e-13,
+    "center_box_iou": 0.11357579787233288
+  },
+  {
+    "key": "isic_0001292",
+    "otsu_dice": 2.9645176877939053e-13,
+    "otsu_iou": 2.9645176877939053e-13,
+    "kmeans_lab_dice": 0.1322349413528002,
+    "kmeans_lab_iou": 0.07079848760453569,
+    "watershed_dice": 2.9364091240095675e-13,
+    "watershed_iou": 2.9364091240095675e-13,
+    "center_box_iou": 0.32123633869594986
+  },
+  {
+    "key": "isic_0015082",
+    "otsu_dice": 0.14834486201996927,
+    "otsu_iou": 0.0801147357179073,
+    "kmeans_lab_dice": 0.8229444893871846,
+    "kmeans_lab_iou": 0.6991552071819729,
+    "watershed_dice": 0.11849575185056213,
+    "watershed_iou": 0.06297926351594235,
+    "center_box_iou": 0.41000263487253574
+  },
+  {
+    "key": "isic_0014173",
+    "otsu_dice": 0.07552378789651289,
+    "otsu_iou": 0.039243814717764273,
+    "kmeans_lab_dice": 0.6958699767709856,
+    "kmeans_lab_iou": 0.5335894154541622,
+    "watershed_dice": 0.07362617136760576,
+    "watershed_iou": 0.038220084945764135,
+    "center_box_iou": 0.4512478036621724
+  },
+  {
+    "key": "isic_0013817",
+    "otsu_dice": 9.408506042141695e-14,
+    "otsu_iou": 9.408506042141695e-14,
+    "kmeans_lab_dice": 0.8186476461178669,
+    "kmeans_lab_iou": 0.6929749988880634,
+    "watershed_dice": 9.417082587813409e-14,
+    "watershed_iou": 9.417082587813409e-14,
+    "center_box_iou": 0.3869788164088648
+  },
+  {
+    "key": "isic_0014890",
+    "otsu_dice": 0.8912657068841492,
+    "otsu_iou": 0.8038586994359564,
+    "kmeans_lab_dice": 0.9307934648718609,
+    "kmeans_lab_iou": 0.8705459930249227,
+    "watershed_dice": 0.8826233881525439,
+    "watershed_iou": 0.7899068038422866,
+    "center_box_iou": 0.6303324396528374
+  },
+  {
+    "key": "isic_0002885",
+    "otsu_dice": 1.0798074919202238e-13,
+    "otsu_iou": 1.0798074919202238e-13,
+    "kmeans_lab_dice": 0.23212863551335502,
+    "kmeans_lab_iou": 0.13130403047213315,
+    "watershed_dice": 1.0838898204318559e-13,
+    "watershed_iou": 1.0838898204318559e-13,
+    "center_box_iou": 0.2639105161657266
+  },
+  {
+    "key": "isic_0015011",
+    "otsu_dice": 0.02872636867624649,
+    "otsu_iou": 0.014572491723008684,
+    "kmeans_lab_dice": 0.7243777320609233,
+    "kmeans_lab_iou": 0.5678622506576692,
+    "watershed_dice": 0.03243400522420184,
+    "watershed_iou": 0.016484329018860596,
+    "center_box_iou": 0.2774624373956584
+  },
+  {
+    "key": "isic_0014317",
+    "otsu_dice": 1.855428706079339e-13,
+    "otsu_iou": 1.855428706079339e-13,
+    "kmeans_lab_dice": 0.6969488177571572,
+    "kmeans_lab_iou": 0.5348591269896196,
+    "watershed_dice": 1.8790352281521042e-13,
+    "watershed_iou": 1.8790352281521042e-13,
+    "center_box_iou": 0.16750601292693737
+  },
+  {
+    "key": "isic_0013082",
+    "otsu_dice": 3.9240923574361844e-13,
+    "otsu_iou": 3.9240923574361844e-13,
+    "kmeans_lab_dice": 0.823553790230626,
+    "kmeans_lab_iou": 0.7000352276132799,
+    "watershed_dice": 3.9240923574361844e-13,
+    "watershed_iou": 3.9240923574361844e-13,
+    "center_box_iou": 0.12865077543107334
+  },
+  {
+    "key": "isic_0013737",
+    "otsu_dice": 4.1737620621706173e-13,
+    "otsu_iou": 4.1737620621706173e-13,
+    "kmeans_lab_dice": 0.4412240712601375,
+    "kmeans_lab_iou": 0.2830580477445384,
+    "watershed_dice": 4.3707630915262395e-13,
+    "watershed_iou": 4.3707630915262395e-13,
+    "center_box_iou": 0.05819087497903549
+  },
+  {
+    "key": "isic_0014930",
+    "otsu_dice": 0.873247625846628,
+    "otsu_iou": 0.77501290068528,
+    "kmeans_lab_dice": 0.9180060734024338,
+    "kmeans_lab_iou": 0.8484392110122042,
+    "watershed_dice": 0.8226928677882082,
+    "watershed_iou": 0.6987920528797185,
+    "center_box_iou": 0.8087469688845258
+  },
+  {
+    "key": "isic_0010220",
+    "otsu_dice": 1.471150734102052e-12,
+    "otsu_iou": 1.471150734102052e-12,
+    "kmeans_lab_dice": 0.21762127852554877,
+    "kmeans_lab_iou": 0.12209598100796855,
+    "watershed_dice": 1.5019074224242257e-12,
+    "watershed_iou": 1.5019074224242257e-12,
+    "center_box_iou": 0.45623779296851796
+  },
+  {
+    "key": "isic_0014066",
+    "otsu_dice": 1.229365106684153e-13,
+    "otsu_iou": 1.229365106684153e-13,
+    "kmeans_lab_dice": 1.1147625778660418e-13,
+    "kmeans_lab_iou": 1.1147625778660418e-13,
+    "watershed_dice": 1.2435104299435765e-13,
+    "watershed_iou": 1.2435104299435765e-13,
+    "center_box_iou": 0.289914883963545
+  },
+  {
+    "key": "isic_0009929",
+    "otsu_dice": 0.36018505270491635,
+    "otsu_iou": 0.2196498167691254,
+    "kmeans_lab_dice": 0.12133673643590352,
+    "kmeans_lab_iou": 0.06458674036457256,
+    "watershed_dice": 0.3762927981139254,
+    "watershed_iou": 0.23174917108235848,
+    "center_box_iou": 0.12072753906243859
+  },
+  {
+    "key": "isic_0014600",
+    "otsu_dice": 3.662239019690518e-13,
+    "otsu_iou": 3.662239019690518e-13,
+    "kmeans_lab_dice": 0.38300865236287546,
+    "kmeans_lab_iou": 0.23686499802403332,
+    "watershed_dice": 3.905792289964494e-13,
+    "watershed_iou": 3.905792289964494e-13,
+    "center_box_iou": 0.33661663988365853
+  },
+  {
+    "key": "isic_0010071",
+    "otsu_dice": 0.05147079273564491,
+    "otsu_iou": 0.026415202063128397,
+    "kmeans_lab_dice": 0.6424251558244817,
+    "kmeans_lab_iou": 0.4732152769188175,
+    "watershed_dice": 0.043635686694428626,
+    "watershed_iou": 0.022304478975519265,
+    "center_box_iou": 0.25353725530649507
+  },
+  {
+    "key": "isic_0010252",
+    "otsu_dice": 0.9089895106883943,
+    "otsu_iou": 0.8331629435221566,
+    "kmeans_lab_dice": 0.7354599083211292,
+    "kmeans_lab_iou": 0.5816026816079305,
+    "watershed_dice": 0.9146187506392864,
+    "watershed_iou": 0.8426704912932717,
+    "center_box_iou": 0.2577579900414208
+  },
+  {
+    "key": "isic_0015950",
+    "otsu_dice": 5.873715124812996e-13,
+    "otsu_iou": 5.873715124812996e-13,
+    "kmeans_lab_dice": 0.37649968079372126,
+    "kmeans_lab_iou": 0.23190613290293427,
+    "watershed_dice": 5.873715124812996e-13,
+    "watershed_iou": 5.873715124812996e-13,
+    "center_box_iou": 0.17878191489360515
+  },
+  {
+    "key": "isic_0015008",
+    "otsu_dice": 0.012348993171094851,
+    "otsu_iou": 0.00621285785516243,
+    "kmeans_lab_dice": 0.8372247742002771,
+    "kmeans_lab_iou": 0.7200228863015712,
+    "watershed_dice": 0.006219221825305802,
+    "watershed_iou": 0.003119310755419733,
+    "center_box_iou": 0.24999999999999917
+  },
+  {
+    "key": "isic_0011225",
+    "otsu_dice": 3.5910511006442666e-12,
+    "otsu_iou": 3.5910511006442666e-12,
+    "kmeans_lab_dice": 0.09932321739204988,
+    "kmeans_lab_iou": 0.05225676364403525,
+    "watershed_dice": 4.148861137600511e-12,
+    "watershed_iou": 4.148861137600511e-12,
+    "center_box_iou": 0.16860961914053924
+  },
+  {
+    "key": "isic_0012261",
+    "otsu_dice": 1.8172335526730928e-13,
+    "otsu_iou": 1.8172335526730928e-13,
+    "kmeans_lab_dice": 1.551867284309605e-13,
+    "kmeans_lab_iou": 1.551867284309605e-13,
+    "watershed_dice": 1.8213343824216058e-13,
+    "watershed_iou": 1.8213343824216058e-13,
+    "center_box_iou": 0.22055933464698255
+  },
+  {
+    "key": "isic_0010480",
+    "otsu_dice": 0.1233972894580421,
+    "otsu_iou": 0.06575568113863015,
+    "kmeans_lab_dice": 0.5213663817551376,
+    "kmeans_lab_iou": 0.3526001135927967,
+    "watershed_dice": 0.09175115684533937,
+    "watershed_iou": 0.04808133759636494,
+    "center_box_iou": 0.4206418485236584
+  },
+  {
+    "key": "isic_0012358",
+    "otsu_dice": 2.3230800324296573e-13,
+    "otsu_iou": 2.3230800324296573e-13,
+    "kmeans_lab_dice": 0.3179057741249907,
+    "kmeans_lab_iou": 0.18899403448082852,
+    "watershed_dice": 2.3230800324296573e-13,
+    "watershed_iou": 2.3230800324296573e-13,
+    "center_box_iou": 0.4136486941495351
+  },
+  {
+    "key": "isic_0013233",
+    "otsu_dice": 0.5388719512201399,
+    "otsu_iou": 0.3688054251446293,
+    "kmeans_lab_dice": 0.04316649168516499,
+    "kmeans_lab_iou": 0.022059358398036615,
+    "watershed_dice": 0.5614665130121386,
+    "watershed_iou": 0.3903047917143783,
+    "center_box_iou": 0.06309840425531496
+  },
+  {
+    "key": "isic_0013998",
+    "otsu_dice": 1.7802812488313734e-13,
+    "otsu_iou": 1.7802812488313734e-13,
+    "kmeans_lab_dice": 0.0034534325064426398,
+    "kmeans_lab_iou": 0.0017297029594958082,
+    "watershed_dice": 1.7939214764688102e-13,
+    "watershed_iou": 1.7939214764688102e-13,
+    "center_box_iou": 0.11290009382048281
+  },
+  {
+    "key": "isic_0010607",
+    "otsu_dice": 2.2838871759682907e-12,
+    "otsu_iou": 2.2838871759682907e-12,
+    "kmeans_lab_dice": 0.11335172342720186,
+    "kmeans_lab_iou": 0.06008100441148269,
+    "watershed_dice": 2.339454907001194e-12,
+    "watershed_iou": 2.339454907001194e-12,
+    "center_box_iou": 0.2806953709317361
+  },
+  {
+    "key": "isic_0014458",
+    "otsu_dice": 0.5512219019919515,
+    "otsu_iou": 0.38047365759461255,
+    "kmeans_lab_dice": 0.7236627385520387,
+    "kmeans_lab_iou": 0.5669839472767059,
+    "watershed_dice": 0.5872646635407714,
+    "watershed_iou": 0.4156933350395073,
+    "center_box_iou": 0.14659311850158835
+  },
+  {
+    "key": "isic_0010853",
+    "otsu_dice": 0.19883261156258744,
+    "otsu_iou": 0.11039096801377472,
+    "kmeans_lab_dice": 0.6075271162928058,
+    "kmeans_lab_iou": 0.436293678248062,
+    "watershed_dice": 0.20663653217404415,
+    "watershed_iou": 0.11522289590653187,
+    "center_box_iou": 0.3605600992836708
+  },
+  {
+    "key": "isic_0014843",
+    "otsu_dice": 0.6222127570259458,
+    "otsu_iou": 0.4516029308580758,
+    "kmeans_lab_dice": 0.8862152411690487,
+    "kmeans_lab_iou": 0.7956790880306512,
+    "watershed_dice": 0.5447096905809479,
+    "watershed_iou": 0.3742962397642847,
+    "center_box_iou": 0.5810893887626212
+  },
+  {
+    "key": "isic_0013212",
+    "otsu_dice": 9.0234790925908e-13,
+    "otsu_iou": 9.0234790925908e-13,
+    "kmeans_lab_dice": 0.10572940622561702,
+    "kmeans_lab_iou": 0.05581536585805293,
+    "watershed_dice": 9.0234790925908e-13,
+    "watershed_iou": 9.0234790925908e-13,
+    "center_box_iou": 0.09479521276595115
+  },
+  {
+    "key": "isic_0013129",
+    "otsu_dice": 2.796600452489171e-13,
+    "otsu_iou": 2.796600452489171e-13,
+    "kmeans_lab_dice": 0.26080060541768135,
+    "kmeans_lab_iou": 0.14995440214050423,
+    "watershed_dice": 2.796600452489171e-13,
+    "watershed_iou": 2.796600452489171e-13,
+    "center_box_iou": 0.31502127659572376
+  },
+  {
+    "key": "isic_0013334",
+    "otsu_dice": 3.1562358857075486e-14,
+    "otsu_iou": 3.1562358857075486e-14,
+    "kmeans_lab_dice": 0.48483018645063286,
+    "kmeans_lab_iou": 0.31998405862831997,
+    "watershed_dice": 3.1570828680581454e-14,
+    "watershed_iou": 3.1570828680581454e-14,
+    "center_box_iou": 0.6299811515750335
+  },
+  {
+    "key": "isic_0011324",
+    "otsu_dice": 7.694142449347387e-13,
+    "otsu_iou": 7.694142449347387e-13,
+    "kmeans_lab_dice": 0.3742477960737083,
+    "kmeans_lab_iou": 0.23019977778295453,
+    "watershed_dice": 7.863551651732841e-13,
+    "watershed_iou": 7.863551651732841e-13,
+    "center_box_iou": 0.5161535899507874
+  },
+  {
+    "key": "isic_0013879",
+    "otsu_dice": 2.0460441781854766e-13,
+    "otsu_iou": 2.0460441781854766e-13,
+    "kmeans_lab_dice": 0.00832544523607492,
+    "kmeans_lab_iou": 0.004180123311985433,
+    "watershed_dice": 2.0605895758890288e-13,
+    "watershed_iou": 2.0605895758890288e-13,
+    "center_box_iou": 0.1846723414179044
+  },
+  {
+    "key": "isic_0010862",
+    "otsu_dice": 0.23571223846429085,
+    "otsu_iou": 0.13360192345251998,
+    "kmeans_lab_dice": 0.323729644355343,
+    "kmeans_lab_iou": 0.19312495938723023,
+    "watershed_dice": 0.2300304790390261,
+    "watershed_iou": 0.12996296055694817,
+    "center_box_iou": 0.5708918392570359
+  },
+  {
+    "key": "isic_0014898",
+    "otsu_dice": 0.924321966130117,
+    "otsu_iou": 0.8592924063018713,
+    "kmeans_lab_dice": 0.9290558311427414,
+    "kmeans_lab_iou": 0.8675109853150259,
+    "watershed_dice": 0.8892688385836867,
+    "watershed_iou": 0.8006157290570338,
+    "center_box_iou": 0.4330007307045551
+  },
+  {
+    "key": "isic_0012777",
+    "otsu_dice": 0.5366487775795628,
+    "otsu_iou": 0.3667258887396021,
+    "kmeans_lab_dice": 0.500914115310509,
+    "kmeans_lab_iou": 0.3341463757525909,
+    "watershed_dice": 0.6233521445965788,
+    "watershed_iou": 0.45280435526812474,
+    "center_box_iou": 0.0526874999999965
+  },
+  {
+    "key": "isic_0013721",
+    "otsu_dice": 1.2797379096759346e-13,
+    "otsu_iou": 1.2797379096759346e-13,
+    "kmeans_lab_dice": 0.0059721478822178506,
+    "kmeans_lab_iou": 0.00299501728422233,
+    "watershed_dice": 1.2734181599615333e-13,
+    "watershed_iou": 1.2734181599615333e-13,
+    "center_box_iou": 0.607434043656704
+  },
+  {
+    "key": "isic_0011107",
+    "otsu_dice": 2.120490511864755e-13,
+    "otsu_iou": 2.120490511864755e-13,
+    "kmeans_lab_dice": 0.5797658281304974,
+    "kmeans_lab_iou": 0.40821847524441757,
+    "watershed_dice": 2.120490511864755e-13,
+    "watershed_iou": 2.120490511864755e-13,
+    "center_box_iou": 0.3278220562243092
+  },
+  {
+    "key": "isic_0014541",
+    "otsu_dice": 3.2426599150162634e-14,
+    "otsu_iou": 3.2426599150162634e-14,
+    "kmeans_lab_dice": 0.5551546268155146,
+    "kmeans_lab_iou": 0.3842311690364133,
+    "watershed_dice": 3.248950507762124e-14,
+    "watershed_iou": 3.248950507762124e-14,
+    "center_box_iou": 0.3088684243360003
+  },
+  {
+    "key": "isic_0009930",
+    "otsu_dice": 0.0831085805659619,
+    "otsu_iou": 0.04335591454380742,
+    "kmeans_lab_dice": 0.11880062196882468,
+    "kmeans_lab_iou": 0.06315153160082444,
+    "watershed_dice": 0.07387333133055368,
+    "watershed_iou": 0.03835330902012322,
+    "center_box_iou": 0.13323974609368222
+  },
+  {
+    "key": "isic_0012473",
+    "otsu_dice": 5.1164294689962224e-14,
+    "otsu_iou": 5.1164294689962224e-14,
+    "kmeans_lab_dice": 0.0009859214160354284,
+    "kmeans_lab_iou": 0.0004932038381543194,
+    "watershed_dice": 5.135906353937641e-14,
+    "watershed_iou": 5.135906353937641e-14,
+    "center_box_iou": 0.600415012630804
+  },
+  {
+    "key": "isic_0000556",
+    "otsu_dice": 3.3059053387054384e-13,
+    "otsu_iou": 3.3059053387054384e-13,
+    "kmeans_lab_dice": 0.9194611575148239,
+    "kmeans_lab_iou": 0.8509283714411819,
+    "watershed_dice": 3.3059053387054384e-13,
+    "watershed_iou": 3.3059053387054384e-13,
+    "center_box_iou": 0.3435595060261406
+  },
+  {
+    "key": "isic_0010059",
+    "otsu_dice": 0.29342560553727254,
+    "otsu_iou": 0.17193836172067514,
+    "kmeans_lab_dice": 0.5839741801813125,
+    "kmeans_lab_iou": 0.4124036242903197,
+    "watershed_dice": 0.33074720125054574,
+    "watershed_iou": 0.19814086967496702,
+    "center_box_iou": 0.4326883951820716
+  },
+  {
+    "key": "isic_0012705",
+    "otsu_dice": 1.147723490455362e-12,
+    "otsu_iou": 1.147723490455362e-12,
+    "kmeans_lab_dice": 0.09501574450540688,
+    "kmeans_lab_iou": 0.04987744346516602,
+    "watershed_dice": 1.147723490455362e-12,
+    "watershed_iou": 1.147723490455362e-12,
+    "center_box_iou": 0.15005053191488366
+  },
+  {
+    "key": "isic_0013861",
+    "otsu_dice": 2.144687480429681e-14,
+    "otsu_iou": 2.144687480429681e-14,
+    "kmeans_lab_dice": 0.42061905732423055,
+    "kmeans_lab_iou": 0.266318939249472,
+    "watershed_dice": 2.146816485833112e-14,
+    "watershed_iou": 2.146816485833112e-14,
+    "center_box_iou": 0.4459454859518661
+  },
+  {
+    "key": "isic_0015309",
+    "otsu_dice": 0.9086533882370857,
+    "otsu_iou": 0.8325983500047602,
+    "kmeans_lab_dice": 0.6914135511706105,
+    "kmeans_lab_iou": 0.5283667363276814,
+    "watershed_dice": 0.9117024603292971,
+    "watershed_iou": 0.8377327220689688,
+    "center_box_iou": 0.2631408039433004
+  },
+  {
+    "key": "isic_0009902",
+    "otsu_dice": 4.017080626823647e-13,
+    "otsu_iou": 4.017080626823647e-13,
+    "kmeans_lab_dice": 0.669595759821198,
+    "kmeans_lab_iou": 0.5033024847630764,
+    "watershed_dice": 4.017080626823647e-13,
+    "watershed_iou": 4.017080626823647e-13,
+    "center_box_iou": 0.6419014659307709
+  },
+  {
+    "key": "isic_0013427",
+    "otsu_dice": 1.4604712502582995e-14,
+    "otsu_iou": 1.4604712502582995e-14,
+    "kmeans_lab_dice": 0.7395881650049432,
+    "kmeans_lab_iou": 0.5867829422657299,
+    "watershed_dice": 1.4630338171488417e-14,
+    "watershed_iou": 1.4630338171488417e-14,
+    "center_box_iou": 0.35854341736694256
+  },
+  {
+    "key": "isic_0009873",
+    "otsu_dice": 4.855288137072137e-13,
+    "otsu_iou": 4.855288137072137e-13,
+    "kmeans_lab_dice": 0.8035322943055602,
+    "kmeans_lab_iou": 0.6715871147054983,
+    "watershed_dice": 4.855288137072137e-13,
+    "watershed_iou": 4.855288137072137e-13,
+    "center_box_iou": 0.5378515757368864
+  },
+  {
+    "key": "isic_0015645",
+    "otsu_dice": 0.098750028143318,
+    "otsu_iou": 0.051939529049356,
+    "kmeans_lab_dice": 0.6730108008675176,
+    "kmeans_lab_iou": 0.5071712726128477,
+    "watershed_dice": 0.09896208855249883,
+    "watershed_iou": 0.05205687269916981,
+    "center_box_iou": 0.6283490799024078
+  },
+  {
+    "key": "isic_0014998",
+    "otsu_dice": 0.594693808550889,
+    "otsu_iou": 0.42317739163851625,
+    "kmeans_lab_dice": 0.7752923782024236,
+    "kmeans_lab_iou": 0.6330428294914033,
+    "watershed_dice": 0.47986275400285366,
+    "watershed_iou": 0.315670677280253,
+    "center_box_iou": 0.4443038908285843
+  },
+  {
+    "key": "isic_0013170",
+    "otsu_dice": 3.870523256038834e-14,
+    "otsu_iou": 3.870523256038834e-14,
+    "kmeans_lab_dice": 0.3872539661892109,
+    "kmeans_lab_iou": 0.24012086098527052,
+    "watershed_dice": 3.870523256038834e-14,
+    "watershed_iou": 3.870523256038834e-14,
+    "center_box_iou": 0.45186605055850965
+  },
+  {
+    "key": "isic_0014385",
+    "otsu_dice": 1.8569877986616344e-14,
+    "otsu_iou": 1.8569877986616344e-14,
+    "kmeans_lab_dice": 0.6205240574042813,
+    "kmeans_lab_iou": 0.4498259362440685,
+    "watershed_dice": 1.8579731853593597e-14,
+    "watershed_iou": 1.8579731853593597e-14,
+    "center_box_iou": 0.3844808105658831
+  },
+  {
+    "key": "isic_0010572",
+    "otsu_dice": 2.607493937575915e-13,
+    "otsu_iou": 2.607493937575915e-13,
+    "kmeans_lab_dice": 0.7071389334018567,
+    "kmeans_lab_iou": 0.5469566310497682,
+    "watershed_dice": 2.607493937575915e-13,
+    "watershed_iou": 2.607493937575915e-13,
+    "center_box_iou": 0.40960597342036037
+  },
+  {
+    "key": "isic_0011208",
+    "otsu_dice": 1.4018364056894906e-12,
+    "otsu_iou": 1.4018364056894906e-12,
+    "kmeans_lab_dice": 0.5733061659051384,
+    "kmeans_lab_iou": 0.40184246416767294,
+    "watershed_dice": 1.4264724762115366e-12,
+    "watershed_iou": 1.4264724762115366e-12,
+    "center_box_iou": 0.4167036714682247
+  },
+  {
+    "key": "isic_0014945",
+    "otsu_dice": 0.8532632141625401,
+    "otsu_iou": 0.7440793952898379,
+    "kmeans_lab_dice": 0.8961272474322324,
+    "kmeans_lab_iou": 0.8118030319597231,
+    "watershed_dice": 0.8054909598782941,
+    "watershed_iou": 0.6743280568192579,
+    "center_box_iou": 0.28199053409804625
+  },
+  {
+    "key": "isic_0011300",
+    "otsu_dice": 0.04173594781544181,
+    "otsu_iou": 0.021312727345947278,
+    "kmeans_lab_dice": 0.39954553638231755,
+    "kmeans_lab_iou": 0.24964505111833357,
+    "watershed_dice": 0.05019375855190864,
+    "watershed_iou": 0.025742946906748512,
+    "center_box_iou": 0.25963488843809956
+  },
+  {
+    "key": "isic_0014291",
+    "otsu_dice": 8.244566830458048e-14,
+    "otsu_iou": 8.244566830458048e-14,
+    "kmeans_lab_dice": 0.5083788194987517,
+    "kmeans_lab_iou": 0.3408230093165818,
+    "watershed_dice": 8.296125211757908e-14,
+    "watershed_iou": 8.296125211757908e-14,
+    "center_box_iou": 0.4224438018528552
+  },
+  {
+    "key": "isic_0009880",
+    "otsu_dice": 0.05713785846284695,
+    "otsu_iou": 0.029409116190889418,
+    "kmeans_lab_dice": 0.5816267424365896,
+    "kmeans_lab_iou": 0.41006606641467186,
+    "watershed_dice": 0.04312109668607991,
+    "watershed_iou": 0.022035649019243035,
+    "center_box_iou": 0.5335058655268644
+  },
+  {
+    "key": "isic_0014923",
+    "otsu_dice": 0.6393232083104936,
+    "otsu_iou": 0.46985677437525913,
+    "kmeans_lab_dice": 0.8445567865913489,
+    "kmeans_lab_iou": 0.7309375110697506,
+    "watershed_dice": 0.44416479020332256,
+    "watershed_iou": 0.28548318447002496,
+    "center_box_iou": 0.44264885050527014
+  },
+  {
+    "key": "isic_0010592",
+    "otsu_dice": 0.3950825726829785,
+    "otsu_iou": 0.2461700309077114,
+    "kmeans_lab_dice": 0.12333164248792804,
+    "kmeans_lab_iou": 0.06571840037405961,
+    "watershed_dice": 0.39778772715618754,
+    "watershed_iou": 0.24827404826584076,
+    "center_box_iou": 0.11726379394525285
+  },
+  {
+    "key": "isic_0012306",
+    "otsu_dice": 6.347110795162011e-13,
+    "otsu_iou": 6.347110795162011e-13,
+    "kmeans_lab_dice": 0.5636414202281486,
+    "kmeans_lab_iou": 0.3924099651479859,
+    "watershed_dice": 6.347110795162011e-13,
+    "watershed_iou": 6.347110795162011e-13,
+    "center_box_iou": 0.1415624999999906
+  },
+  {
+    "key": "isic_0016003",
+    "otsu_dice": 0.15083063851406425,
+    "otsu_iou": 0.08156669781356607,
+    "kmeans_lab_dice": 0.7569948335522547,
+    "kmeans_lab_iou": 0.60900377084971,
+    "watershed_dice": 0.16072181731495913,
+    "watershed_iou": 0.0873830934484808,
+    "center_box_iou": 0.23935106382977134
+  },
+  {
+    "key": "isic_0014821",
+    "otsu_dice": 0.9081764033839557,
+    "otsu_iou": 0.8317977429675678,
+    "kmeans_lab_dice": 0.9597956391323946,
+    "kmeans_lab_iou": 0.9226991110976086,
+    "watershed_dice": 0.9134169988869896,
+    "watershed_iou": 0.8406325130720423,
+    "center_box_iou": 0.4592421567704348
+  },
+  {
+    "key": "isic_0013799",
+    "otsu_dice": 0.37466126580385845,
+    "otsu_iou": 0.2305127281602627,
+    "kmeans_lab_dice": 0.5181444566029925,
+    "kmeans_lab_iou": 0.3496592221231441,
+    "watershed_dice": 0.35314564890190797,
+    "watershed_iou": 0.21443647925919343,
+    "center_box_iou": 0.24405518617019656
+  },
+  {
+    "key": "isic_0011173",
+    "otsu_dice": 0.36458489491390705,
+    "otsu_iou": 0.22293110402514232,
+    "kmeans_lab_dice": 0.21647985743127715,
+    "kmeans_lab_iou": 0.12137785958495859,
+    "watershed_dice": 0.3808958413743926,
+    "watershed_iou": 0.23525098082632914,
+    "center_box_iou": 0.21893310546863864
+  },
+  {
+    "key": "isic_0009991",
+    "otsu_dice": 0.3997074489473907,
+    "otsu_iou": 0.24977148627278567,
+    "kmeans_lab_dice": 0.8856850253368572,
+    "kmeans_lab_iou": 0.7948246640090736,
+    "watershed_dice": 0.3353528111372666,
+    "watershed_iou": 0.20145578797792799,
+    "center_box_iou": 0.5581857491143235
+  },
+  {
+    "key": "isic_0013675",
+    "otsu_dice": 1.1307100859338386e-13,
+    "otsu_iou": 1.1307100859338386e-13,
+    "kmeans_lab_dice": 0.752520274624498,
+    "kmeans_lab_iou": 0.6032324688868246,
+    "watershed_dice": 1.1309939853738578e-13,
+    "watershed_iou": 1.1309939853738578e-13,
+    "center_box_iou": 0.21718852270818506
+  },
+  {
+    "key": "isic_0014946",
+    "otsu_dice": 0.7351484943151702,
+    "otsu_iou": 0.581213281567895,
+    "kmeans_lab_dice": 0.8720209596951316,
+    "kmeans_lab_iou": 0.7730825915519178,
+    "watershed_dice": 0.6433756965305526,
+    "watershed_iou": 0.4742475089714813,
+    "center_box_iou": 0.5888635341931316
+  },
+  {
+    "key": "isic_0010067",
+    "otsu_dice": 0.006871458396059129,
+    "otsu_iou": 0.003447574129425615,
+    "kmeans_lab_dice": 0.6227238431563138,
+    "kmeans_lab_iou": 0.4521415985183594,
+    "watershed_dice": 0.011236891286045997,
+    "watershed_iou": 0.005650190933954026,
+    "center_box_iou": 0.5530611519736514
+  },
+  {
+    "key": "isic_0015417",
+    "otsu_dice": 0.24306013797607998,
+    "otsu_iou": 0.13834288994735175,
+    "kmeans_lab_dice": 0.6031107358847064,
+    "kmeans_lab_iou": 0.4317527175403459,
+    "watershed_dice": 0.20592729962088924,
+    "watershed_iou": 0.11478202615612243,
+    "center_box_iou": 0.684961752470504
+  },
+  {
+    "key": "isic_0012726",
+    "otsu_dice": 9.279536765516054e-13,
+    "otsu_iou": 9.279536765516054e-13,
+    "kmeans_lab_dice": 0.33092993878158955,
+    "kmeans_lab_iou": 0.1982720476935334,
+    "watershed_dice": 9.51954839261519e-13,
+    "watershed_iou": 9.51954839261519e-13,
+    "center_box_iou": 0.07898936170212241
+  },
+  {
+    "key": "isic_0014453",
+    "otsu_dice": 2.398858143523107e-13,
+    "otsu_iou": 2.398858143523107e-13,
+    "kmeans_lab_dice": 2.211083276028936e-13,
+    "kmeans_lab_iou": 2.211083276028936e-13,
+    "watershed_dice": 2.4693553007174786e-13,
+    "watershed_iou": 2.4693553007174786e-13,
+    "center_box_iou": 0.15240139715746606
+  },
+  {
+    "key": "isic_0012455",
+    "otsu_dice": 0.2133102682410557,
+    "otsu_iou": 0.119388534253957,
+    "kmeans_lab_dice": 0.22339357116138367,
+    "kmeans_lab_iou": 0.12574173296639954,
+    "watershed_dice": 0.197776187593109,
+    "watershed_iou": 0.10974008124397247,
+    "center_box_iou": 0.28209374999998127
+  },
+  {
+    "key": "isic_0011296",
+    "otsu_dice": 6.780074716418778e-13,
+    "otsu_iou": 6.780074716418778e-13,
+    "kmeans_lab_dice": 0.7131793679838738,
+    "kmeans_lab_iou": 0.5542181639306226,
+    "watershed_dice": 6.780074716418778e-13,
+    "watershed_iou": 6.780074716418778e-13,
+    "center_box_iou": 0.7785780367808354
+  },
+  {
+    "key": "isic_0014862",
+    "otsu_dice": 0.09477715148427648,
+    "otsu_iou": 0.049745966230732935,
+    "kmeans_lab_dice": 0.7855871903019563,
+    "kmeans_lab_iou": 0.6468864491780925,
+    "watershed_dice": 0.08307285951514645,
+    "watershed_iou": 0.04333647208633198,
+    "center_box_iou": 0.3347663656256813
+  },
+  {
+    "key": "isic_0013063",
+    "otsu_dice": 5.894030054837708e-14,
+    "otsu_iou": 5.894030054837708e-14,
+    "kmeans_lab_dice": 0.5691458557561841,
+    "kmeans_lab_iou": 0.3977665075408362,
+    "watershed_dice": 5.893300613727979e-14,
+    "watershed_iou": 5.893300613727979e-14,
+    "center_box_iou": 0.4768043124789284
+  },
+  {
+    "key": "isic_0015607",
+    "otsu_dice": 0.01571913889669493,
+    "otsu_iou": 0.007921831634237566,
+    "kmeans_lab_dice": 0.7809516369356637,
+    "kmeans_lab_iou": 0.6406239986841683,
+    "watershed_dice": 0.018503020770693053,
+    "watershed_iou": 0.009337900064775815,
+    "center_box_iou": 0.2724936068937726
+  },
+  {
+    "key": "isic_0010019",
+    "otsu_dice": 0.007657918558657763,
+    "otsu_iou": 0.003843676560534827,
+    "kmeans_lab_dice": 0.856918310946485,
+    "kmeans_lab_iou": 0.7496562311798322,
+    "watershed_dice": 0.008652456209416945,
+    "watershed_iou": 0.0043450256770809145,
+    "center_box_iou": 0.4410347519447717
+  },
+  {
+    "key": "isic_0011095",
+    "otsu_dice": 0.2945077003282349,
+    "otsu_iou": 0.17268192907427274,
+    "kmeans_lab_dice": 0.5990134438352113,
+    "kmeans_lab_iou": 0.4275654475052315,
+    "watershed_dice": 0.2743294339198356,
+    "watershed_iou": 0.15896975895195659,
+    "center_box_iou": 0.701847283229774
+  },
+  {
+    "key": "isic_0015958",
+    "otsu_dice": 2.843930767348591e-13,
+    "otsu_iou": 2.843930767348591e-13,
+    "kmeans_lab_dice": 2.488596008789102e-13,
+    "kmeans_lab_iou": 2.488596008789102e-13,
+    "watershed_dice": 2.8692757947885716e-13,
+    "watershed_iou": 2.8692757947885716e-13,
+    "center_box_iou": 0.19293790174471223
+  },
+  {
+    "key": "isic_0013052",
+    "otsu_dice": 6.688922942938358e-14,
+    "otsu_iou": 6.688922942938358e-14,
+    "kmeans_lab_dice": 0.6880851328153981,
+    "kmeans_lab_iou": 0.5244891646757975,
+    "watershed_dice": 6.688922942938358e-14,
+    "watershed_iou": 6.688922942938358e-14,
+    "center_box_iou": 0.6703811841436104
+  },
+  {
+    "key": "isic_0011378",
+    "otsu_dice": 0.5274303433604819,
+    "otsu_iou": 0.3581700471571555,
+    "kmeans_lab_dice": 0.8573245141053119,
+    "kmeans_lab_iou": 0.7502782064447059,
+    "watershed_dice": 0.48236254636241466,
+    "watershed_iou": 0.31783779795798445,
+    "center_box_iou": 0.5314731772129037
+  },
+  {
+    "key": "isic_0016062",
+    "otsu_dice": 2.571050994224758e-13,
+    "otsu_iou": 2.571050994224758e-13,
+    "kmeans_lab_dice": 0.18167037609883782,
+    "kmeans_lab_iou": 0.09991058480873242,
+    "watershed_dice": 2.5842664688834715e-13,
+    "watershed_iou": 2.5842664688834715e-13,
+    "center_box_iou": 0.17994101647659982
+  },
+  {
+    "key": "isic_0000547",
+    "otsu_dice": 3.2819597237891925e-13,
+    "otsu_iou": 3.2819597237891925e-13,
+    "kmeans_lab_dice": 0.7355327686135177,
+    "kmeans_lab_iou": 0.5816938156689868,
+    "watershed_dice": 3.2819597237891925e-13,
+    "watershed_iou": 3.2819597237891925e-13,
+    "center_box_iou": 0.3385323575257844
+  },
+  {
+    "key": "isic_0013670",
+    "otsu_dice": 0.5432062640003918,
+    "otsu_iou": 0.37287795147469965,
+    "kmeans_lab_dice": 0.8134674951520853,
+    "kmeans_lab_iou": 0.685583826678621,
+    "watershed_dice": 0.5949189078719485,
+    "watershed_iou": 0.42340539005560207,
+    "center_box_iou": 0.021469702360964963
+  },
+  {
+    "key": "isic_0015251",
+    "otsu_dice": 4.458402215647366e-14,
+    "otsu_iou": 4.458402215647366e-14,
+    "kmeans_lab_dice": 0.08181291368082642,
+    "kmeans_lab_iou": 0.042651164875598745,
+    "watershed_dice": 4.4334730764045044e-14,
+    "watershed_iou": 4.4334730764045044e-14,
+    "center_box_iou": 0.11656925244465367
+  },
+  {
+    "key": "isic_0012222",
+    "otsu_dice": 0.15488311515502814,
+    "otsu_iou": 0.0839421699663634,
+    "kmeans_lab_dice": 0.8158561033858047,
+    "kmeans_lab_iou": 0.6889839197065936,
+    "watershed_dice": 0.15447081029465248,
+    "watershed_iou": 0.08370000927471137,
+    "center_box_iou": 0.1612499999999893
+  },
+  {
+    "key": "isic_0012653",
+    "otsu_dice": 5.22212300188246e-13,
+    "otsu_iou": 5.22212300188246e-13,
+    "kmeans_lab_dice": 0.5659704114403102,
+    "kmeans_lab_iou": 0.3946713624012068,
+    "watershed_dice": 5.41213400443502e-13,
+    "watershed_iou": 5.41213400443502e-13,
+    "center_box_iou": 0.21475636541118537
+  },
+  {
+    "key": "isic_0013636",
+    "otsu_dice": 2.5041462401370442e-14,
+    "otsu_iou": 2.5041462401370442e-14,
+    "kmeans_lab_dice": 0.5341791468543566,
+    "kmeans_lab_iou": 0.364423214274801,
+    "watershed_dice": 2.50323041885547e-14,
+    "watershed_iou": 2.50323041885547e-14,
+    "center_box_iou": 0.550386620582398
+  },
+  {
+    "key": "isic_0011366",
+    "otsu_dice": 3.1408416199194873e-13,
+    "otsu_iou": 3.1408416199194873e-13,
+    "kmeans_lab_dice": 0.6991796014773071,
+    "kmeans_lab_iou": 0.5374912649520522,
+    "watershed_dice": 3.1408416199194873e-13,
+    "watershed_iou": 3.1408416199194873e-13,
+    "center_box_iou": 0.48620096148127334
+  },
+  {
+    "key": "isic_0010192",
+    "otsu_dice": 0.6991226081042321,
+    "otsu_iou": 0.5374239051734174,
+    "kmeans_lab_dice": 0.8217818067208641,
+    "kmeans_lab_iou": 0.6974784563747493,
+    "watershed_dice": 0.6736737270804773,
+    "watershed_iou": 0.5079245890212208,
+    "center_box_iou": 0.5794646525295565
+  },
+  {
+    "key": "isic_0015563",
+    "otsu_dice": 0.7760202311507729,
+    "otsu_iou": 0.6340139362600691,
+    "kmeans_lab_dice": 0.8970355627453288,
+    "kmeans_lab_iou": 0.8132950913431969,
+    "watershed_dice": 0.7294964028777091,
+    "watershed_iou": 0.5741789354473668,
+    "center_box_iou": 0.3031904141914278
+  },
+  {
+    "key": "isic_0013395",
+    "otsu_dice": 2.459582903930546e-13,
+    "otsu_iou": 2.459582903930546e-13,
+    "kmeans_lab_dice": 2.0550549213423505e-13,
+    "kmeans_lab_iou": 2.0550549213423505e-13,
+    "watershed_dice": 2.4580654042036707e-13,
+    "watershed_iou": 2.4580654042036707e-13,
+    "center_box_iou": 0.15103295340201434
+  },
+  {
+    "key": "isic_0012897",
+    "otsu_dice": 1.4521797217602565e-12,
+    "otsu_iou": 1.4521797217602565e-12,
+    "kmeans_lab_dice": 0.13346339299122711,
+    "kmeans_lab_iou": 0.07150322821967606,
+    "watershed_dice": 1.4593427120403663e-12,
+    "watershed_iou": 1.4593427120403663e-12,
+    "center_box_iou": 0.06149999999999592
+  },
+  {
+    "key": "isic_0014617",
+    "otsu_dice": 0.41652784461838344,
+    "otsu_iou": 0.26304715444677645,
+    "kmeans_lab_dice": 0.2393658070296488,
+    "kmeans_lab_iou": 0.13595431009203748,
+    "watershed_dice": 0.43028049272808827,
+    "watershed_iou": 0.27411298052627037,
+    "center_box_iou": 0.12839490230587694
+  },
+  {
+    "key": "isic_0002459",
+    "otsu_dice": 1.8734976890402495e-13,
+    "otsu_iou": 1.8734976890402495e-13,
+    "kmeans_lab_dice": 0.22625295616513313,
+    "kmeans_lab_iou": 0.12755649513361614,
+    "watershed_dice": 1.8734976890402495e-13,
+    "watershed_iou": 1.8734976890402495e-13,
+    "center_box_iou": 0.16809405580317177
+  },
+  {
+    "key": "isic_0014982",
+    "otsu_dice": 0.3440886663237665,
+    "otsu_iou": 0.20779413687559745,
+    "kmeans_lab_dice": 0.75524391584736,
+    "kmeans_lab_iou": 0.6067404895325254,
+    "watershed_dice": 0.2196037808729517,
+    "watershed_iou": 0.12334545451946269,
+    "center_box_iou": 0.5266613940516539
+  },
+  {
+    "key": "isic_0010362",
+    "otsu_dice": 0.4692476818669931,
+    "otsu_iou": 0.30654709864535123,
+    "kmeans_lab_dice": 0.7330411408750771,
+    "kmeans_lab_iou": 0.5785832235957054,
+    "watershed_dice": 0.444988249918536,
+    "watershed_iou": 0.2861639147720976,
+    "center_box_iou": 0.26705404759996265
+  },
+  {
+    "key": "isic_0013397",
+    "otsu_dice": 9.215375300765963e-14,
+    "otsu_iou": 9.215375300765963e-14,
+    "kmeans_lab_dice": 0.30642727043426987,
+    "kmeans_lab_iou": 0.18093540660217278,
+    "watershed_dice": 0.04258603865376246,
+    "watershed_iou": 0.02175627613515252,
+    "center_box_iou": 0.2391363924710513
+  },
+  {
+    "key": "isic_0015155",
+    "otsu_dice": 0.9255098909436067,
+    "otsu_iou": 0.8613479855634795,
+    "kmeans_lab_dice": 0.9853132935552258,
+    "kmeans_lab_iou": 0.9710517416824491,
+    "watershed_dice": 0.8869845132679749,
+    "watershed_iou": 0.7969201900975265,
+    "center_box_iou": 0.5421270515056585
+  },
+  {
+    "key": "isic_0012094",
+    "otsu_dice": 8.099658194417635e-13,
+    "otsu_iou": 8.099658194417635e-13,
+    "kmeans_lab_dice": 0.1301535914421545,
+    "kmeans_lab_iou": 0.06960656813657266,
+    "watershed_dice": 8.099658194417635e-13,
+    "watershed_iou": 8.099658194417635e-13,
+    "center_box_iou": 0.10675531914892908
+  },
+  {
+    "key": "isic_0012134",
+    "otsu_dice": 2.0656304500367978e-14,
+    "otsu_iou": 2.0656304500367978e-14,
+    "kmeans_lab_dice": 0.6839757400837335,
+    "kmeans_lab_iou": 0.5197288233328301,
+    "watershed_dice": 2.0656304500367978e-14,
+    "watershed_iou": 2.0656304500367978e-14,
+    "center_box_iou": 0.28024566215490504
+  },
+  {
+    "key": "isic_0015229",
+    "otsu_dice": 0.10068269236241781,
+    "otsu_iou": 0.05300993781163013,
+    "kmeans_lab_dice": 0.7146411901080516,
+    "kmeans_lab_iou": 0.5559857563571122,
+    "watershed_dice": 0.08894742439240186,
+    "watershed_iou": 0.046543682537946524,
+    "center_box_iou": 0.2528078676623626
+  },
+  {
+    "key": "isic_0015476",
+    "otsu_dice": 0.49713360405980306,
+    "otsu_iou": 0.3307902854190861,
+    "kmeans_lab_dice": 0.6761883613199803,
+    "kmeans_lab_iou": 0.5107889533243678,
+    "watershed_dice": 0.43846245008322543,
+    "watershed_iou": 0.2807889250608179,
+    "center_box_iou": 0.6541355367653219
+  },
+  {
+    "key": "isic_0013079",
+    "otsu_dice": 1.6275246976870226e-13,
+    "otsu_iou": 1.6275246976870226e-13,
+    "kmeans_lab_dice": 0.42658948742523095,
+    "kmeans_lab_iou": 0.27112408619107514,
+    "watershed_dice": 1.6275246976870226e-13,
+    "watershed_iou": 1.6275246976870226e-13,
+    "center_box_iou": 0.4743769628599257
+  },
+  {
+    "key": "isic_0014836",
+    "otsu_dice": 0.7741031402490793,
+    "otsu_iou": 0.6314586207573499,
+    "kmeans_lab_dice": 0.8964962491240362,
+    "kmeans_lab_iou": 0.8124088825365542,
+    "watershed_dice": 0.7295588229135083,
+    "watershed_iou": 0.5742562788988097,
+    "center_box_iou": 0.7618852618223446
+  },
+  {
+    "key": "isic_0010034",
+    "otsu_dice": 0.16460639913853686,
+    "otsu_iou": 0.08968452274300756,
+    "kmeans_lab_dice": 0.8252703542316809,
+    "kmeans_lab_iou": 0.702519390061007,
+    "watershed_dice": 0.15000081267804957,
+    "watershed_iou": 0.08108155598462112,
+    "center_box_iou": 0.5085882206860983
+  },
+  {
+    "key": "isic_0010317",
+    "otsu_dice": 0.3656540709650685,
+    "otsu_iou": 0.2237311357836358,
+    "kmeans_lab_dice": 0.507970647000539,
+    "kmeans_lab_iou": 0.34045620213821987,
+    "watershed_dice": 0.3754971114358125,
+    "watershed_iou": 0.23114585642193158,
+    "center_box_iou": 0.35873921712221335
+  },
+  {
+    "key": "isic_0010452",
+    "otsu_dice": 0.0037193387020420473,
+    "otsu_iou": 0.0018631341647560864,
+    "kmeans_lab_dice": 0.9120791047617359,
+    "kmeans_lab_iou": 0.8383689556417825,
+    "watershed_dice": 0.002679319006883115,
+    "watershed_iou": 0.0013414565987548016,
+    "center_box_iou": 0.6423586607070747
+  },
+  {
+    "key": "isic_0010323",
+    "otsu_dice": 0.9526884541397052,
+    "otsu_iou": 0.9096514383951938,
+    "kmeans_lab_dice": 0.5978491479843145,
+    "kmeans_lab_iou": 0.4263800482843346,
+    "watershed_dice": 0.956987346214119,
+    "watershed_iou": 0.9175222781243298,
+    "center_box_iou": 0.2545403700653732
+  },
+  {
+    "key": "isic_0014851",
+    "otsu_dice": 0.3383728885231154,
+    "otsu_iou": 0.20363948456665254,
+    "kmeans_lab_dice": 0.8834045252822925,
+    "kmeans_lab_iou": 0.791158969639952,
+    "watershed_dice": 0.3148556399479663,
+    "watershed_iou": 0.1868419391311126,
+    "center_box_iou": 0.524006579998194
+  },
+  {
+    "key": "isic_0015963",
+    "otsu_dice": 2.8407154057669814e-13,
+    "otsu_iou": 2.8407154057669814e-13,
+    "kmeans_lab_dice": 0.5798072908674254,
+    "kmeans_lab_iou": 0.4082595883918161,
+    "watershed_dice": 2.8583842125714997e-13,
+    "watershed_iou": 2.8583842125714997e-13,
+    "center_box_iou": 0.21206700846851514
+  },
+  {
+    "key": "isic_0014090",
+    "otsu_dice": 6.524306303128062e-13,
+    "otsu_iou": 6.524306303128062e-13,
+    "kmeans_lab_dice": 0.20273972602774956,
+    "kmeans_lab_iou": 0.11280487804921675,
+    "watershed_dice": 6.643723674240527e-13,
+    "watershed_iou": 6.643723674240527e-13,
+    "center_box_iou": 0.07363507253060299
+  },
+  {
+    "key": "isic_0014792",
+    "otsu_dice": 0.9107923590564958,
+    "otsu_iou": 0.8361971811614797,
+    "kmeans_lab_dice": 0.9689224097718855,
+    "kmeans_lab_iou": 0.939718231639119,
+    "watershed_dice": 0.8953378672559832,
+    "watershed_iou": 0.8105083361841537,
+    "center_box_iou": 0.24241212396631287
+  },
+  {
+    "key": "isic_0003174",
+    "otsu_dice": 0.023843527280658437,
+    "otsu_iou": 0.012065606954790519,
+    "kmeans_lab_dice": 6.610997659045292e-14,
+    "kmeans_lab_iou": 6.610997659045292e-14,
+    "watershed_dice": 0.018298588453817943,
+    "watershed_iou": 0.009233776767551027,
+    "center_box_iou": 0.23157990047869484
+  },
+  {
+    "key": "isic_0005639",
+    "otsu_dice": 8.781365941471425e-14,
+    "otsu_iou": 8.781365941471425e-14,
+    "kmeans_lab_dice": 0.38000479521320635,
+    "kmeans_lab_iou": 0.23457155557644455,
+    "watershed_dice": 8.781365941471425e-14,
+    "watershed_iou": 8.781365941471425e-14,
+    "center_box_iou": 0.32212547835549615
+  },
+  {
+    "key": "isic_0014830",
+    "otsu_dice": 0.37403574129459943,
+    "otsu_iou": 0.23003933776036056,
+    "kmeans_lab_dice": 0.9180779793320551,
+    "kmeans_lab_iou": 0.8485620606605856,
+    "watershed_dice": 0.2752294551697924,
+    "watershed_iou": 0.15957453354868975,
+    "center_box_iou": 0.4545228708125557
+  },
+  {
+    "key": "isic_0014831",
+    "otsu_dice": 0.16972250754326185,
+    "otsu_iou": 0.09273047843442314,
+    "kmeans_lab_dice": 0.6596447983886614,
+    "kmeans_lab_iou": 0.492141782712267,
+    "watershed_dice": 0.14662726699327658,
+    "watershed_iou": 0.07911374996620965,
+    "center_box_iou": 0.5291609889040257
+  },
+  {
+    "key": "isic_0013438",
+    "otsu_dice": 1.3778298903658856e-13,
+    "otsu_iou": 1.3778298903658856e-13,
+    "kmeans_lab_dice": 0.6765149687228973,
+    "kmeans_lab_iou": 0.5111617832731516,
+    "watershed_dice": 1.3845793855511685e-13,
+    "watershed_iou": 1.3845793855511685e-13,
+    "center_box_iou": 0.318586470065097
+  },
+  {
+    "key": "isic_0010367",
+    "otsu_dice": 1.0975020852527574e-12,
+    "otsu_iou": 1.0975020852527574e-12,
+    "kmeans_lab_dice": 0.6105629094801374,
+    "kmeans_lab_iou": 0.43943184880149405,
+    "watershed_dice": 1.0975020852527574e-12,
+    "watershed_iou": 1.0975020852527574e-12,
+    "center_box_iou": 0.5984474666021792
+  },
+  {
+    "key": "isic_0014131",
+    "otsu_dice": 4.3947351073394733e-13,
+    "otsu_iou": 4.3947351073394733e-13,
+    "kmeans_lab_dice": 0.17909980394491354,
+    "kmeans_lab_iou": 0.09835783659809061,
+    "watershed_dice": 4.5153046250244884e-13,
+    "watershed_iou": 4.5153046250244884e-13,
+    "center_box_iou": 0.08768132651349704
+  },
+  {
+    "key": "isic_0011227",
+    "otsu_dice": 3.625053469537361e-13,
+    "otsu_iou": 3.625053469537361e-13,
+    "kmeans_lab_dice": 0.1488368620757072,
+    "kmeans_lab_iou": 0.08040180739702232,
+    "watershed_dice": 3.625053469537361e-13,
+    "watershed_iou": 3.625053469537361e-13,
+    "center_box_iou": 0.4996767102028914
+  },
+  {
+    "key": "isic_0011224",
+    "otsu_dice": 5.207953586714923e-13,
+    "otsu_iou": 5.207953586714923e-13,
+    "kmeans_lab_dice": 0.5557636182669062,
+    "kmeans_lab_iou": 0.38481485807756693,
+    "watershed_dice": 5.207953586714923e-13,
+    "watershed_iou": 5.207953586714923e-13,
+    "center_box_iou": 0.648620829580443
+  },
+  {
+    "key": "isic_0002488",
+    "otsu_dice": 0.09571104360239203,
+    "otsu_iou": 0.05026077753633875,
+    "kmeans_lab_dice": 0.12529979672097272,
+    "kmeans_lab_iou": 0.06683724496419782,
+    "watershed_dice": 0.09746760267596859,
+    "watershed_iou": 0.051230456213557665,
+    "center_box_iou": 0.07946962391513557
+  },
+  {
+    "key": "isic_0011097",
+    "otsu_dice": 9.714585478628189e-13,
+    "otsu_iou": 9.714585478628189e-13,
+    "kmeans_lab_dice": 0.8070368562617184,
+    "kmeans_lab_iou": 0.6764977279456826,
+    "watershed_dice": 9.714585478628189e-13,
+    "watershed_iou": 9.714585478628189e-13,
+    "center_box_iou": 0.5800763066135837
+  },
+  {
+    "key": "isic_0013671",
+    "otsu_dice": 5.212978857721375e-14,
+    "otsu_iou": 5.212978857721375e-14,
+    "kmeans_lab_dice": 0.8448510581688013,
+    "kmeans_lab_iou": 0.7313784634815226,
+    "watershed_dice": 5.218307911476352e-14,
+    "watershed_iou": 5.218307911476352e-14,
+    "center_box_iou": 0.5007955778313025
+  },
+  {
+    "key": "isic_0013567",
+    "otsu_dice": 1.8342296602269612e-13,
+    "otsu_iou": 1.8342296602269612e-13,
+    "kmeans_lab_dice": 8.521306248076655e-14,
+    "kmeans_lab_iou": 8.521306248076655e-14,
+    "watershed_dice": 1.853994245201519e-13,
+    "watershed_iou": 1.853994245201519e-13,
+    "center_box_iou": 0.20389996121917828
+  },
+  {
+    "key": "isic_0012447",
+    "otsu_dice": 1.0827725473847163e-13,
+    "otsu_iou": 1.0827725473847163e-13,
+    "kmeans_lab_dice": 0.08499754816026578,
+    "kmeans_lab_iou": 0.044385085814731676,
+    "watershed_dice": 1.0827725473847163e-13,
+    "watershed_iou": 1.0827725473847163e-13,
+    "center_box_iou": 0.5591643592870292
+  },
+  {
+    "key": "isic_0014263",
+    "otsu_dice": 2.7351175416756056e-13,
+    "otsu_iou": 2.7351175416756056e-13,
+    "kmeans_lab_dice": 0.015446831839876074,
+    "kmeans_lab_iou": 0.007783531370149387,
+    "watershed_dice": 2.7809140308228775e-13,
+    "watershed_iou": 2.7809140308228775e-13,
+    "center_box_iou": 0.13193469101123162
+  },
+  {
+    "key": "isic_0007087",
+    "otsu_dice": 1.411703587420957e-13,
+    "otsu_iou": 1.411703587420957e-13,
+    "kmeans_lab_dice": 0.6007839126698382,
+    "kmeans_lab_iou": 0.42937178761017813,
+    "watershed_dice": 1.411703587420957e-13,
+    "watershed_iou": 1.411703587420957e-13,
+    "center_box_iou": 0.4943224427238875
+  },
+  {
+    "key": "isic_0013637",
+    "otsu_dice": 1.1992938557775741e-13,
+    "otsu_iou": 1.1992938557775741e-13,
+    "kmeans_lab_dice": 0.0006327894410651189,
+    "kmeans_lab_iou": 0.00031649485788939365,
+    "watershed_dice": 1.212656250757763e-13,
+    "watershed_iou": 1.212656250757763e-13,
+    "center_box_iou": 0.35180258730922875
+  },
+  {
+    "key": "isic_0014912",
+    "otsu_dice": 0.22407945564100767,
+    "otsu_iou": 0.12617650961512708,
+    "kmeans_lab_dice": 0.6845475463909398,
+    "kmeans_lab_iou": 0.5203894253363743,
+    "watershed_dice": 0.16930969899850135,
+    "watershed_iou": 0.09248407494478206,
+    "center_box_iou": 0.287649040953861
+  },
+  {
+    "key": "isic_0014077",
+    "otsu_dice": 2.323083270455159e-14,
+    "otsu_iou": 2.323083270455159e-14,
+    "kmeans_lab_dice": 0.4926707947836155,
+    "kmeans_lab_iou": 0.32685016191462984,
+    "watershed_dice": 2.3260904304871757e-14,
+    "watershed_iou": 2.3260904304871757e-14,
+    "center_box_iou": 0.5347127367039239
+  },
+  {
+    "key": "isic_0011083",
+    "otsu_dice": 0.774325429272858,
+    "otsu_iou": 0.6317545030035367,
+    "kmeans_lab_dice": 0.8892182289739505,
+    "kmeans_lab_iou": 0.8005336891269157,
+    "watershed_dice": 0.8187549251383502,
+    "watershed_iou": 0.6931287525029473,
+    "center_box_iou": 0.186767578124905
+  },
+  {
+    "key": "isic_0010327",
+    "otsu_dice": 6.096928976870631e-13,
+    "otsu_iou": 6.096928976870631e-13,
+    "kmeans_lab_dice": 0.0001522410360953256,
+    "kmeans_lab_iou": 7.61263130599085e-05,
+    "watershed_dice": 6.349649816808571e-13,
+    "watershed_iou": 6.349649816808571e-13,
+    "center_box_iou": 0.7325394032556385
+  },
+  {
+    "key": "isic_0009897",
+    "otsu_dice": 0.06763855445982296,
+    "otsu_iou": 0.03500305525973147,
+    "kmeans_lab_dice": 0.8683371932652112,
+    "kmeans_lab_iou": 0.7673108880998489,
+    "watershed_dice": 0.058562853643667354,
+    "watershed_iou": 0.030164692044640125,
+    "center_box_iou": 0.2789873992507267
+  },
+  {
+    "key": "isic_0014255",
+    "otsu_dice": 2.8329751508416813e-14,
+    "otsu_iou": 2.8329751508416813e-14,
+    "kmeans_lab_dice": 0.09103236991634012,
+    "kmeans_lab_iou": 0.047686701692459685,
+    "watershed_dice": 2.836912429335977e-14,
+    "watershed_iou": 2.836912429335977e-14,
+    "center_box_iou": 0.6208881405015696
+  },
+  {
+    "key": "isic_0010335",
+    "otsu_dice": 0.0821502062277873,
+    "otsu_iou": 0.042834536101171855,
+    "kmeans_lab_dice": 0.6189298353242628,
+    "kmeans_lab_iou": 0.44815234674890964,
+    "watershed_dice": 0.07011411422385541,
+    "watershed_iou": 0.03633070470165823,
+    "center_box_iou": 0.3188851476283568
+  },
+  {
+    "key": "isic_0009869",
+    "otsu_dice": 0.02427710582428518,
+    "otsu_iou": 0.012287707905796533,
+    "kmeans_lab_dice": 0.19596951391989936,
+    "kmeans_lab_iou": 0.10862871521979442,
+    "watershed_dice": 0.034502091691390645,
+    "watershed_iou": 0.017553868435911803,
+    "center_box_iou": 0.3084564208982806
+  },
+  {
+    "key": "isic_0015443",
+    "otsu_dice": 0.008258381164123474,
+    "otsu_iou": 0.004146311492431675,
+    "kmeans_lab_dice": 0.9343833391135102,
+    "kmeans_lab_iou": 0.8768475319597523,
+    "watershed_dice": 0.007213596745374211,
+    "watershed_iou": 0.00361985445786018,
+    "center_box_iou": 0.5669402609313365
+  },
+  {
+    "key": "isic_0009910",
+    "otsu_dice": 0.08110033021034131,
+    "otsu_iou": 0.04226397632322614,
+    "kmeans_lab_dice": 0.5907456418903809,
+    "kmeans_lab_iou": 0.41919021821081426,
+    "watershed_dice": 0.06516055423805825,
+    "watershed_iou": 0.033677499381711426,
+    "center_box_iou": 0.4359746497486626
+  },
+  {
+    "key": "isic_0015946",
+    "otsu_dice": 0.45368051524479436,
+    "otsu_iou": 0.2933937777528595,
+    "kmeans_lab_dice": 0.5614759513742977,
+    "kmeans_lab_iou": 0.3903139137026115,
+    "watershed_dice": 0.5000750750753432,
+    "watershed_iou": 0.3334000700740539,
+    "center_box_iou": 0.14391289893616066
+  },
+  {
+    "key": "isic_0010215",
+    "otsu_dice": 5.96313589390033e-13,
+    "otsu_iou": 5.96313589390033e-13,
+    "kmeans_lab_dice": 0.679470777418808,
+    "kmeans_lab_iou": 0.5145442946660896,
+    "watershed_dice": 5.96313589390033e-13,
+    "watershed_iou": 5.96313589390033e-13,
+    "center_box_iou": 0.6164597701147063
+  },
+  {
+    "key": "isic_0009921",
+    "otsu_dice": 0.7874304331167439,
+    "otsu_iou": 0.6493899027506956,
+    "kmeans_lab_dice": 0.5489727467468475,
+    "kmeans_lab_iou": 0.3783338634861321,
+    "watershed_dice": 0.7961907018765247,
+    "watershed_iou": 0.6613927165354769,
+    "center_box_iou": 0.29079291831206594
+  },
+  {
+    "key": "isic_0014664",
+    "otsu_dice": 0.8790454235414765,
+    "otsu_iou": 0.7841936167642766,
+    "kmeans_lab_dice": 0.9402420613127874,
+    "kmeans_lab_iou": 0.8872234186587209,
+    "watershed_dice": 0.7699688279140054,
+    "watershed_iou": 0.625975052817748,
+    "center_box_iou": 0.3802914139105847
+  },
+  {
+    "key": "isic_0015179",
+    "otsu_dice": 0.45354883126617784,
+    "otsu_iou": 0.29328364221001235,
+    "kmeans_lab_dice": 0.7959945535866735,
+    "kmeans_lab_iou": 0.6611220538560728,
+    "watershed_dice": 0.30685188933253227,
+    "watershed_iou": 0.18123156940568894,
+    "center_box_iou": 0.523139238309513
+  },
+  {
+    "key": "isic_0013767",
+    "otsu_dice": 2.4584128732331088e-14,
+    "otsu_iou": 2.4584128732331088e-14,
+    "kmeans_lab_dice": 0.7637862203141674,
+    "kmeans_lab_iou": 0.617843153720774,
+    "watershed_dice": 2.4584128732331088e-14,
+    "watershed_iou": 2.4584128732331088e-14,
+    "center_box_iou": 0.43387452020237516
+  },
+  {
+    "key": "isic_0015284",
+    "otsu_dice": 0.4071159051711336,
+    "otsu_iou": 0.25558413602897945,
+    "kmeans_lab_dice": 0.629351427793528,
+    "kmeans_lab_iou": 0.45916323159363864,
+    "watershed_dice": 0.35580467522157616,
+    "watershed_iou": 0.21640049078082071,
+    "center_box_iou": 0.436125654450259
+  },
+  {
+    "key": "isic_0008406",
+    "otsu_dice": 2.0831987934108247e-13,
+    "otsu_iou": 2.0831987934108247e-13,
+    "kmeans_lab_dice": 0.04782038057197622,
+    "kmeans_lab_iou": 0.02449589171820608,
+    "watershed_dice": 2.0746070175652672e-13,
+    "watershed_iou": 2.0746070175652672e-13,
+    "center_box_iou": 0.1880739284309811
+  },
+  {
+    "key": "isic_0015412",
+    "otsu_dice": 0.07035583691304073,
+    "otsu_iou": 0.036460523789265516,
+    "kmeans_lab_dice": 0.6969464970406338,
+    "kmeans_lab_iou": 0.534856393431122,
+    "watershed_dice": 0.07480070872313292,
+    "watershed_iou": 0.03885348860352573,
+    "center_box_iou": 0.5419808380080178
+  },
+  {
+    "key": "isic_0011115",
+    "otsu_dice": 0.03177503277184821,
+    "otsu_iou": 0.01614400452429211,
+    "kmeans_lab_dice": 0.20792540401297208,
+    "kmeans_lab_iou": 0.11602497154914646,
+    "watershed_dice": 0.03302504664377793,
+    "watershed_iou": 0.016789764705102354,
+    "center_box_iou": 0.17866007486970079
+  },
+  {
+    "key": "isic_0011117",
+    "otsu_dice": 2.736899148002546e-13,
+    "otsu_iou": 2.736899148002546e-13,
+    "kmeans_lab_dice": 0.22852422987435733,
+    "kmeans_lab_iou": 0.1290021764499074,
+    "watershed_dice": 2.736899148002546e-13,
+    "watershed_iou": 2.736899148002546e-13,
+    "center_box_iou": 0.41800183692204607
+  },
+  {
+    "key": "isic_0010596",
+    "otsu_dice": 0.049813109450828195,
+    "otsu_iou": 0.025542736284673562,
+    "kmeans_lab_dice": 0.746919673940287,
+    "kmeans_lab_iou": 0.5960668748898483,
+    "watershed_dice": 0.04800541524530267,
+    "watershed_iou": 0.024593006364120016,
+    "center_box_iou": 0.4217897229944518
+  },
+  {
+    "key": "isic_0012966",
+    "otsu_dice": 5.014469251023578e-14,
+    "otsu_iou": 5.014469251023578e-14,
+    "kmeans_lab_dice": 4.8384911649148985e-14,
+    "kmeans_lab_iou": 4.8384911649148985e-14,
+    "watershed_dice": 5.250898428720878e-14,
+    "watershed_iou": 5.250898428720878e-14,
+    "center_box_iou": 0.06309185606060354
+  },
+  {
+    "key": "isic_0014685",
+    "otsu_dice": 0.7953593541805675,
+    "otsu_iou": 0.6602461546858714,
+    "kmeans_lab_dice": 0.7487521979511301,
+    "kmeans_lab_iou": 0.5984044061656634,
+    "watershed_dice": 0.7707658293990804,
+    "watershed_iou": 0.6270292901329825,
+    "center_box_iou": 0.20308105056683898
+  },
+  {
+    "key": "isic_0013173",
+    "otsu_dice": 8.146174963539231e-13,
+    "otsu_iou": 8.146174963539231e-13,
+    "kmeans_lab_dice": 0.07454798527562777,
+    "kmeans_lab_iou": 0.03871713483673208,
+    "watershed_dice": 8.857631292231983e-13,
+    "watershed_iou": 8.857631292231983e-13,
+    "center_box_iou": 0.04565860626466505
+  },
+  {
+    "key": "isic_0014441",
+    "otsu_dice": 1.5323580385201816e-13,
+    "otsu_iou": 1.5323580385201816e-13,
+    "kmeans_lab_dice": 1.3989105284802238e-13,
+    "kmeans_lab_iou": 1.3989105284802238e-13,
+    "watershed_dice": 1.5393804301642303e-13,
+    "watershed_iou": 1.5393804301642303e-13,
+    "center_box_iou": 0.23498930649289093
+  },
+  {
+    "key": "isic_0010863",
+    "otsu_dice": 0.005643587786140695,
+    "otsu_iou": 0.0028297789461305843,
+    "kmeans_lab_dice": 0.7926332546819492,
+    "kmeans_lab_iou": 0.656497503973572,
+    "watershed_dice": 0.004717086484608111,
+    "watershed_iou": 0.0023641191195889737,
+    "center_box_iou": 0.32387714255115785
+  },
+  {
+    "key": "isic_0012823",
+    "otsu_dice": 7.341658774378093e-13,
+    "otsu_iou": 7.341658774378093e-13,
+    "kmeans_lab_dice": 0.41071880677125006,
+    "kmeans_lab_iou": 0.2584305461623011,
+    "watershed_dice": 7.478368818187782e-13,
+    "watershed_iou": 7.478368818187782e-13,
+    "center_box_iou": 0.06604475946331743
+  },
+  {
+    "key": "isic_0009884",
+    "otsu_dice": 0.29521472882203814,
+    "otsu_iou": 0.17316827744462926,
+    "kmeans_lab_dice": 0.7675707530625043,
+    "kmeans_lab_iou": 0.6228112120595409,
+    "watershed_dice": 0.2870142104109925,
+    "watershed_iou": 0.16755200898700354,
+    "center_box_iou": 0.6274822730850753
+  },
+  {
+    "key": "isic_0013558",
+    "otsu_dice": 0.6927192401296771,
+    "otsu_iou": 0.5298932420596083,
+    "kmeans_lab_dice": 0.6536367952328651,
+    "kmeans_lab_iou": 0.4854832580975224,
+    "watershed_dice": 0.7553955238310341,
+    "watershed_iou": 0.6069362100933078,
+    "center_box_iou": 0.17279787234041405
+  },
+  {
+    "key": "isic_0003728",
+    "otsu_dice": 0.11087800527417428,
+    "otsu_iou": 0.058692877211608124,
+    "kmeans_lab_dice": 0.11039752351214657,
+    "kmeans_lab_iou": 0.058423676347713,
+    "watershed_dice": 0.11285258483478003,
+    "watershed_iou": 0.05980061966961752,
+    "center_box_iou": 0.30351330849147984
+  },
+  {
+    "key": "isic_0012697",
+    "otsu_dice": 5.187905953638181e-13,
+    "otsu_iou": 5.187905953638181e-13,
+    "kmeans_lab_dice": 0.33536508596141973,
+    "kmeans_lab_iou": 0.20146464737295391,
+    "watershed_dice": 5.187905953638181e-13,
+    "watershed_iou": 5.187905953638181e-13,
+    "center_box_iou": 0.15758377659573422
+  },
+  {
+    "key": "isic_0002093",
+    "otsu_dice": 0.02324319141846356,
+    "otsu_iou": 0.011758245282190532,
+    "kmeans_lab_dice": 0.9447031032542799,
+    "kmeans_lab_iou": 0.8952012520528769,
+    "watershed_dice": 0.035448795484402135,
+    "watershed_iou": 0.01804422068663775,
+    "center_box_iou": 0.26776322080901727
+  },
+  {
+    "key": "isic_0010330",
+    "otsu_dice": 0.5178607102068656,
+    "otsu_iou": 0.3494008382162286,
+    "kmeans_lab_dice": 0.9138835658575025,
+    "kmeans_lab_iou": 0.8414232002474514,
+    "watershed_dice": 0.5249202437580449,
+    "watershed_iou": 0.35585888934944104,
+    "center_box_iou": 0.3930572048891462
+  },
+  {
+    "key": "isic_0010860",
+    "otsu_dice": 0.37081355731950655,
+    "otsu_iou": 0.22760658179165352,
+    "kmeans_lab_dice": 0.914129735830261,
+    "kmeans_lab_iou": 0.8418406562861817,
+    "watershed_dice": 0.37633906315652804,
+    "watershed_iou": 0.2317842688809544,
+    "center_box_iou": 0.6514853492849871
+  },
+  {
+    "key": "isic_0013140",
+    "otsu_dice": 3.1540666958933565e-13,
+    "otsu_iou": 3.1540666958933565e-13,
+    "kmeans_lab_dice": 0.29974631587961054,
+    "kmeans_lab_iou": 0.17629505448466548,
+    "watershed_dice": 3.237859645259049e-13,
+    "watershed_iou": 3.237859645259049e-13,
+    "center_box_iou": 0.13189621913579722
+  },
+  {
+    "key": "isic_0014081",
+    "otsu_dice": 3.433558918153077e-13,
+    "otsu_iou": 3.433558918153077e-13,
+    "kmeans_lab_dice": 0.40290126285941685,
+    "kmeans_lab_iou": 0.25227072909772563,
+    "watershed_dice": 3.497114880222592e-13,
+    "watershed_iou": 3.497114880222592e-13,
+    "center_box_iou": 0.12067679073033312
+  },
+  {
+    "key": "isic_0014132",
+    "otsu_dice": 3.932222637726926e-14,
+    "otsu_iou": 3.932222637726926e-14,
+    "kmeans_lab_dice": 0.00020502445598795008,
+    "kmeans_lab_iou": 0.00010252273784709403,
+    "watershed_dice": 3.948919930909541e-14,
+    "watershed_iou": 3.948919930909541e-14,
+    "center_box_iou": 0.3897696992162108
+  },
+  {
+    "key": "isic_0014730",
+    "otsu_dice": 0.6442847548034918,
+    "otsu_iou": 0.475236047603871,
+    "kmeans_lab_dice": 0.8785370424897757,
+    "kmeans_lab_iou": 0.7833848069669921,
+    "watershed_dice": 0.5683837617778893,
+    "watershed_iou": 0.3970224328300181,
+    "center_box_iou": 0.5428722167001357
+  },
+  {
+    "key": "isic_0011339",
+    "otsu_dice": 0.7942961165049324,
+    "otsu_iou": 0.6587820835432443,
+    "kmeans_lab_dice": 0.9200586924623934,
+    "kmeans_lab_iou": 0.8519524959743282,
+    "watershed_dice": 0.7248106789886869,
+    "watershed_iou": 0.5683945646706289,
+    "center_box_iou": 0.5696747807030529
+  },
+  {
+    "key": "isic_0015035",
+    "otsu_dice": 0.8804501400175924,
+    "otsu_iou": 0.786432272012826,
+    "kmeans_lab_dice": 0.9036510469498472,
+    "kmeans_lab_iou": 0.8242367035019372,
+    "watershed_dice": 0.8567298828166907,
+    "watershed_iou": 0.7493678614879259,
+    "center_box_iou": 0.18017693458649645
+  },
+  {
+    "key": "isic_0015313",
+    "otsu_dice": 0.16408066152865927,
+    "otsu_iou": 0.08937247845827684,
+    "kmeans_lab_dice": 0.885972264935489,
+    "kmeans_lab_iou": 0.7952874394856828,
+    "watershed_dice": 0.09791371238509498,
+    "watershed_iou": 0.051477008704940194,
+    "center_box_iou": 0.30336731541550693
+  },
+  {
+    "key": "isic_0010361",
+    "otsu_dice": 2.501300676351077e-13,
+    "otsu_iou": 2.501300676351077e-13,
+    "kmeans_lab_dice": 0.556567232192998,
+    "kmeans_lab_iou": 0.3855858371835889,
+    "watershed_dice": 2.5014007844386604e-13,
+    "watershed_iou": 2.5014007844386604e-13,
+    "center_box_iou": 0.3872576537394868
+  },
+  {
+    "key": "isic_0010443",
+    "otsu_dice": 0.6766046000863493,
+    "otsu_iou": 0.5112641317408184,
+    "kmeans_lab_dice": 0.8809402880171349,
+    "kmeans_lab_iou": 0.7872147291017236,
+    "watershed_dice": 0.6577109345675725,
+    "watershed_iou": 0.4899920229596747,
+    "center_box_iou": 0.6248412496822054
+  },
+  {
+    "key": "isic_0012271",
+    "otsu_dice": 2.064055911146095e-13,
+    "otsu_iou": 2.064055911146095e-13,
+    "kmeans_lab_dice": 0.16203838271081392,
+    "kmeans_lab_iou": 0.08816200577128731,
+    "watershed_dice": 2.144652523397699e-13,
+    "watershed_iou": 2.144652523397699e-13,
+    "center_box_iou": 0.11489692055550393
+  },
+  {
+    "key": "isic_0013437",
+    "otsu_dice": 5.27517140350655e-14,
+    "otsu_iou": 5.27517140350655e-14,
+    "kmeans_lab_dice": 0.7871366937614516,
+    "kmeans_lab_iou": 0.6489904424618198,
+    "watershed_dice": 5.2937053608292645e-14,
+    "watershed_iou": 5.2937053608292645e-14,
+    "center_box_iou": 0.5805831340981912
+  },
+  {
+    "key": "isic_0012758",
+    "otsu_dice": 0.6966568209747324,
+    "otsu_iou": 0.5345152621253279,
+    "kmeans_lab_dice": 0.8022379100038365,
+    "kmeans_lab_iou": 0.6697806824118128,
+    "watershed_dice": 0.6673971724091525,
+    "watershed_iou": 0.5008222694657222,
+    "center_box_iou": 0.38274088978274534
+  },
+  {
+    "key": "isic_0010182",
+    "otsu_dice": 2.9978715112180414e-12,
+    "otsu_iou": 2.9978715112180414e-12,
+    "kmeans_lab_dice": 0.16038004562351596,
+    "kmeans_lab_iou": 0.08718107522273581,
+    "watershed_dice": 2.9978715112180414e-12,
+    "watershed_iou": 2.9978715112180414e-12,
+    "center_box_iou": 0.23612016802887625
+  },
+  {
+    "key": "isic_0010584",
+    "otsu_dice": 0.16697472234209715,
+    "otsu_iou": 0.09109242757173015,
+    "kmeans_lab_dice": 0.30977094725846055,
+    "kmeans_lab_iou": 0.18327157893553664,
+    "watershed_dice": 0.16979893292006265,
+    "watershed_iou": 0.09277610857865044,
+    "center_box_iou": 0.46274312337216045
+  },
+  {
+    "key": "isic_0009994",
+    "otsu_dice": 0.7931734469868406,
+    "otsu_iou": 0.657238975233543,
+    "kmeans_lab_dice": 0.9062122292707082,
+    "kmeans_lab_iou": 0.8285082842593389,
+    "watershed_dice": 0.7875605592212488,
+    "watershed_iou": 0.6495669249389969,
+    "center_box_iou": 0.6356536502544441
+  },
+  {
+    "key": "isic_0013562",
+    "otsu_dice": 1.4289960445387444e-13,
+    "otsu_iou": 1.4289960445387444e-13,
+    "kmeans_lab_dice": 0.301504287552828,
+    "kmeans_lab_iou": 0.1775125396804531,
+    "watershed_dice": 1.440826688720713e-13,
+    "watershed_iou": 1.440826688720713e-13,
+    "center_box_iou": 0.28726299157302426
+  },
+  {
+    "key": "isic_0010599",
+    "otsu_dice": 3.6159041930011945e-13,
+    "otsu_iou": 3.6159041930011945e-13,
+    "kmeans_lab_dice": 0.8704700453302017,
+    "kmeans_lab_iou": 0.7706480396836556,
+    "watershed_dice": 3.6159041930011945e-13,
+    "watershed_iou": 3.6159041930011945e-13,
+    "center_box_iou": 0.3873286052008693
+  },
+  {
+    "key": "isic_0011223",
+    "otsu_dice": 1.2674271229388246e-12,
+    "otsu_iou": 1.2674271229388246e-12,
+    "kmeans_lab_dice": 0.8504317983629284,
+    "kmeans_lab_iou": 0.739783683257794,
+    "watershed_dice": 1.2674271229388246e-12,
+    "watershed_iou": 1.2674271229388246e-12,
+    "center_box_iou": 0.5402824864338607
+  },
+  {
+    "key": "isic_0009919",
+    "otsu_dice": 3.796709012626412e-13,
+    "otsu_iou": 3.796709012626412e-13,
+    "kmeans_lab_dice": 0.6949671685808774,
+    "kmeans_lab_iou": 0.5325284941875905,
+    "watershed_dice": 3.796709012626412e-13,
+    "watershed_iou": 3.796709012626412e-13,
+    "center_box_iou": 0.5836420632657144
+  },
+  {
+    "key": "isic_0010264",
+    "otsu_dice": 2.278179370174012e-13,
+    "otsu_iou": 2.278179370174012e-13,
+    "kmeans_lab_dice": 0.7998042268944945,
+    "kmeans_lab_iou": 0.6663948039285685,
+    "watershed_dice": 2.278179370174012e-13,
+    "watershed_iou": 2.278179370174012e-13,
+    "center_box_iou": 0.33718698710126394
+  },
+  {
+    "key": "isic_0009949",
+    "otsu_dice": 0.6436382484693939,
+    "otsu_iou": 0.4745328801429946,
+    "kmeans_lab_dice": 0.813556327010012,
+    "kmeans_lab_iou": 0.6857100303462894,
+    "watershed_dice": 0.5958267348979387,
+    "watershed_iou": 0.424325651047688,
+    "center_box_iou": 0.5482432477068269
+  },
+  {
+    "key": "isic_0014937",
+    "otsu_dice": 0.14599395150844724,
+    "otsu_iou": 0.0787451322649319,
+    "kmeans_lab_dice": 0.840971758328061,
+    "kmeans_lab_iou": 0.7255834914901904,
+    "watershed_dice": 0.08438252469022854,
+    "watershed_iou": 0.04404977808870077,
+    "center_box_iou": 0.2857142857142846
+  },
+  {
+    "key": "isic_0009035",
+    "otsu_dice": 6.975534012005803e-14,
+    "otsu_iou": 6.975534012005803e-14,
+    "kmeans_lab_dice": 0.267656315338762,
+    "kmeans_lab_iou": 0.15450531999434655,
+    "watershed_dice": 6.987470766168694e-14,
+    "watershed_iou": 6.987470766168694e-14,
+    "center_box_iou": 0.42666415825366616
+  },
+  {
+    "key": "isic_0001262",
+    "otsu_dice": 3.488976578499011e-13,
+    "otsu_iou": 3.488976578499011e-13,
+    "kmeans_lab_dice": 0.1067947979188712,
+    "kmeans_lab_iou": 0.0564095206380657,
+    "watershed_dice": 3.488976578499011e-13,
+    "watershed_iou": 3.488976578499011e-13,
+    "center_box_iou": 0.24221830679598988
+  },
+  {
+    "key": "isic_0006193",
+    "otsu_dice": 2.654681663847575e-13,
+    "otsu_iou": 2.654681663847575e-13,
+    "kmeans_lab_dice": 0.12553497907074188,
+    "kmeans_lab_iou": 0.06697109717658215,
+    "watershed_dice": 2.654681663847575e-13,
+    "watershed_iou": 2.654681663847575e-13,
+    "center_box_iou": 0.3264485964138528
+  },
+  {
+    "key": "isic_0014974",
+    "otsu_dice": 0.8676967567995549,
+    "otsu_iou": 0.766311288084825,
+    "kmeans_lab_dice": 0.9459904910453533,
+    "kmeans_lab_iou": 0.8975160878610821,
+    "watershed_dice": 0.8505622826876869,
+    "watershed_iou": 0.7399811837361034,
+    "center_box_iou": 0.5971868868263841
+  },
+  {
+    "key": "isic_0012442",
+    "otsu_dice": 0.43802309468832556,
+    "otsu_iou": 0.2804286626767097,
+    "kmeans_lab_dice": 0.6206446208277503,
+    "kmeans_lab_iou": 0.44995265919087746,
+    "watershed_dice": 0.44253793621825277,
+    "watershed_iou": 0.2841404272434331,
+    "center_box_iou": 0.3734687499999752
+  },
+  {
+    "key": "isic_0015026",
+    "otsu_dice": 0.780244915086036,
+    "otsu_iou": 0.6396734268511695,
+    "kmeans_lab_dice": 0.8057985138031561,
+    "kmeans_lab_iou": 0.6747592622492765,
+    "watershed_dice": 0.737524542690324,
+    "watershed_iou": 0.5841892120913023,
+    "center_box_iou": 0.22293806613761427
+  },
+  {
+    "key": "isic_0013229",
+    "otsu_dice": 1.4974610547813935e-13,
+    "otsu_iou": 1.4974610547813935e-13,
+    "kmeans_lab_dice": 0.6290625356950432,
+    "kmeans_lab_iou": 0.45885574803662565,
+    "watershed_dice": 1.496551197764527e-13,
+    "watershed_iou": 1.496551197764527e-13,
+    "center_box_iou": 0.15730498604014959
+  },
+  {
+    "key": "isic_0014684",
+    "otsu_dice": 0.9639146462276739,
+    "otsu_iou": 0.9303428937761923,
+    "kmeans_lab_dice": 0.9738161461972122,
+    "kmeans_lab_iou": 0.9489684938897526,
+    "watershed_dice": 0.9512528825318043,
+    "watershed_iou": 0.907037422737569,
+    "center_box_iou": 0.3867119039239485
+  },
+  {
+    "key": "isic_0012957",
+    "otsu_dice": 4.0449147331957877e-13,
+    "otsu_iou": 4.0449147331957877e-13,
+    "kmeans_lab_dice": 0.05896243173699446,
+    "kmeans_lab_iou": 0.03037675967799973,
+    "watershed_dice": 4.0449147331957877e-13,
+    "watershed_iou": 4.0449147331957877e-13,
+    "center_box_iou": 0.12614784205692794
+  },
+  {
+    "key": "isic_0013962",
+    "otsu_dice": 3.338965054390626e-13,
+    "otsu_iou": 3.338965054390626e-13,
+    "kmeans_lab_dice": 0.0032649423931637362,
+    "kmeans_lab_iou": 0.0016351405164732452,
+    "watershed_dice": 3.1824532258926996e-13,
+    "watershed_iou": 3.1824532258926996e-13,
+    "center_box_iou": 0.07812499999999743
+  },
+  {
+    "key": "isic_0009344",
+    "otsu_dice": 1.3049123425132212e-13,
+    "otsu_iou": 1.3049123425132212e-13,
+    "kmeans_lab_dice": 0.1361192360533623,
+    "kmeans_lab_iou": 0.07303001280250776,
+    "watershed_dice": 1.316217244288431e-13,
+    "watershed_iou": 1.316217244288431e-13,
+    "center_box_iou": 0.36455571073703313
+  },
+  {
+    "key": "isic_0012986",
+    "otsu_dice": 1.7328800119219142e-13,
+    "otsu_iou": 1.7328800119219142e-13,
+    "kmeans_lab_dice": 0.27719064373025293,
+    "kmeans_lab_iou": 0.16089455442153622,
+    "watershed_dice": 1.7328800119219142e-13,
+    "watershed_iou": 1.7328800119219142e-13,
+    "center_box_iou": 0.2992424242424123
+  },
+  {
+    "key": "isic_0012273",
+    "otsu_dice": 4.211900725499722e-14,
+    "otsu_iou": 4.211900725499722e-14,
+    "kmeans_lab_dice": 0.35737885250387297,
+    "kmeans_lab_iou": 0.2175662069422664,
+    "watershed_dice": 4.211900725499722e-14,
+    "watershed_iou": 4.211900725499722e-14,
+    "center_box_iou": 0.4854796841882133
+  },
+  {
+    "key": "isic_0014663",
+    "otsu_dice": 7.364237158187957e-15,
+    "otsu_iou": 7.364237158187957e-15,
+    "kmeans_lab_dice": 0.8683940338196523,
+    "kmeans_lab_iou": 0.7673996601050569,
+    "watershed_dice": 7.364237158187957e-15,
+    "watershed_iou": 7.364237158187957e-15,
+    "center_box_iou": 0.39897588701081843
+  },
+  {
+    "key": "isic_0000900",
+    "otsu_dice": 2.398961729362956e-13,
+    "otsu_iou": 2.398961729362956e-13,
+    "kmeans_lab_dice": 0.01232503737522307,
+    "kmeans_lab_iou": 0.0062007308071331405,
+    "watershed_dice": 2.398961729362956e-13,
+    "watershed_iou": 2.398961729362956e-13,
+    "center_box_iou": 0.23096469884819384
+  },
+  {
+    "key": "isic_0002251",
+    "otsu_dice": 0.053896957851815495,
+    "otsu_iou": 0.027694811983060886,
+    "kmeans_lab_dice": 0.011815127435687564,
+    "kmeans_lab_iou": 0.005942670422046287,
+    "watershed_dice": 0.037125248246841554,
+    "watershed_iou": 0.018913712254858144,
+    "center_box_iou": 0.1930958907375832
+  },
+  {
+    "key": "isic_0010476",
+    "otsu_dice": 0.24037267497675924,
+    "otsu_iou": 0.13660430908214105,
+    "kmeans_lab_dice": 0.35934244037988233,
+    "kmeans_lab_iou": 0.21902342647498385,
+    "watershed_dice": 0.24427289987389075,
+    "watershed_iou": 0.13912919602166143,
+    "center_box_iou": 0.5454685904090905
+  },
+  {
+    "key": "isic_0011383",
+    "otsu_dice": 0.17787941422298442,
+    "otsu_iou": 0.09762219669337863,
+    "kmeans_lab_dice": 0.870559723618805,
+    "kmeans_lab_iou": 0.7707886302835392,
+    "watershed_dice": 0.15187118069570288,
+    "watershed_iou": 0.08217564658381958,
+    "center_box_iou": 0.5172922089848171
+  },
+  {
+    "key": "isic_0012351",
+    "otsu_dice": 5.106808908314852e-13,
+    "otsu_iou": 5.106808908314852e-13,
+    "kmeans_lab_dice": 0.6646116274213087,
+    "kmeans_lab_iou": 0.4976916386788893,
+    "watershed_dice": 5.162542655506026e-13,
+    "watershed_iou": 5.162542655506026e-13,
+    "center_box_iou": 0.1718749999999886
+  },
+  {
+    "key": "isic_0014440",
+    "otsu_dice": 6.606067011939405e-13,
+    "otsu_iou": 6.606067011939405e-13,
+    "kmeans_lab_dice": 0.03156768798331378,
+    "kmeans_lab_iou": 0.016036969008808414,
+    "watershed_dice": 7.188090771205091e-13,
+    "watershed_iou": 7.188090771205091e-13,
+    "center_box_iou": 0.03303837204427194
+  },
+  {
+    "key": "isic_0014028",
+    "otsu_dice": 0.6830517470147355,
+    "otsu_iou": 0.5186625560014249,
+    "kmeans_lab_dice": 0.7744766597073037,
+    "kmeans_lab_iou": 0.631955862645945,
+    "watershed_dice": 0.7869385030004369,
+    "watershed_iou": 0.64872102935179,
+    "center_box_iou": 0.13299999999999118
+  },
+  {
+    "key": "isic_0016044",
+    "otsu_dice": 1.4065271297983452e-13,
+    "otsu_iou": 1.4065271297983452e-13,
+    "kmeans_lab_dice": 0.2141704329276847,
+    "kmeans_lab_iou": 0.11992770019976642,
+    "watershed_dice": 1.4088177905508606e-13,
+    "watershed_iou": 1.4088177905508606e-13,
+    "center_box_iou": 0.3137643069763439
+  },
+  {
+    "key": "isic_0012681",
+    "otsu_dice": 0.4459375951960956,
+    "otsu_iou": 0.28694960628237176,
+    "kmeans_lab_dice": 0.7837119106953132,
+    "kmeans_lab_iou": 0.6443472706729776,
+    "watershed_dice": 0.4691478690300084,
+    "watershed_iou": 0.30646191068325945,
+    "center_box_iou": 0.07698404255318637
+  },
+  {
+    "key": "isic_0010357",
+    "otsu_dice": 0.06597722215051492,
+    "otsu_iou": 0.034113984027081226,
+    "kmeans_lab_dice": 0.2582871781493476,
+    "kmeans_lab_iou": 0.14829492836549127,
+    "watershed_dice": 0.0673265599800862,
+    "watershed_iou": 0.03483597310699558,
+    "center_box_iou": 0.5545846342631311
+  },
+  {
+    "key": "isic_0013271",
+    "otsu_dice": 2.1846033524918274e-13,
+    "otsu_iou": 2.1846033524918274e-13,
+    "kmeans_lab_dice": 0.27564800354970925,
+    "kmeans_lab_iou": 0.15985599466768252,
+    "watershed_dice": 2.194320221538088e-13,
+    "watershed_iou": 2.194320221538088e-13,
+    "center_box_iou": 0.23651416809910342
+  },
+  {
+    "key": "isic_0010479",
+    "otsu_dice": 2.8555600609939473e-13,
+    "otsu_iou": 2.8555600609939473e-13,
+    "kmeans_lab_dice": 0.546479311375255,
+    "kmeans_lab_iou": 0.375969407007503,
+    "watershed_dice": 2.8555600609939473e-13,
+    "watershed_iou": 2.8555600609939473e-13,
+    "center_box_iou": 0.41968108950404087
+  },
+  {
+    "key": "isic_0010585",
+    "otsu_dice": 3.3523298692478967e-12,
+    "otsu_iou": 3.3523298692478967e-12,
+    "kmeans_lab_dice": 0.10126492639743773,
+    "kmeans_lab_iou": 0.053332836057913995,
+    "watershed_dice": 3.852376916542675e-12,
+    "watershed_iou": 3.852376916542675e-12,
+    "center_box_iou": 0.15755208333325318
+  },
+  {
+    "key": "isic_0012434",
+    "otsu_dice": 4.430444240642046e-13,
+    "otsu_iou": 4.430444240642046e-13,
+    "kmeans_lab_dice": 0.7730494249301094,
+    "kmeans_lab_iou": 0.6300575105775198,
+    "watershed_dice": 4.430444240642046e-13,
+    "watershed_iou": 4.430444240642046e-13,
+    "center_box_iou": 0.1889015957446683
+  },
+  {
+    "key": "isic_0013982",
+    "otsu_dice": 1.0400772985447196e-13,
+    "otsu_iou": 1.0400772985447196e-13,
+    "kmeans_lab_dice": 0.002536590644752724,
+    "kmeans_lab_iou": 0.0012699059381646137,
+    "watershed_dice": 1.0354635925822457e-13,
+    "watershed_iou": 1.0354635925822457e-13,
+    "center_box_iou": 0.3848415734227526
+  },
+  {
+    "key": "isic_0010554",
+    "otsu_dice": 9.202002355704134e-13,
+    "otsu_iou": 9.202002355704134e-13,
+    "kmeans_lab_dice": 0.4280049444300155,
+    "kmeans_lab_iou": 0.2722686327248184,
+    "watershed_dice": 9.202002355704134e-13,
+    "watershed_iou": 9.202002355704134e-13,
+    "center_box_iou": 0.5178037795383733
+  },
+  {
+    "key": "isic_0014666",
+    "otsu_dice": 0.18537753962394077,
+    "otsu_iou": 0.10215763536043115,
+    "kmeans_lab_dice": 0.6842153286821706,
+    "kmeans_lab_iou": 0.5200055477138931,
+    "watershed_dice": 0.11487070180727502,
+    "watershed_iou": 0.06093518461434303,
+    "center_box_iou": 0.3529068190855669
+  },
+  {
+    "key": "isic_0014913",
+    "otsu_dice": 0.692285101478291,
+    "otsu_iou": 0.5293853440538754,
+    "kmeans_lab_dice": 0.9133685810521539,
+    "kmeans_lab_iou": 0.8405504986562445,
+    "watershed_dice": 0.6049233591645126,
+    "watershed_iou": 0.43361299405188075,
+    "center_box_iou": 0.45388548057259437
+  },
+  {
+    "key": "isic_0013473",
+    "otsu_dice": 0.004122929234148172,
+    "otsu_iou": 0.0020657230320182372,
+    "kmeans_lab_dice": 0.4868939747381613,
+    "kmeans_lab_iou": 0.32178443982728216,
+    "watershed_dice": 0.005139537210679457,
+    "watershed_iou": 0.002576389329759442,
+    "center_box_iou": 0.28299957360819894
+  },
+  {
+    "key": "isic_0012250",
+    "otsu_dice": 5.167157546630927e-13,
+    "otsu_iou": 5.167157546630927e-13,
+    "kmeans_lab_dice": 0.01782642068775555,
+    "kmeans_lab_iou": 0.008993370143723782,
+    "watershed_dice": 5.167157546630927e-13,
+    "watershed_iou": 5.167157546630927e-13,
+    "center_box_iou": 0.1629474734042445
+  },
+  {
+    "key": "isic_0001140",
+    "otsu_dice": 0.924140841679581,
+    "otsu_iou": 0.8589793882707784,
+    "kmeans_lab_dice": 0.9193911406420905,
+    "kmeans_lab_iou": 0.8508084425556107,
+    "watershed_dice": 0.9130705792570388,
+    "watershed_iou": 0.8400458777101878,
+    "center_box_iou": 0.5893699752307046
+  },
+  {
+    "key": "isic_0011357",
+    "otsu_dice": 9.891881732652218e-13,
+    "otsu_iou": 9.891881732652218e-13,
+    "kmeans_lab_dice": 0.5460257514978227,
+    "kmeans_lab_iou": 0.3755401803440279,
+    "watershed_dice": 9.891881732652218e-13,
+    "watershed_iou": 9.891881732652218e-13,
+    "center_box_iou": 0.5636255603645446
+  },
+  {
+    "key": "isic_0000539",
+    "otsu_dice": 0.12853174546670793,
+    "otsu_iou": 0.06867962903224697,
+    "kmeans_lab_dice": 0.706029942926524,
+    "kmeans_lab_iou": 0.5456308197141866,
+    "watershed_dice": 0.10303312088325155,
+    "watershed_iou": 0.0543146651730146,
+    "center_box_iou": 0.28314121312911567
+  },
+  {
+    "key": "isic_0013500",
+    "otsu_dice": 2.0491803278684324e-13,
+    "otsu_iou": 2.0491803278684324e-13,
+    "kmeans_lab_dice": 0.3447189740210451,
+    "kmeans_lab_iou": 0.2082540478691243,
+    "watershed_dice": 2.0531562143901503e-13,
+    "watershed_iou": 2.0531562143901503e-13,
+    "center_box_iou": 0.2640801958983672
+  },
+  {
+    "key": "isic_0000111",
+    "otsu_dice": 0.7963394564359232,
+    "otsu_iou": 0.6615980399905339,
+    "kmeans_lab_dice": 0.8724644490439796,
+    "kmeans_lab_iou": 0.7737799915082382,
+    "watershed_dice": 0.7179192727208956,
+    "watershed_iou": 0.559964171869672,
+    "center_box_iou": 0.2927238889302355
+  },
+  {
+    "key": "isic_0015146",
+    "otsu_dice": 0.9265528976557063,
+    "otsu_iou": 0.8631565501757978,
+    "kmeans_lab_dice": 0.9372730267219784,
+    "kmeans_lab_iou": 0.8819509152298308,
+    "watershed_dice": 0.8973186427989224,
+    "watershed_iou": 0.8137605999584291,
+    "center_box_iou": 0.5842261111672293
+  },
+  {
+    "key": "isic_0000517",
+    "otsu_dice": 0.10311424144828206,
+    "otsu_iou": 0.054359753076099346,
+    "kmeans_lab_dice": 0.38620453328582743,
+    "kmeans_lab_iou": 0.2393144244433168,
+    "watershed_dice": 0.10350261550792146,
+    "watershed_iou": 0.054575670050713135,
+    "center_box_iou": 0.25109289617482916
+  },
+  {
+    "key": "isic_0000182",
+    "otsu_dice": 0.01195559351005375,
+    "otsu_iou": 0.006013745704703249,
+    "kmeans_lab_dice": 0.9601951353985704,
+    "kmeans_lab_iou": 0.9234378180819868,
+    "watershed_dice": 0.01465329180805256,
+    "watershed_iou": 0.007380721839577903,
+    "center_box_iou": 0.682599686167901
+  },
+  {
+    "key": "isic_0000190",
+    "otsu_dice": 0.6142077015849742,
+    "otsu_iou": 0.44321771905329976,
+    "kmeans_lab_dice": 0.8232952138924625,
+    "kmeans_lab_iou": 0.69966165142911,
+    "watershed_dice": 0.5023451398998828,
+    "watershed_iou": 0.33542116630697694,
+    "center_box_iou": 0.30539456710716056
+  },
+  {
+    "key": "isic_0000162",
+    "otsu_dice": 0.03790628957402897,
+    "otsu_iou": 0.01931930639855924,
+    "kmeans_lab_dice": 0.8529113176070009,
+    "kmeans_lab_iou": 0.743544357728085,
+    "watershed_dice": 0.042451042325066544,
+    "watershed_iou": 0.021685813863813682,
+    "center_box_iou": 0.43380677823078784
+  },
+  {
+    "key": "isic_0015161",
+    "otsu_dice": 0.6075259367062332,
+    "otsu_iou": 0.43629246154085705,
+    "kmeans_lab_dice": 0.9495492344002715,
+    "kmeans_lab_iou": 0.9039445402832855,
+    "watershed_dice": 0.47028129521318573,
+    "watershed_iou": 0.30742991750155163,
+    "center_box_iou": 0.4965113250023379
+  },
+  {
+    "key": "isic_0000043",
+    "otsu_dice": 0.8768003839745491,
+    "otsu_iou": 0.7806273893479492,
+    "kmeans_lab_dice": 0.8527693688746444,
+    "kmeans_lab_iou": 0.7433286261177954,
+    "watershed_dice": 0.8231840968312909,
+    "watershed_iou": 0.6995011663377427,
+    "center_box_iou": 0.43516912491333243
+  },
+  {
+    "key": "isic_0013673",
+    "otsu_dice": 6.480293427682206e-13,
+    "otsu_iou": 6.480293427682206e-13,
+    "kmeans_lab_dice": 0.09876176685323367,
+    "kmeans_lab_iou": 0.051946023981338546,
+    "watershed_dice": 6.480293427682206e-13,
+    "watershed_iou": 6.480293427682206e-13,
+    "center_box_iou": 0.12800864361701278
+  },
+  {
+    "key": "isic_0000017",
+    "otsu_dice": 0.6041759904525488,
+    "otsu_iou": 0.43284539191196714,
+    "kmeans_lab_dice": 0.8337467092006372,
+    "kmeans_lab_iou": 0.7148933390183494,
+    "watershed_dice": 0.5331351272663427,
+    "watershed_iou": 0.36345210603684813,
+    "center_box_iou": 0.7301320055758885
+  },
+  {
+    "key": "isic_0000201",
+    "otsu_dice": 0.9035522124368018,
+    "otsu_iou": 0.8240722656251431,
+    "kmeans_lab_dice": 0.9050573162508829,
+    "kmeans_lab_iou": 0.8265796280331424,
+    "watershed_dice": 0.8893136670101544,
+    "watershed_iou": 0.8006884037334911,
+    "center_box_iou": 0.8694187529894916
+  },
+  {
+    "key": "isic_0015203",
+    "otsu_dice": 0.7737894777114738,
+    "otsu_iou": 0.6310412964548047,
+    "kmeans_lab_dice": 0.8789473836568428,
+    "kmeans_lab_iou": 0.7840375829316072,
+    "watershed_dice": 0.7593137228631612,
+    "watershed_iou": 0.6120110594077405,
+    "center_box_iou": 0.26329488888713487
+  },
+  {
+    "key": "isic_0000465",
+    "otsu_dice": 0.6892050094514336,
+    "otsu_iou": 0.525791610756212,
+    "kmeans_lab_dice": 0.9434591189714607,
+    "kmeans_lab_iou": 0.892969818690831,
+    "watershed_dice": 0.593230414718551,
+    "watershed_iou": 0.42169692956520605,
+    "center_box_iou": 0.6745083877586119
+  },
+  {
+    "key": "isic_0000229",
+    "otsu_dice": 0.6859188176095778,
+    "otsu_iou": 0.5219759835248183,
+    "kmeans_lab_dice": 0.8125970885447903,
+    "kmeans_lab_iou": 0.6843482365635969,
+    "watershed_dice": 0.545910938751594,
+    "watershed_iou": 0.37543156970252906,
+    "center_box_iou": 0.36513705622221626
+  },
+  {
+    "key": "isic_0011382",
+    "otsu_dice": 0.7644527443975915,
+    "otsu_iou": 0.6187159098378382,
+    "kmeans_lab_dice": 0.8417567361851496,
+    "kmeans_lab_iou": 0.7267529736480061,
+    "watershed_dice": 0.726131179105174,
+    "watershed_iou": 0.5700203719525982,
+    "center_box_iou": 0.5220605416886559
+  },
+  {
+    "key": "isic_0016036",
+    "otsu_dice": 2.8250973740436598e-14,
+    "otsu_iou": 2.8250973740436598e-14,
+    "kmeans_lab_dice": 0.00931774838321005,
+    "kmeans_lab_iou": 0.004680680895039059,
+    "watershed_dice": 2.821926026595444e-14,
+    "watershed_iou": 2.821926026595444e-14,
+    "center_box_iou": 0.6620260053475838
+  },
+  {
+    "key": "isic_0000535",
+    "otsu_dice": 0.3208785016640812,
+    "otsu_iou": 0.19109903719452592,
+    "kmeans_lab_dice": 0.8324520500747296,
+    "kmeans_lab_iou": 0.7129917449027622,
+    "watershed_dice": 0.26179646540101953,
+    "watershed_iou": 0.15061323958359585,
+    "center_box_iou": 0.6156263602746544
+  },
+  {
+    "key": "isic_0016024",
+    "otsu_dice": 1.0550982876808775e-13,
+    "otsu_iou": 1.0550982876808775e-13,
+    "kmeans_lab_dice": 0.4762676480414052,
+    "kmeans_lab_iou": 0.3125664736521813,
+    "watershed_dice": 1.0550982876808775e-13,
+    "watershed_iou": 1.0550982876808775e-13,
+    "center_box_iou": 0.45080127284631066
+  },
+  {
+    "key": "isic_0000520",
+    "otsu_dice": 9.049044918553253e-14,
+    "otsu_iou": 9.049044918553253e-14,
+    "kmeans_lab_dice": 0.37950747266865636,
+    "kmeans_lab_iou": 0.23419267060345933,
+    "watershed_dice": 9.049044918553253e-14,
+    "watershed_iou": 9.049044918553253e-14,
+    "center_box_iou": 0.5595705850778048
+  },
+  {
+    "key": "isic_0000036",
+    "otsu_dice": 1.0259493365697561e-13,
+    "otsu_iou": 1.0259493365697561e-13,
+    "kmeans_lab_dice": 0.2948864107524124,
+    "kmeans_lab_iou": 0.1729423849601669,
+    "watershed_dice": 1.0670240485878932e-13,
+    "watershed_iou": 1.0670240485878932e-13,
+    "center_box_iou": 0.4625103233074175
+  },
+  {
+    "key": "isic_0014904",
+    "otsu_dice": 0.006131667213031968,
+    "otsu_iou": 0.0030752618476463773,
+    "kmeans_lab_dice": 0.9081993045201533,
+    "kmeans_lab_iou": 0.8318361659597597,
+    "watershed_dice": 0.007372277343699302,
+    "watershed_iou": 0.0036997765613185616,
+    "center_box_iou": 0.7630140284700663
+  },
+  {
+    "key": "isic_0009860",
+    "otsu_dice": 1.7758393504686838e-13,
+    "otsu_iou": 1.7758393504686838e-13,
+    "kmeans_lab_dice": 0.1452432378698142,
+    "kmeans_lab_iou": 0.07830850968462613,
+    "watershed_dice": 1.813022943805025e-13,
+    "watershed_iou": 1.813022943805025e-13,
+    "center_box_iou": 0.2616447258091479
+  },
+  {
+    "key": "isic_0000326",
+    "otsu_dice": 0.012617927974103136,
+    "otsu_iou": 0.006349019724572545,
+    "kmeans_lab_dice": 0.7261277186782047,
+    "kmeans_lab_iou": 0.5700161070504646,
+    "watershed_dice": 0.024303488728024066,
+    "watershed_iou": 0.01230122571498148,
+    "center_box_iou": 0.6854531607001416
+  },
+  {
+    "key": "isic_0003056",
+    "otsu_dice": 2.411027073422426e-13,
+    "otsu_iou": 2.411027073422426e-13,
+    "kmeans_lab_dice": 0.15401937700272256,
+    "kmeans_lab_iou": 0.0834349911824557,
+    "watershed_dice": 2.4267544828216294e-13,
+    "watershed_iou": 2.4267544828216294e-13,
+    "center_box_iou": 0.14363970811181856
+  },
+  {
+    "key": "isic_0015127",
+    "otsu_dice": 0.47364368007006763,
+    "otsu_iou": 0.3103100330411826,
+    "kmeans_lab_dice": 0.5677280122837352,
+    "kmeans_lab_iou": 0.39638282194499536,
+    "watershed_dice": 0.43434420659751793,
+    "watershed_iou": 0.27741998492121267,
+    "center_box_iou": 0.6236683872319135
+  },
+  {
+    "key": "isic_0000349",
+    "otsu_dice": 1.5023812743175397e-12,
+    "otsu_iou": 1.5023812743175397e-12,
+    "kmeans_lab_dice": 0.45788638222180167,
+    "kmeans_lab_iou": 0.2969213013513658,
+    "watershed_dice": 1.5284910736097938e-12,
+    "watershed_iou": 1.5284910736097938e-12,
+    "center_box_iou": 0.5958141008618466
+  },
+  {
+    "key": "isic_0000503",
+    "otsu_dice": 0.6550267443518567,
+    "otsu_iou": 0.4870184158690921,
+    "kmeans_lab_dice": 0.8243344676583345,
+    "kmeans_lab_iou": 0.7011641023587238,
+    "watershed_dice": 0.5776083601104564,
+    "watershed_iou": 0.40608250492498166,
+    "center_box_iou": 0.7143003899856898
+  },
+  {
+    "key": "isic_0013997",
+    "otsu_dice": 1.6425728604253866e-13,
+    "otsu_iou": 1.6425728604253866e-13,
+    "kmeans_lab_dice": 0.4862834425575718,
+    "kmeans_lab_iou": 0.3212513202466571,
+    "watershed_dice": 1.6526002839164555e-13,
+    "watershed_iou": 1.6526002839164555e-13,
+    "center_box_iou": 0.2007578373851032
+  },
+  {
+    "key": "isic_0000042",
+    "otsu_dice": 0.54637182243975,
+    "otsu_iou": 0.3758676605711186,
+    "kmeans_lab_dice": 0.7471128191605122,
+    "kmeans_lab_iou": 0.5963129247279503,
+    "watershed_dice": 0.4682662059649753,
+    "watershed_iou": 0.3057099136864518,
+    "center_box_iou": 0.5358545821761505
+  },
+  {
+    "key": "isic_0000345",
+    "otsu_dice": 3.1276389453503653e-12,
+    "otsu_iou": 3.1276389453503653e-12,
+    "kmeans_lab_dice": 0.22240009314081208,
+    "kmeans_lab_iou": 0.1251125702043045,
+    "watershed_dice": 3.2632815559219967e-12,
+    "watershed_iou": 3.2632815559219967e-12,
+    "center_box_iou": 0.24788135593197896
+  },
+  {
+    "key": "isic_0002879",
+    "otsu_dice": 2.1056931626032882e-13,
+    "otsu_iou": 2.1056931626032882e-13,
+    "kmeans_lab_dice": 0.17529212401111957,
+    "kmeans_lab_iou": 0.09606585597496729,
+    "watershed_dice": 2.1056931626032882e-13,
+    "watershed_iou": 2.1056931626032882e-13,
+    "center_box_iou": 0.19984039697147235
+  },
+  {
+    "key": "isic_0014762",
+    "otsu_dice": 0.7341281109362607,
+    "otsu_iou": 0.5799387104482079,
+    "kmeans_lab_dice": 0.9398971431164566,
+    "kmeans_lab_iou": 0.886609386073665,
+    "watershed_dice": 0.4659390577787113,
+    "watershed_iou": 0.3037291706964676,
+    "center_box_iou": 0.27766419341972565
+  },
+  {
+    "key": "isic_0000391",
+    "otsu_dice": 3.711002007651948e-14,
+    "otsu_iou": 3.711002007651948e-14,
+    "kmeans_lab_dice": 0.5754061328339704,
+    "kmeans_lab_iou": 0.40390889368255317,
+    "watershed_dice": 3.711002007651948e-14,
+    "watershed_iou": 3.711002007651948e-14,
+    "center_box_iou": 0.4894138888980949
+  },
+  {
+    "key": "isic_0000181",
+    "otsu_dice": 0.7051635482415006,
+    "otsu_iou": 0.5445966147183411,
+    "kmeans_lab_dice": 0.9062536171307463,
+    "kmeans_lab_iou": 0.8285774758435084,
+    "watershed_dice": 0.654623267672727,
+    "watershed_iou": 0.4865724610388064,
+    "center_box_iou": 0.386242709914453
+  },
+  {
+    "key": "isic_0013425",
+    "otsu_dice": 1.660211212070124e-13,
+    "otsu_iou": 1.660211212070124e-13,
+    "kmeans_lab_dice": 0.7725198047965129,
+    "kmeans_lab_iou": 0.629354190654356,
+    "watershed_dice": 1.6731585217307028e-13,
+    "watershed_iou": 1.6731585217307028e-13,
+    "center_box_iou": 0.25501399253730506
+  },
+  {
+    "key": "isic_0010557",
+    "otsu_dice": 1.0287219158906377e-12,
+    "otsu_iou": 1.0287219158906377e-12,
+    "kmeans_lab_dice": 0.6855576676541236,
+    "kmeans_lab_iou": 0.5215578126055008,
+    "watershed_dice": 1.0287219158906377e-12,
+    "watershed_iou": 1.0287219158906377e-12,
+    "center_box_iou": 0.6938565811050379
+  },
+  {
+    "key": "isic_0000323",
+    "otsu_dice": 2.1025630243222333e-12,
+    "otsu_iou": 2.1025630243222333e-12,
+    "kmeans_lab_dice": 0.00407272340218267,
+    "kmeans_lab_iou": 0.002040516932286792,
+    "watershed_dice": 2.1781272461889783e-12,
+    "watershed_iou": 2.1781272461889783e-12,
+    "center_box_iou": 0.4039442835467488
+  },
+  {
+    "key": "isic_0000325",
+    "otsu_dice": 0.5535865174264387,
+    "otsu_iou": 0.3827304737520945,
+    "kmeans_lab_dice": 0.7504125300419906,
+    "kmeans_lab_iou": 0.6005282127767831,
+    "watershed_dice": 0.43955069649570766,
+    "watershed_iou": 0.2816821382848258,
+    "center_box_iou": 0.630390035361429
+  },
+  {
+    "key": "isic_0000383",
+    "otsu_dice": 8.376128369192234e-14,
+    "otsu_iou": 8.376128369192234e-14,
+    "kmeans_lab_dice": 0.6667263906053704,
+    "kmeans_lab_iou": 0.50006719244081,
+    "watershed_dice": 8.376128369192234e-14,
+    "watershed_iou": 8.376128369192234e-14,
+    "center_box_iou": 0.6127462285335884
+  },
+  {
+    "key": "isic_0014637",
+    "otsu_dice": 2.577153533921119e-13,
+    "otsu_iou": 2.577153533921119e-13,
+    "kmeans_lab_dice": 0.23640302535068464,
+    "kmeans_lab_iou": 0.13404594629550934,
+    "watershed_dice": 2.7872000624325043e-13,
+    "watershed_iou": 2.7872000624325043e-13,
+    "center_box_iou": 0.3360451101928107
+  },
+  {
+    "key": "isic_0000258",
+    "otsu_dice": 0.05636714666836872,
+    "otsu_iou": 0.029000922973684763,
+    "kmeans_lab_dice": 0.7191880092747327,
+    "kmeans_lab_iou": 0.5615094287706915,
+    "watershed_dice": 0.04949562377765824,
+    "watershed_iou": 0.02537580760200398,
+    "center_box_iou": 0.3694958447503337
+  },
+  {
+    "key": "isic_0000226",
+    "otsu_dice": 0.6776380975307451,
+    "otsu_iou": 0.5124452665079747,
+    "kmeans_lab_dice": 0.7702049072201673,
+    "kmeans_lab_iou": 0.6262871853548125,
+    "watershed_dice": 0.6471571244498188,
+    "watershed_iou": 0.47836828366837814,
+    "center_box_iou": 0.4102293912619533
+  },
+  {
+    "key": "isic_0000260",
+    "otsu_dice": 0.6505830401605315,
+    "otsu_iou": 0.48212158252271964,
+    "kmeans_lab_dice": 0.9590996453587188,
+    "kmeans_lab_iou": 0.9214135061845365,
+    "watershed_dice": 0.5702213324191876,
+    "watershed_iou": 0.39881790472111,
+    "center_box_iou": 0.7438105046340571
+  },
+  {
+    "key": "isic_0000281",
+    "otsu_dice": 1.817005719933676e-13,
+    "otsu_iou": 1.817005719933676e-13,
+    "kmeans_lab_dice": 0.07634685599809476,
+    "kmeans_lab_iou": 0.03968847306819194,
+    "watershed_dice": 1.8586669640530354e-13,
+    "watershed_iou": 1.8586669640530354e-13,
+    "center_box_iou": 0.6451903105029154
+  },
+  {
+    "key": "isic_0000265",
+    "otsu_dice": 0.11516748933765507,
+    "otsu_iou": 0.0611022404837628,
+    "kmeans_lab_dice": 0.7307219968237892,
+    "kmeans_lab_iou": 0.5756989367147185,
+    "watershed_dice": 0.1008971424712939,
+    "watershed_iou": 0.0531288455871464,
+    "center_box_iou": 0.5542900932799479
+  },
+  {
+    "key": "isic_0012216",
+    "otsu_dice": 7.997555946901988e-14,
+    "otsu_iou": 7.997555946901988e-14,
+    "kmeans_lab_dice": 0.3187938547226213,
+    "kmeans_lab_iou": 0.18962210887591746,
+    "watershed_dice": 7.997555946901988e-14,
+    "watershed_iou": 7.997555946901988e-14,
+    "center_box_iou": 0.614343029087231
+  },
+  {
+    "key": "isic_0009252",
+    "otsu_dice": 2.6611952492335327e-13,
+    "otsu_iou": 2.6611952492335327e-13,
+    "kmeans_lab_dice": 0.12763529221755027,
+    "kmeans_lab_iou": 0.0681679651870452,
+    "watershed_dice": 2.6611952492335327e-13,
+    "watershed_iou": 2.6611952492335327e-13,
+    "center_box_iou": 0.29326119544426754
+  },
+  {
+    "key": "isic_0000011",
+    "otsu_dice": 4.781417499029477e-13,
+    "otsu_iou": 4.781417499029477e-13,
+    "kmeans_lab_dice": 0.23576607197588811,
+    "kmeans_lab_iou": 0.13363651397422951,
+    "watershed_dice": 5.216293614732265e-13,
+    "watershed_iou": 5.216293614732265e-13,
+    "center_box_iou": 0.8592905646465085
+  },
+  {
+    "key": "isic_0000268",
+    "otsu_dice": 2.2846281082360194e-13,
+    "otsu_iou": 2.2846281082360194e-13,
+    "kmeans_lab_dice": 0.5052249446013432,
+    "kmeans_lab_iou": 0.33799396288874667,
+    "watershed_dice": 2.2846281082360194e-13,
+    "watershed_iou": 2.2846281082360194e-13,
+    "center_box_iou": 0.3469495796539209
+  },
+  {
+    "key": "isic_0000471",
+    "otsu_dice": 0.6866063772207539,
+    "otsu_iou": 0.5227727356922367,
+    "kmeans_lab_dice": 0.87051171986791,
+    "kmeans_lab_iou": 0.7707133709844476,
+    "watershed_dice": 0.6397591423858762,
+    "watershed_iou": 0.47032783848909954,
+    "center_box_iou": 0.6968080192738728
+  },
+  {
+    "key": "isic_0000064",
+    "otsu_dice": 0.863607369255164,
+    "otsu_iou": 0.7599550946481816,
+    "kmeans_lab_dice": 0.9157872953032289,
+    "kmeans_lab_iou": 0.8446564879161482,
+    "watershed_dice": 0.8338483243142318,
+    "watershed_iou": 0.7150427699071883,
+    "center_box_iou": 0.541500348371923
+  },
+  {
+    "key": "isic_0000228",
+    "otsu_dice": 0.6427112153341741,
+    "otsu_iou": 0.47352576886765047,
+    "kmeans_lab_dice": 0.8709003184955185,
+    "kmeans_lab_iou": 0.7713227917442435,
+    "watershed_dice": 0.6271384764365181,
+    "watershed_iou": 0.4568111682588614,
+    "center_box_iou": 0.4477680319865881
+  },
+  {
+    "key": "isic_0000493",
+    "otsu_dice": 0.7717529991494273,
+    "otsu_iou": 0.6283369701819335,
+    "kmeans_lab_dice": 0.8836472703862426,
+    "kmeans_lab_iou": 0.7915484478566259,
+    "watershed_dice": 0.7162357395506945,
+    "watershed_iou": 0.5579184291203928,
+    "center_box_iou": 0.3923169459406834
+  },
+  {
+    "key": "isic_0000358",
+    "otsu_dice": 1.1583056305223283e-12,
+    "otsu_iou": 1.1583056305223283e-12,
+    "kmeans_lab_dice": 0.506820898018127,
+    "kmeans_lab_iou": 0.3394240498985291,
+    "watershed_dice": 1.1698095550030767e-12,
+    "watershed_iou": 1.1698095550030767e-12,
+    "center_box_iou": 0.5715823629301828
+  },
+  {
+    "key": "isic_0015232",
+    "otsu_dice": 0.3420642890285986,
+    "otsu_iou": 0.20631939270322255,
+    "kmeans_lab_dice": 0.4588355894050003,
+    "kmeans_lab_iou": 0.29772007856570104,
+    "watershed_dice": 0.3095534685755396,
+    "watershed_iou": 0.18311934913120267,
+    "center_box_iou": 0.5103510945534708
+  },
+  {
+    "key": "isic_0016061",
+    "otsu_dice": 0.629416701448427,
+    "otsu_iou": 0.4592327238438078,
+    "kmeans_lab_dice": 0.49446923763519296,
+    "kmeans_lab_iou": 0.3284351605401366,
+    "watershed_dice": 0.6115200480117431,
+    "watershed_iou": 0.44042411065159504,
+    "center_box_iou": 0.06326579008049432
+  },
+  {
+    "key": "isic_0016019",
+    "otsu_dice": 3.5064343069520296e-13,
+    "otsu_iou": 3.5064343069520296e-13,
+    "kmeans_lab_dice": 0.24084348625889168,
+    "kmeans_lab_iou": 0.13690850380719094,
+    "watershed_dice": 3.5128147482002045e-13,
+    "watershed_iou": 3.5128147482002045e-13,
+    "center_box_iou": 0.23656382978721832
+  },
+  {
+    "key": "isic_0015211",
+    "otsu_dice": 0.4464910156614669,
+    "otsu_iou": 0.2874080679047903,
+    "kmeans_lab_dice": 0.55452214091664,
+    "kmeans_lab_iou": 0.3836254823496844,
+    "watershed_dice": 0.3896274069089227,
+    "watershed_iou": 0.24194860778215635,
+    "center_box_iou": 0.33671093075198416
+  },
+  {
+    "key": "isic_0010061",
+    "otsu_dice": 0.23857653433862577,
+    "otsu_iou": 0.13544530261503768,
+    "kmeans_lab_dice": 0.7488453546510214,
+    "kmeans_lab_iou": 0.5985234178965254,
+    "watershed_dice": 0.2798273597306814,
+    "watershed_iou": 0.16267399747034564,
+    "center_box_iou": 0.5239071951960068
+  },
+  {
+    "key": "isic_0000544",
+    "otsu_dice": 0.8633437041697344,
+    "otsu_iou": 0.7595468457236669,
+    "kmeans_lab_dice": 0.9278182539314136,
+    "kmeans_lab_iou": 0.8653553908500418,
+    "watershed_dice": 0.8153387996272274,
+    "watershed_iou": 0.6882463943031064,
+    "center_box_iou": 0.6537762088144283
+  },
+  {
+    "key": "isic_0000279",
+    "otsu_dice": 0.0401368141842105,
+    "otsu_iou": 0.020479395947078465,
+    "kmeans_lab_dice": 0.8926333215088225,
+    "kmeans_lab_iou": 0.8060864922584521,
+    "watershed_dice": 0.04006840947980872,
+    "watershed_iou": 0.020443779606301324,
+    "center_box_iou": 0.29620790960447513
+  },
+  {
+    "key": "isic_0000495",
+    "otsu_dice": 0.726040250147879,
+    "otsu_iou": 0.5699083116498258,
+    "kmeans_lab_dice": 0.8479979880020386,
+    "kmeans_lab_iou": 0.736108078953283,
+    "watershed_dice": 0.6654629689767854,
+    "watershed_iou": 0.4986470614957604,
+    "center_box_iou": 0.6959152342746119
+  },
+  {
+    "key": "isic_0000245",
+    "otsu_dice": 2.542129440146187e-13,
+    "otsu_iou": 2.542129440146187e-13,
+    "kmeans_lab_dice": 0.34391125946413814,
+    "kmeans_lab_iou": 0.2076647531297089,
+    "watershed_dice": 2.544820653763778e-13,
+    "watershed_iou": 2.544820653763778e-13,
+    "center_box_iou": 0.4020531277478166
+  },
+  {
+    "key": "isic_0013495",
+    "otsu_dice": 1.5470703901554423e-13,
+    "otsu_iou": 1.5470703901554423e-13,
+    "kmeans_lab_dice": 0.8199092743584105,
+    "kmeans_lab_iou": 0.6947849487696538,
+    "watershed_dice": 1.5580935167726338e-13,
+    "watershed_iou": 1.5580935167726338e-13,
+    "center_box_iou": 0.33007719893853654
+  },
+  {
+    "key": "isic_0000489",
+    "otsu_dice": 4.860290937013127e-13,
+    "otsu_iou": 4.860290937013127e-13,
+    "kmeans_lab_dice": 0.6212095323290344,
+    "kmeans_lab_iou": 0.45054672692839065,
+    "watershed_dice": 4.860290937013127e-13,
+    "watershed_iou": 4.860290937013127e-13,
+    "center_box_iou": 0.5511273225415003
+  },
+  {
+    "key": "isic_0000477",
+    "otsu_dice": 3.652754542198939e-13,
+    "otsu_iou": 3.652754542198939e-13,
+    "kmeans_lab_dice": 0.8307032610276677,
+    "kmeans_lab_iou": 0.7104298107919212,
+    "watershed_dice": 3.652754542198939e-13,
+    "watershed_iou": 3.652754542198939e-13,
+    "center_box_iou": 0.5212285366749112
+  },
+  {
+    "key": "isic_0014185",
+    "otsu_dice": 1.103674795599306e-13,
+    "otsu_iou": 1.103674795599306e-13,
+    "kmeans_lab_dice": 0.8627448280245403,
+    "kmeans_lab_iou": 0.7586202721117808,
+    "watershed_dice": 1.1060209568849687e-13,
+    "watershed_iou": 1.1060209568849687e-13,
+    "center_box_iou": 0.3459182940295463
+  },
+  {
+    "key": "isic_0010320",
+    "otsu_dice": 0.01782396694785646,
+    "otsu_iou": 0.008992121108727857,
+    "kmeans_lab_dice": 0.032455147486597016,
+    "kmeans_lab_iou": 0.01649525165603801,
+    "watershed_dice": 0.005674609977883477,
+    "watershed_iou": 0.0028453781947746747,
+    "center_box_iou": 0.2813235117360816
+  },
+  {
+    "key": "isic_0000141",
+    "otsu_dice": 0.6559796646304392,
+    "otsu_iou": 0.48807272283579717,
+    "kmeans_lab_dice": 0.8297095060423749,
+    "kmeans_lab_iou": 0.7089773952076973,
+    "watershed_dice": 0.5238149170555164,
+    "watershed_iou": 0.3548436595841852,
+    "center_box_iou": 0.7897742798443259
+  },
+  {
+    "key": "isic_0000321",
+    "otsu_dice": 4.947874145870777e-13,
+    "otsu_iou": 4.947874145870777e-13,
+    "kmeans_lab_dice": 0.7017133051012479,
+    "kmeans_lab_iou": 0.540491794191959,
+    "watershed_dice": 4.976461337869389e-13,
+    "watershed_iou": 4.976461337869389e-13,
+    "center_box_iou": 0.4396692767317632
+  },
+  {
+    "key": "isic_0000269",
+    "otsu_dice": 0.7333694125908807,
+    "otsu_iou": 0.578992343846116,
+    "kmeans_lab_dice": 0.5866627963409152,
+    "kmeans_lab_iou": 0.41509046448528303,
+    "watershed_dice": 0.6571818449660739,
+    "watershed_iou": 0.48940494474463386,
+    "center_box_iou": 0.8260168768363626
+  },
+  {
+    "key": "isic_0000338",
+    "otsu_dice": 0.572752608032233,
+    "otsu_iou": 0.40129875959570677,
+    "kmeans_lab_dice": 0.630192941049422,
+    "kmeans_lab_iou": 0.460059639006813,
+    "watershed_dice": 0.5403498809710832,
+    "watershed_iou": 0.37019137252649115,
+    "center_box_iou": 0.6524874958837137
+  },
+  {
+    "key": "isic_0000032",
+    "otsu_dice": 1.5395510669086524e-13,
+    "otsu_iou": 1.5395510669086524e-13,
+    "kmeans_lab_dice": 0.6137172510390487,
+    "kmeans_lab_iou": 0.44270712558393754,
+    "watershed_dice": 1.5730220427576376e-13,
+    "watershed_iou": 1.5730220427576376e-13,
+    "center_box_iou": 0.5929555587836783
+  },
+  {
+    "key": "isic_0016046",
+    "otsu_dice": 0.12130057682400547,
+    "otsu_iou": 0.06456625010256832,
+    "kmeans_lab_dice": 0.865512391892034,
+    "kmeans_lab_iou": 0.762910397351573,
+    "watershed_dice": 0.1596502989427017,
+    "watershed_iou": 0.08674997955621883,
+    "center_box_iou": 0.27164361702125855
+  },
+  {
+    "key": "isic_0010473",
+    "otsu_dice": 0.01759656519054632,
+    "otsu_iou": 0.008876379490608377,
+    "kmeans_lab_dice": 0.8279909226945772,
+    "kmeans_lab_iou": 0.7064714247762252,
+    "watershed_dice": 0.031977004191728796,
+    "watershed_iou": 0.01624828788085333,
+    "center_box_iou": 0.30108929859457034
+  },
+  {
+    "key": "isic_0000095",
+    "otsu_dice": 0.5217979046976773,
+    "otsu_iou": 0.352994970279185,
+    "kmeans_lab_dice": 0.42925716693328464,
+    "kmeans_lab_iou": 0.2732829065947618,
+    "watershed_dice": 0.45433893684705995,
+    "watershed_iou": 0.2939447383894711,
+    "center_box_iou": 0.43313598632806993
+  },
+  {
+    "key": "isic_0000300",
+    "otsu_dice": 0.2874133212620476,
+    "otsu_iou": 0.167824101886739,
+    "kmeans_lab_dice": 0.7021791253793571,
+    "kmeans_lab_iou": 0.5410447151150408,
+    "watershed_dice": 0.24981600252370947,
+    "watershed_iou": 0.14273699387281377,
+    "center_box_iou": 0.3718068853125647
+  },
+  {
+    "key": "isic_0013128",
+    "otsu_dice": 0.11363527111926483,
+    "otsu_iou": 0.060240349800686724,
+    "kmeans_lab_dice": 0.4467951211585798,
+    "kmeans_lab_iou": 0.28766013244298594,
+    "watershed_dice": 0.11961992840232172,
+    "watershed_iou": 0.06361476076529185,
+    "center_box_iou": 0.27505763123659754
+  },
+  {
+    "key": "isic_0010256",
+    "otsu_dice": 0.5087858253409934,
+    "otsu_iou": 0.3411889680161263,
+    "kmeans_lab_dice": 0.853467889081942,
+    "kmeans_lab_iou": 0.7443907422698558,
+    "watershed_dice": 0.49750243844915465,
+    "watershed_iou": 0.3311169689604158,
+    "center_box_iou": 0.18062337239574147
+  },
+  {
+    "key": "isic_0000328",
+    "otsu_dice": 5.115377335806559e-13,
+    "otsu_iou": 5.115377335806559e-13,
+    "kmeans_lab_dice": 0.0037215713305749037,
+    "kmeans_lab_iou": 0.001864254643834443,
+    "watershed_dice": 5.15086895158948e-13,
+    "watershed_iou": 5.15086895158948e-13,
+    "center_box_iou": 0.41971020660968344
+  },
+  {
+    "key": "isic_0000418",
+    "otsu_dice": 5.753206981401277e-14,
+    "otsu_iou": 5.753206981401277e-14,
+    "kmeans_lab_dice": 0.05262068890417316,
+    "kmeans_lab_iou": 0.027021283734703822,
+    "watershed_dice": 5.891831858902063e-14,
+    "watershed_iou": 5.891831858902063e-14,
+    "center_box_iou": 0.6760199198849018
+  },
+  {
+    "key": "isic_0016015",
+    "otsu_dice": 1.1702777537219314e-13,
+    "otsu_iou": 1.1702777537219314e-13,
+    "kmeans_lab_dice": 0.5286313258227737,
+    "kmeans_lab_iou": 0.3592786329492917,
+    "watershed_dice": 1.1702777537219314e-13,
+    "watershed_iou": 1.1702777537219314e-13,
+    "center_box_iou": 0.355838503247538
+  },
+  {
+    "key": "isic_0000263",
+    "otsu_dice": 0.5347606303897308,
+    "otsu_iou": 0.3649646886926322,
+    "kmeans_lab_dice": 0.7326306511440991,
+    "kmeans_lab_iou": 0.5780719344409154,
+    "watershed_dice": 0.46288357501293975,
+    "watershed_iou": 0.30113761553042273,
+    "center_box_iou": 0.6175086833534523
+  },
+  {
+    "key": "isic_0000087",
+    "otsu_dice": 0.3217964321107746,
+    "otsu_iou": 0.1917505350769647,
+    "kmeans_lab_dice": 0.8595530848313512,
+    "kmeans_lab_iou": 0.7536984610145161,
+    "watershed_dice": 0.2793740876351304,
+    "watershed_iou": 0.16236770911534812,
+    "center_box_iou": 0.48098933964511476
+  },
+  {
+    "key": "isic_0000003",
+    "otsu_dice": 0.7574975510512213,
+    "otsu_iou": 0.6096547750808824,
+    "kmeans_lab_dice": 0.9510404987396425,
+    "kmeans_lab_iou": 0.9066513031217662,
+    "watershed_dice": 0.601494831699019,
+    "watershed_iou": 0.4300983974409729,
+    "center_box_iou": 0.501778270532559
+  },
+  {
+    "key": "isic_0016051",
+    "otsu_dice": 2.7092928745590056e-13,
+    "otsu_iou": 2.7092928745590056e-13,
+    "kmeans_lab_dice": 0.8047085811552757,
+    "kmeans_lab_iou": 0.6732321243743977,
+    "watershed_dice": 0.08003401034049287,
+    "watershed_iou": 0.041685118784291174,
+    "center_box_iou": 0.1504387734781101
+  },
+  {
+    "key": "isic_0000532",
+    "otsu_dice": 0.5091576141479601,
+    "otsu_iou": 0.34152343599842255,
+    "kmeans_lab_dice": 0.7064358220834429,
+    "kmeans_lab_iou": 0.5461157893390587,
+    "watershed_dice": 0.4343350223250718,
+    "watershed_iou": 0.2774124915091595,
+    "center_box_iou": 0.7006490889176905
+  },
+  {
+    "key": "isic_0000016",
+    "otsu_dice": 0.8669239024356823,
+    "otsu_iou": 0.7651065134101057,
+    "kmeans_lab_dice": 0.9333529498308295,
+    "kmeans_lab_iou": 0.8750344827586973,
+    "watershed_dice": 0.8666719931636033,
+    "watershed_iou": 0.764714176245355,
+    "center_box_iou": 0.5578092036761926
+  },
+  {
+    "key": "isic_0013749",
+    "otsu_dice": 1.2163763176394982e-13,
+    "otsu_iou": 1.2163763176394982e-13,
+    "kmeans_lab_dice": 0.4362223410375027,
+    "kmeans_lab_iou": 0.2789541969329285,
+    "watershed_dice": 1.2226538190201868e-13,
+    "watershed_iou": 1.2226538190201868e-13,
+    "center_box_iou": 0.2962844522360335
+  },
+  {
+    "key": "isic_0016072",
+    "otsu_dice": 7.719081027964863e-14,
+    "otsu_iou": 7.719081027964863e-14,
+    "kmeans_lab_dice": 0.5529437027775613,
+    "kmeans_lab_iou": 0.3821162340670087,
+    "watershed_dice": 7.721101461449489e-14,
+    "watershed_iou": 7.721101461449489e-14,
+    "center_box_iou": 0.31037454813227144
+  },
+  {
+    "key": "isic_0016038",
+    "otsu_dice": 0.4831806880727858,
+    "otsu_iou": 0.31854861305751514,
+    "kmeans_lab_dice": 0.5239120702260798,
+    "kmeans_lab_iou": 0.3549328326981887,
+    "watershed_dice": 0.5296924671975106,
+    "watershed_iou": 0.36025964322465653,
+    "center_box_iou": 0.1021057180850996
+  },
+  {
+    "key": "isic_0000051",
+    "otsu_dice": 0.37221352854631823,
+    "otsu_iou": 0.2286623799091072,
+    "kmeans_lab_dice": 0.822558926394716,
+    "kmeans_lab_iou": 0.6985988045041636,
+    "watershed_dice": 0.3350516607371002,
+    "watershed_iou": 0.20123847259162972,
+    "center_box_iou": 0.526941410129031
+  },
+  {
+    "key": "isic_0011099",
+    "otsu_dice": 0.046697879659561216,
+    "otsu_iou": 0.02390714635165922,
+    "kmeans_lab_dice": 0.6256134509305272,
+    "kmeans_lab_iou": 0.45519468402409546,
+    "watershed_dice": 0.04138976230542309,
+    "watershed_iou": 0.021132209721607537,
+    "center_box_iou": 0.5091888532061253
+  },
+  {
+    "key": "isic_0000298",
+    "otsu_dice": 0.7287311311820518,
+    "otsu_iou": 0.5732313195556971,
+    "kmeans_lab_dice": 0.6530152646142438,
+    "kmeans_lab_iou": 0.4847978209846707,
+    "watershed_dice": 0.6853895891846575,
+    "watershed_iou": 0.5213632750406968,
+    "center_box_iou": 0.4676918735887982
+  },
+  {
+    "key": "isic_0009881",
+    "otsu_dice": 0.010523503176227213,
+    "otsu_iou": 0.005289584065813108,
+    "kmeans_lab_dice": 0.810873214963659,
+    "kmeans_lab_iou": 0.6819064419098106,
+    "watershed_dice": 0.018560091709358132,
+    "watershed_iou": 0.009366971782679803,
+    "center_box_iou": 0.708612739218997
+  },
+  {
+    "key": "isic_0000213",
+    "otsu_dice": 0.31298132923241034,
+    "otsu_iou": 0.18552333454049155,
+    "kmeans_lab_dice": 0.9047056145787029,
+    "kmeans_lab_iou": 0.8259931089035742,
+    "watershed_dice": 0.23084266764749747,
+    "watershed_iou": 0.13048170641841927,
+    "center_box_iou": 0.45433488220026885
+  },
+  {
+    "key": "isic_0000456",
+    "otsu_dice": 5.420856310987728e-14,
+    "otsu_iou": 5.420856310987728e-14,
+    "kmeans_lab_dice": 0.8665662989761699,
+    "kmeans_lab_iou": 0.7645496143209853,
+    "watershed_dice": 5.420856310987728e-14,
+    "watershed_iou": 5.420856310987728e-14,
+    "center_box_iou": 0.6132365653019194
+  },
+  {
+    "key": "isic_0014486",
+    "otsu_dice": 1.5976380519038097e-13,
+    "otsu_iou": 1.5976380519038097e-13,
+    "kmeans_lab_dice": 0.605335364574581,
+    "kmeans_lab_iou": 0.4340365054068976,
+    "watershed_dice": 1.5880653711226846e-13,
+    "watershed_iou": 1.5880653711226846e-13,
+    "center_box_iou": 0.26233649169880074
+  },
+  {
+    "key": "isic_0010348",
+    "otsu_dice": 0.11487448547279805,
+    "otsu_iou": 0.060937314034505696,
+    "kmeans_lab_dice": 0.3202273512810322,
+    "kmeans_lab_iou": 0.19063731721406202,
+    "watershed_dice": 0.10216581094151435,
+    "watershed_iou": 0.05383284352813232,
+    "center_box_iou": 0.45995692187179976
+  },
+  {
+    "key": "isic_0013015",
+    "otsu_dice": 2.64627972764419e-13,
+    "otsu_iou": 2.64627972764419e-13,
+    "kmeans_lab_dice": 0.6810700312129423,
+    "kmeans_lab_iou": 0.5163807384249032,
+    "watershed_dice": 2.64627972764419e-13,
+    "watershed_iou": 2.64627972764419e-13,
+    "center_box_iou": 0.33468749999997777
+  },
+  {
+    "key": "isic_0013676",
+    "otsu_dice": 0.7214639981105982,
+    "otsu_iou": 0.5642891534101991,
+    "kmeans_lab_dice": 0.7449212259434586,
+    "kmeans_lab_iou": 0.5935254753259983,
+    "watershed_dice": 0.6653390319825554,
+    "watershed_iou": 0.49850789670646817,
+    "center_box_iou": 0.33490226672986095
+  },
+  {
+    "key": "isic_0016066",
+    "otsu_dice": 8.907392512266913e-14,
+    "otsu_iou": 8.907392512266913e-14,
+    "kmeans_lab_dice": 0.034711823261355,
+    "kmeans_lab_iou": 0.01766245972081283,
+    "watershed_dice": 8.930804129603032e-14,
+    "watershed_iou": 8.930804129603032e-14,
+    "center_box_iou": 0.22842172571494834
+  },
+  {
+    "key": "isic_0015089",
+    "otsu_dice": 0.6425673309882862,
+    "otsu_iou": 0.4733695789538592,
+    "kmeans_lab_dice": 0.8180221218365453,
+    "kmeans_lab_iou": 0.6920790455973516,
+    "watershed_dice": 0.5535731787965877,
+    "watershed_iou": 0.38271772251569774,
+    "center_box_iou": 0.34184941587136247
+  },
+  {
+    "key": "isic_0000315",
+    "otsu_dice": 0.2880686176526719,
+    "otsu_iou": 0.16827112384530915,
+    "kmeans_lab_dice": 0.6028349393847666,
+    "kmeans_lab_iou": 0.43147009353330473,
+    "watershed_dice": 1.222987268701037e-12,
+    "watershed_iou": 1.222987268701037e-12,
+    "center_box_iou": 0.6450125394380823
+  },
+  {
+    "key": "isic_0011220",
+    "otsu_dice": 3.395701042468689e-12,
+    "otsu_iou": 3.395701042468689e-12,
+    "kmeans_lab_dice": 0.6428036407389455,
+    "kmeans_lab_iou": 0.4736261163345031,
+    "watershed_dice": 3.395701042468689e-12,
+    "watershed_iou": 3.395701042468689e-12,
+    "center_box_iou": 0.24841308593737366
+  },
+  {
+    "key": "isic_0000145",
+    "otsu_dice": 0.9546717982779074,
+    "otsu_iou": 0.9132746985159,
+    "kmeans_lab_dice": 0.9838699840635557,
+    "kmeans_lab_iou": 0.9682520628591443,
+    "watershed_dice": 0.9677500020209822,
+    "watershed_iou": 0.9375151406303579,
+    "center_box_iou": 0.6263384920357569
+  },
+  {
+    "key": "isic_0000254",
+    "otsu_dice": 0.4251298514867407,
+    "otsu_iou": 0.26994597103034906,
+    "kmeans_lab_dice": 0.5795073408696305,
+    "kmeans_lab_iou": 0.40796222151869876,
+    "watershed_dice": 0.2876910590336016,
+    "watershed_iou": 0.168013523816389,
+    "center_box_iou": 0.8540379049571216
+  },
+  {
+    "key": "isic_0011294",
+    "otsu_dice": 0.23930371511991758,
+    "otsu_iou": 0.13591425004725438,
+    "kmeans_lab_dice": 0.8541323828762297,
+    "kmeans_lab_iou": 0.7454023223208605,
+    "watershed_dice": 0.2198750941907177,
+    "watershed_iou": 0.12351666642814459,
+    "center_box_iou": 0.5378628222802928
+  },
+  {
+    "key": "isic_0009904",
+    "otsu_dice": 0.12544061223027111,
+    "otsu_iou": 0.06691738498600334,
+    "kmeans_lab_dice": 0.8386361147436694,
+    "kmeans_lab_iou": 0.7221131338681283,
+    "watershed_dice": 0.10351248145950928,
+    "watershed_iou": 0.054581156188900005,
+    "center_box_iou": 0.43228410859862265
+  },
+  {
+    "key": "isic_0000340",
+    "otsu_dice": 0.4707354962733767,
+    "otsu_iou": 0.30781823231169475,
+    "kmeans_lab_dice": 0.6112232592284428,
+    "kmeans_lab_iou": 0.44011628455790147,
+    "watershed_dice": 0.4256029086899098,
+    "watershed_iou": 0.27032755017134585,
+    "center_box_iou": 0.577659705918249
+  },
+  {
+    "key": "isic_0011214",
+    "otsu_dice": 0.5403883398009811,
+    "otsu_iou": 0.37022747525010274,
+    "kmeans_lab_dice": 0.8276574616713887,
+    "kmeans_lab_iou": 0.7059860361728474,
+    "watershed_dice": 0.45258316980970903,
+    "watershed_iou": 0.2924765719099665,
+    "center_box_iou": 0.3316968488393897
+  },
+  {
+    "key": "isic_0013958",
+    "otsu_dice": 9.933061101237765e-14,
+    "otsu_iou": 9.933061101237765e-14,
+    "kmeans_lab_dice": 0.24173773686167954,
+    "kmeans_lab_iou": 0.1374867344478121,
+    "watershed_dice": 9.940397377324567e-14,
+    "watershed_iou": 9.940397377324567e-14,
+    "center_box_iou": 0.599866327365082
+  },
+  {
+    "key": "isic_0016037",
+    "otsu_dice": 6.030526525270558e-14,
+    "otsu_iou": 6.030526525270558e-14,
+    "kmeans_lab_dice": 5.693104113779778e-14,
+    "kmeans_lab_iou": 5.693104113779778e-14,
+    "watershed_dice": 6.06782493354178e-14,
+    "watershed_iou": 6.06782493354178e-14,
+    "center_box_iou": 0.47728315741164307
+  },
+  {
+    "key": "isic_0016029",
+    "otsu_dice": 7.621782750228263e-14,
+    "otsu_iou": 7.621782750228263e-14,
+    "kmeans_lab_dice": 0.002356252431375194,
+    "kmeans_lab_iou": 0.0011795158342368032,
+    "watershed_dice": 7.63584356599945e-14,
+    "watershed_iou": 7.63584356599945e-14,
+    "center_box_iou": 0.5547742982768559
+  },
+  {
+    "key": "isic_0000507",
+    "otsu_dice": 0.12270211304638061,
+    "otsu_iou": 0.06536102442749094,
+    "kmeans_lab_dice": 0.8932577493668147,
+    "kmeans_lab_iou": 0.8071054925894661,
+    "watershed_dice": 0.1037015875611641,
+    "watershed_iou": 0.05468632303935506,
+    "center_box_iou": 0.592156842471029
+  },
+  {
+    "key": "isic_0000381",
+    "otsu_dice": 0.1684210526316344,
+    "otsu_iou": 0.09195402298857186,
+    "kmeans_lab_dice": 0.6386995471271725,
+    "kmeans_lab_iou": 0.46918337959802703,
+    "watershed_dice": 0.1428397600477564,
+    "watershed_iou": 0.07691299704515098,
+    "center_box_iou": 0.4467889801822052
+  },
+  {
+    "key": "isic_0000208",
+    "otsu_dice": 0.0017770121161586622,
+    "otsu_iou": 0.0008892962031870195,
+    "kmeans_lab_dice": 0.8451515893063434,
+    "kmeans_lab_iou": 0.7318290274986992,
+    "watershed_dice": 0.0017350305469546596,
+    "watershed_iou": 0.0008682685097147184,
+    "center_box_iou": 0.30034627488134946
+  },
+  {
+    "key": "isic_0000329",
+    "otsu_dice": 1.3061309788128494e-12,
+    "otsu_iou": 1.3061309788128494e-12,
+    "kmeans_lab_dice": 0.6319410959799101,
+    "kmeans_lab_iou": 0.4619253557893445,
+    "watershed_dice": 1.3317529864542985e-12,
+    "watershed_iou": 1.3317529864542985e-12,
+    "center_box_iou": 0.6503253723327432
+  },
+  {
+    "key": "isic_0012179",
+    "otsu_dice": 2.3787944745356283e-13,
+    "otsu_iou": 2.3787944745356283e-13,
+    "kmeans_lab_dice": 0.021403862419824757,
+    "kmeans_lab_iou": 0.010817701507377195,
+    "watershed_dice": 2.4878654363336604e-13,
+    "watershed_iou": 2.4878654363336604e-13,
+    "center_box_iou": 0.048446808510635084
+  },
+  {
+    "key": "isic_0000377",
+    "otsu_dice": 0.17847521904020616,
+    "otsu_iou": 0.0979812193091493,
+    "kmeans_lab_dice": 0.8067892696754014,
+    "kmeans_lab_iou": 0.6761498611866654,
+    "watershed_dice": 0.1375584971253482,
+    "watershed_iou": 0.07385923096811225,
+    "center_box_iou": 0.6763252672365805
+  },
+  {
+    "key": "isic_0000198",
+    "otsu_dice": 0.9611509620730598,
+    "otsu_iou": 0.9252075392889819,
+    "kmeans_lab_dice": 0.9884418282097607,
+    "kmeans_lab_iou": 0.9771477862320535,
+    "watershed_dice": 0.9613739705018199,
+    "watershed_iou": 0.9256209099307526,
+    "center_box_iou": 0.7863197970625796
+  },
+  {
+    "key": "isic_0011202",
+    "otsu_dice": 6.894934980758377e-13,
+    "otsu_iou": 6.894934980758377e-13,
+    "kmeans_lab_dice": 0.23085044269760183,
+    "kmeans_lab_iou": 0.1304866746539793,
+    "watershed_dice": 6.894934980758377e-13,
+    "watershed_iou": 6.894934980758377e-13,
+    "center_box_iou": 0.6507593136952754
+  },
+  {
+    "key": "isic_0000488",
+    "otsu_dice": 0.02243415445881057,
+    "otsu_iou": 0.011344327426667095,
+    "kmeans_lab_dice": 0.9177990488859107,
+    "kmeans_lab_iou": 0.8480856054886421,
+    "watershed_dice": 0.0379452242335355,
+    "watershed_iou": 0.0193395335864169,
+    "center_box_iou": 0.6886968106633381
+  },
+  {
+    "key": "isic_0000466",
+    "otsu_dice": 0.0821194149079926,
+    "otsu_iou": 0.042817793530358784,
+    "kmeans_lab_dice": 0.8274648292893461,
+    "kmeans_lab_iou": 0.7057057647046112,
+    "watershed_dice": 0.07469805689766476,
+    "watershed_iou": 0.0387980997815146,
+    "center_box_iou": 0.4674122046004517
+  },
+  {
+    "key": "isic_0000513",
+    "otsu_dice": 5.143980000203113e-13,
+    "otsu_iou": 5.143980000203113e-13,
+    "kmeans_lab_dice": 0.7722091606248932,
+    "kmeans_lab_iou": 0.6289419466739374,
+    "watershed_dice": 5.143980000203113e-13,
+    "watershed_iou": 5.143980000203113e-13,
+    "center_box_iou": 0.7046575751083397
+  },
+  {
+    "key": "isic_0000029",
+    "otsu_dice": 0.9510464884675177,
+    "otsu_iou": 0.9066621904702731,
+    "kmeans_lab_dice": 0.9426528619712589,
+    "kmeans_lab_iou": 0.8915263758397234,
+    "watershed_dice": 0.9526484329886121,
+    "watershed_iou": 0.9095784672447633,
+    "center_box_iou": 0.4582920388567035
+  },
+  {
+    "key": "isic_0014915",
+    "otsu_dice": 0.7879610465149973,
+    "otsu_iou": 0.6501119821680292,
+    "kmeans_lab_dice": 0.893137023053601,
+    "kmeans_lab_iou": 0.8069083903389542,
+    "watershed_dice": 0.7550490693170359,
+    "watershed_iou": 0.6064890195333461,
+    "center_box_iou": 0.3905028102755359
+  },
+  {
+    "key": "isic_0015021",
+    "otsu_dice": 0.7255433337960914,
+    "otsu_iou": 0.5692961973804858,
+    "kmeans_lab_dice": 0.9534979494310468,
+    "kmeans_lab_iou": 0.9111286011457483,
+    "watershed_dice": 0.7040064120803485,
+    "watershed_iou": 0.5432175117551588,
+    "center_box_iou": 0.6169108658752043
+  },
+  {
+    "key": "isic_0000120",
+    "otsu_dice": 0.6312910115062077,
+    "otsu_iou": 0.46123099710256543,
+    "kmeans_lab_dice": 0.9219409848645613,
+    "kmeans_lab_iou": 0.855186007371537,
+    "watershed_dice": 0.5386615236258693,
+    "watershed_iou": 0.36860832198330234,
+    "center_box_iou": 0.43877120050701907
+  },
+  {
+    "key": "isic_0015593",
+    "otsu_dice": 0.0045831974062107905,
+    "otsu_iou": 0.002296862189525761,
+    "kmeans_lab_dice": 0.5681463946813043,
+    "kmeans_lab_iou": 0.3967908399091204,
+    "watershed_dice": 0.0036682391513872883,
+    "watershed_iou": 0.0018374897516228743,
+    "center_box_iou": 0.5969819165007301
+  },
+  {
+    "key": "isic_0010488",
+    "otsu_dice": 0.6223768812575711,
+    "otsu_iou": 0.45177586873379366,
+    "kmeans_lab_dice": 0.752038744437252,
+    "kmeans_lab_iou": 0.6026138560673518,
+    "watershed_dice": 0.6302553281695055,
+    "watershed_iou": 0.46012613966024396,
+    "center_box_iou": 0.4271106467007964
+  },
+  {
+    "key": "isic_0000473",
+    "otsu_dice": 9.62549138133409e-14,
+    "otsu_iou": 9.62549138133409e-14,
+    "kmeans_lab_dice": 0.7839473484739691,
+    "kmeans_lab_iou": 0.6446656298065779,
+    "watershed_dice": 9.62549138133409e-14,
+    "watershed_iou": 9.62549138133409e-14,
+    "center_box_iou": 0.6663684743812891
+  },
+  {
+    "key": "isic_0000135",
+    "otsu_dice": 0.8314178130708971,
+    "otsu_iou": 0.7114756859813248,
+    "kmeans_lab_dice": 0.872258901512184,
+    "kmeans_lab_iou": 0.7734566938119242,
+    "watershed_dice": 0.8178417014395167,
+    "watershed_iou": 0.6918208013558343,
+    "center_box_iou": 0.5839649690568873
+  },
+  {
+    "key": "isic_0000143",
+    "otsu_dice": 0.3618417747033868,
+    "otsu_iou": 0.22088328777759877,
+    "kmeans_lab_dice": 0.6940559473130341,
+    "kmeans_lab_iou": 0.5314591738329397,
+    "watershed_dice": 0.3181700671499631,
+    "watershed_iou": 0.18918088026346352,
+    "center_box_iou": 0.6359189083096277
+  },
+  {
+    "key": "isic_0000426",
+    "otsu_dice": 0.5968598564518988,
+    "otsu_iou": 0.42537437133160294,
+    "kmeans_lab_dice": 0.8321655416678965,
+    "kmeans_lab_iou": 0.7125714913879114,
+    "watershed_dice": 0.5135689944704913,
+    "watershed_iou": 0.3455047644727753,
+    "center_box_iou": 0.27913527429674345
+  },
+  {
+    "key": "isic_0000514",
+    "otsu_dice": 0.12823792460468444,
+    "otsu_iou": 0.0685118724710298,
+    "kmeans_lab_dice": 0.8671914212662212,
+    "kmeans_lab_iou": 0.7655233527942394,
+    "watershed_dice": 0.10321763565213202,
+    "watershed_iou": 0.05441722655859615,
+    "center_box_iou": 0.6598920495553832
+  },
+  {
+    "key": "isic_0000112",
+    "otsu_dice": 1.5570018372619254e-13,
+    "otsu_iou": 1.5570018372619254e-13,
+    "kmeans_lab_dice": 0.7026554768076545,
+    "kmeans_lab_iou": 0.5416105469645703,
+    "watershed_dice": 1.5629200347590972e-13,
+    "watershed_iou": 1.5629200347590972e-13,
+    "center_box_iou": 0.7230148993895961
+  }
+]

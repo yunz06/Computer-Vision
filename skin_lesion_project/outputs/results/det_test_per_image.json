@@ -1,0 +1,2330 @@
+[
+  {
+    "key": "isic_0010262",
+    "top1_box_iou": 0.9073715764928869,
+    "top1_score": 0.9965824484825134,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0011211",
+    "top1_box_iou": 0.957679306563156,
+    "top1_score": 0.9979054927825928,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0012742",
+    "top1_box_iou": 0.554292781790475,
+    "top1_score": 0.8565230965614319,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0013219",
+    "top1_box_iou": 0.887468741746379,
+    "top1_score": 0.9930890202522278,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0009297",
+    "top1_box_iou": 0.8054279243832121,
+    "top1_score": 0.9960495829582214,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0012395",
+    "top1_box_iou": 0.9201212355356401,
+    "top1_score": 0.9982048273086548,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0013053",
+    "top1_box_iou": 0.6670695061536196,
+    "top1_score": 0.9720504879951477,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0009980",
+    "top1_box_iou": 0.9844375090732362,
+    "top1_score": 0.996957540512085,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0012135",
+    "top1_box_iou": 0.8834270384282532,
+    "top1_score": 0.9979832172393799,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0008294",
+    "top1_box_iou": 0.7880469388453467,
+    "top1_score": 0.9977757334709167,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0001131",
+    "top1_box_iou": 0.8604013158843428,
+    "top1_score": 0.9972711205482483,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0011085",
+    "top1_box_iou": 0.4621952736500629,
+    "top1_score": 0.9626202583312988,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0014697",
+    "top1_box_iou": 0.7900745015068761,
+    "top1_score": 0.9817734360694885,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0013207",
+    "top1_box_iou": 0.6687967022638766,
+    "top1_score": 0.4823068082332611,
+    "num_preds_above_thresh": 0
+  },
+  {
+    "key": "isic_0006651",
+    "top1_box_iou": 0.8247131913792113,
+    "top1_score": 0.9969674944877625,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0013027",
+    "top1_box_iou": 0.5943339764679865,
+    "top1_score": 0.7311869263648987,
+    "num_preds_above_thresh": 2
+  },
+  {
+    "key": "isic_0013216",
+    "top1_box_iou": 0.949193506926488,
+    "top1_score": 0.995820164680481,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0011105",
+    "top1_box_iou": 0.9427591924857988,
+    "top1_score": 0.9946033358573914,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0013459",
+    "top1_box_iou": 0.9191649773127929,
+    "top1_score": 0.9897887110710144,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0013674",
+    "top1_box_iou": 0.873898776325146,
+    "top1_score": 0.9926791191101074,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0012551",
+    "top1_box_iou": 0.8064760562156218,
+    "top1_score": 0.9979561567306519,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0015985",
+    "top1_box_iou": 0.7826973204239231,
+    "top1_score": 0.9960273504257202,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0012836",
+    "top1_box_iou": 0.8377915504161363,
+    "top1_score": 0.9800368547439575,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0001292",
+    "top1_box_iou": 0.8324237082690839,
+    "top1_score": 0.9894595146179199,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0015082",
+    "top1_box_iou": 0.8851338785939922,
+    "top1_score": 0.9938613176345825,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0014173",
+    "top1_box_iou": 0.8442858944217136,
+    "top1_score": 0.9684103727340698,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0013817",
+    "top1_box_iou": 0.7844779931221745,
+    "top1_score": 0.999053418636322,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0014890",
+    "top1_box_iou": 0.8999224607545606,
+    "top1_score": 0.9965124726295471,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0002885",
+    "top1_box_iou": 0.7871753599161192,
+    "top1_score": 0.9835114479064941,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0015011",
+    "top1_box_iou": 0.9382626242254277,
+    "top1_score": 0.9930311441421509,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0014317",
+    "top1_box_iou": 0.8386305139015819,
+    "top1_score": 0.9914934635162354,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0013082",
+    "top1_box_iou": 0.8539082649423649,
+    "top1_score": 0.9945504069328308,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0013737",
+    "top1_box_iou": 0.768270126079977,
+    "top1_score": 0.9748392701148987,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0014930",
+    "top1_box_iou": 0.8475268564848727,
+    "top1_score": 0.997329831123352,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0010220",
+    "top1_box_iou": 0.8824647106613223,
+    "top1_score": 0.9955525994300842,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0014066",
+    "top1_box_iou": 0.7579865590915994,
+    "top1_score": 0.9944338202476501,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0009929",
+    "top1_box_iou": 0.8442593050837831,
+    "top1_score": 0.9910215735435486,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0014600",
+    "top1_box_iou": 0.8066706427700951,
+    "top1_score": 0.9912676215171814,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0010071",
+    "top1_box_iou": 0.9700969312117571,
+    "top1_score": 0.9959671497344971,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0010252",
+    "top1_box_iou": 0.982166527979608,
+    "top1_score": 0.9935272336006165,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0015950",
+    "top1_box_iou": 0.9543329127249628,
+    "top1_score": 0.9906734824180603,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0015008",
+    "top1_box_iou": 0.8545303088318316,
+    "top1_score": 0.8987515568733215,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0011225",
+    "top1_box_iou": 0.9225936099670125,
+    "top1_score": 0.9867961406707764,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0012261",
+    "top1_box_iou": 0.8145420001148781,
+    "top1_score": 0.8648127913475037,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0010480",
+    "top1_box_iou": 0.8968410577195186,
+    "top1_score": 0.9942147135734558,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0012358",
+    "top1_box_iou": 0.8832920867416079,
+    "top1_score": 0.9875375628471375,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0013233",
+    "top1_box_iou": 0.8469251333228703,
+    "top1_score": 0.9357093572616577,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0013998",
+    "top1_box_iou": 0.5730817342016508,
+    "top1_score": 0.41238799691200256,
+    "num_preds_above_thresh": 0
+  },
+  {
+    "key": "isic_0010607",
+    "top1_box_iou": 0.8990416445997944,
+    "top1_score": 0.9921148419380188,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0014458",
+    "top1_box_iou": 0.7380842665510705,
+    "top1_score": 0.9789800643920898,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0010853",
+    "top1_box_iou": 0.8297617949670426,
+    "top1_score": 0.9903691411018372,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0014843",
+    "top1_box_iou": 0.9612428427317963,
+    "top1_score": 0.9980864524841309,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0013212",
+    "top1_box_iou": 0.6142476677105936,
+    "top1_score": 0.5550670623779297,
+    "num_preds_above_thresh": 0
+  },
+  {
+    "key": "isic_0013129",
+    "top1_box_iou": 0.6675934412043866,
+    "top1_score": 0.897330105304718,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0013334",
+    "top1_box_iou": 0.8924014341184224,
+    "top1_score": 0.9975246787071228,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0011324",
+    "top1_box_iou": 0.8641933763124896,
+    "top1_score": 0.997521698474884,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0013879",
+    "top1_box_iou": 0.9144310039010304,
+    "top1_score": 0.9942799806594849,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0010862",
+    "top1_box_iou": 0.2929290048961032,
+    "top1_score": 0.9428631067276001,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0014898",
+    "top1_box_iou": 0.862315680760115,
+    "top1_score": 0.9971820116043091,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0012777",
+    "top1_box_iou": 0.9210676178301629,
+    "top1_score": 0.9703276753425598,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0013721",
+    "top1_box_iou": 0.8270656218879524,
+    "top1_score": 0.6639817953109741,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0011107",
+    "top1_box_iou": 0.9634651785607693,
+    "top1_score": 0.9967973828315735,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0014541",
+    "top1_box_iou": 0.8523266578477312,
+    "top1_score": 0.9358323216438293,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0009930",
+    "top1_box_iou": 0.9070696363146805,
+    "top1_score": 0.9824051260948181,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0012473",
+    "top1_box_iou": 0.7969721182810506,
+    "top1_score": 0.9339089393615723,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000556",
+    "top1_box_iou": 0.9378030867148073,
+    "top1_score": 0.9972374439239502,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0010059",
+    "top1_box_iou": 0.9152471893184593,
+    "top1_score": 0.9764175415039062,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0012705",
+    "top1_box_iou": 0.700404346014246,
+    "top1_score": 0.6535059213638306,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0013861",
+    "top1_box_iou": 0.7619693996561933,
+    "top1_score": 0.9871672987937927,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0015309",
+    "top1_box_iou": 0.8507667775128408,
+    "top1_score": 0.9986182451248169,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0009902",
+    "top1_box_iou": 0.9120056994869153,
+    "top1_score": 0.9963032007217407,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0013427",
+    "top1_box_iou": 0.9779220726301732,
+    "top1_score": 0.9972807168960571,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0009873",
+    "top1_box_iou": 0.8333146885050902,
+    "top1_score": 0.9980385899543762,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0015645",
+    "top1_box_iou": 0.9104097764612373,
+    "top1_score": 0.9956300258636475,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0014998",
+    "top1_box_iou": 0.8660040857565877,
+    "top1_score": 0.9943601489067078,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0013170",
+    "top1_box_iou": 0.8167401992176512,
+    "top1_score": 0.9344491362571716,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0014385",
+    "top1_box_iou": 0.945280732203455,
+    "top1_score": 0.9941892623901367,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0010572",
+    "top1_box_iou": 0.8922062588290615,
+    "top1_score": 0.9958401918411255,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0011208",
+    "top1_box_iou": 0.8163322260091366,
+    "top1_score": 0.9958279728889465,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0014945",
+    "top1_box_iou": 0.9158175588778525,
+    "top1_score": 0.9970179796218872,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0011300",
+    "top1_box_iou": 0.8220745102555956,
+    "top1_score": 0.9307472109794617,
+    "num_preds_above_thresh": 2
+  },
+  {
+    "key": "isic_0014291",
+    "top1_box_iou": 0.8705907875375564,
+    "top1_score": 0.9878364205360413,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0009880",
+    "top1_box_iou": 0.8975276029925416,
+    "top1_score": 0.996394693851471,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0014923",
+    "top1_box_iou": 0.8695561900912357,
+    "top1_score": 0.9964050054550171,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0010592",
+    "top1_box_iou": 0.8019712255605352,
+    "top1_score": 0.9605855345726013,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0012306",
+    "top1_box_iou": 0.8915587342969242,
+    "top1_score": 0.9979835748672485,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0016003",
+    "top1_box_iou": 0.705482222372439,
+    "top1_score": 0.9849969148635864,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0014821",
+    "top1_box_iou": 0.9222534802935185,
+    "top1_score": 0.9983299374580383,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0013799",
+    "top1_box_iou": 0.9054636636647089,
+    "top1_score": 0.9916231036186218,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0011173",
+    "top1_box_iou": 0.9057777918873302,
+    "top1_score": 0.9948393702507019,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0009991",
+    "top1_box_iou": 0.9571981462054975,
+    "top1_score": 0.9981837868690491,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0013675",
+    "top1_box_iou": 0.934610533222862,
+    "top1_score": 0.9964371919631958,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0014946",
+    "top1_box_iou": 0.9563986921556685,
+    "top1_score": 0.9975419044494629,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0010067",
+    "top1_box_iou": 0.8725491715578448,
+    "top1_score": 0.9888156652450562,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0015417",
+    "top1_box_iou": 0.8567808504310109,
+    "top1_score": 0.9945312142372131,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0012726",
+    "top1_box_iou": 0.7108318102067065,
+    "top1_score": 0.9395173192024231,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0014453",
+    "top1_box_iou": 0.806666290086913,
+    "top1_score": 0.9941058158874512,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0012455",
+    "top1_box_iou": 0.8123598063431835,
+    "top1_score": 0.9939966201782227,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0011296",
+    "top1_box_iou": 0.9487118481301571,
+    "top1_score": 0.9977272152900696,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0014862",
+    "top1_box_iou": 0.685284575795171,
+    "top1_score": 0.9982421398162842,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0013063",
+    "top1_box_iou": 0.8351187554107226,
+    "top1_score": 0.9552374482154846,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0015607",
+    "top1_box_iou": 0.9480256519985779,
+    "top1_score": 0.6630352139472961,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0010019",
+    "top1_box_iou": 0.8974114519532386,
+    "top1_score": 0.9988448619842529,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0011095",
+    "top1_box_iou": 0.886666063664038,
+    "top1_score": 0.9989897608757019,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0015958",
+    "top1_box_iou": 0.7326344393418792,
+    "top1_score": 0.8301711678504944,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0013052",
+    "top1_box_iou": 0.9078658472770034,
+    "top1_score": 0.9955068826675415,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0011378",
+    "top1_box_iou": 0.8849587155263774,
+    "top1_score": 0.9968001842498779,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0016062",
+    "top1_box_iou": 0.8028871608424547,
+    "top1_score": 0.8709890842437744,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000547",
+    "top1_box_iou": 0.944365817536478,
+    "top1_score": 0.9944005608558655,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0013670",
+    "top1_box_iou": 0.8432344756327523,
+    "top1_score": 0.6249037384986877,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0015251",
+    "top1_box_iou": 0.0651763979998791,
+    "top1_score": 0.9887258410453796,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0012222",
+    "top1_box_iou": 0.9282506809279621,
+    "top1_score": 0.9880621433258057,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0012653",
+    "top1_box_iou": 0.8217124282531754,
+    "top1_score": 0.998552143573761,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0013636",
+    "top1_box_iou": 0.8646165466736634,
+    "top1_score": 0.9930233955383301,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0011366",
+    "top1_box_iou": 0.8710190308264837,
+    "top1_score": 0.9979740977287292,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0010192",
+    "top1_box_iou": 0.9194372144643966,
+    "top1_score": 0.9976512789726257,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0015563",
+    "top1_box_iou": 0.8676681168871349,
+    "top1_score": 0.9908769726753235,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0013395",
+    "top1_box_iou": 0.8771696361466396,
+    "top1_score": 0.9955636262893677,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0012897",
+    "top1_box_iou": 0.8973358684602019,
+    "top1_score": 0.8563066124916077,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0014617",
+    "top1_box_iou": 0.7917555321983663,
+    "top1_score": 0.9965227842330933,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0002459",
+    "top1_box_iou": 0.82822191062578,
+    "top1_score": 0.996192455291748,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0014982",
+    "top1_box_iou": 0.7544086174921907,
+    "top1_score": 0.996547281742096,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0010362",
+    "top1_box_iou": 0.9080187821193348,
+    "top1_score": 0.995418906211853,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0013397",
+    "top1_box_iou": 0.7566883423425094,
+    "top1_score": 0.9618062973022461,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0015155",
+    "top1_box_iou": 0.9712428413374071,
+    "top1_score": 0.9984721541404724,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0012094",
+    "top1_box_iou": 0.8793431404043588,
+    "top1_score": 0.9963710308074951,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0012134",
+    "top1_box_iou": 0.9016733926010465,
+    "top1_score": 0.9989057779312134,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0015229",
+    "top1_box_iou": 0.990531011334686,
+    "top1_score": 0.9969250559806824,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0015476",
+    "top1_box_iou": 0.9194577582471464,
+    "top1_score": 0.9948586225509644,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0013079",
+    "top1_box_iou": 0.6473756905432866,
+    "top1_score": 0.6584330201148987,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0014836",
+    "top1_box_iou": 0.9277825023770985,
+    "top1_score": 0.9973554611206055,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0010034",
+    "top1_box_iou": 0.9298708668511005,
+    "top1_score": 0.9994483590126038,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0010317",
+    "top1_box_iou": 0.867066979118804,
+    "top1_score": 0.9946080446243286,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0010452",
+    "top1_box_iou": 0.8695712454916431,
+    "top1_score": 0.9981130361557007,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0010323",
+    "top1_box_iou": 0.0,
+    "top1_score": 0.0,
+    "num_preds_above_thresh": 0
+  },
+  {
+    "key": "isic_0014851",
+    "top1_box_iou": 0.7929665154792077,
+    "top1_score": 0.9972522854804993,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0015963",
+    "top1_box_iou": 0.9241011022860863,
+    "top1_score": 0.9890224933624268,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0014090",
+    "top1_box_iou": 0.9359227695284453,
+    "top1_score": 0.953467071056366,
+    "num_preds_above_thresh": 2
+  },
+  {
+    "key": "isic_0014792",
+    "top1_box_iou": 0.9099553990386922,
+    "top1_score": 0.9915416836738586,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0003174",
+    "top1_box_iou": 0.767335834728742,
+    "top1_score": 0.9839072227478027,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0005639",
+    "top1_box_iou": 0.7054098927834683,
+    "top1_score": 0.9886221289634705,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0014830",
+    "top1_box_iou": 0.9433250167823816,
+    "top1_score": 0.9965223073959351,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0014831",
+    "top1_box_iou": 0.8160222130290434,
+    "top1_score": 0.9970088601112366,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0013438",
+    "top1_box_iou": 0.9650105043518038,
+    "top1_score": 0.9990742206573486,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0010367",
+    "top1_box_iou": 0.8432189184158483,
+    "top1_score": 0.9847456216812134,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0014131",
+    "top1_box_iou": 0.9217420606657285,
+    "top1_score": 0.9680187106132507,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0011227",
+    "top1_box_iou": 0.1620256568292305,
+    "top1_score": 0.981605589389801,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0011224",
+    "top1_box_iou": 0.8562378700566999,
+    "top1_score": 0.9963235855102539,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0002488",
+    "top1_box_iou": 0.78974211508594,
+    "top1_score": 0.9943851232528687,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0011097",
+    "top1_box_iou": 0.88700788286063,
+    "top1_score": 0.9967659711837769,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0013671",
+    "top1_box_iou": 0.9546703805568094,
+    "top1_score": 0.9991012811660767,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0013567",
+    "top1_box_iou": 0.060363552445197054,
+    "top1_score": 0.2441471666097641,
+    "num_preds_above_thresh": 0
+  },
+  {
+    "key": "isic_0012447",
+    "top1_box_iou": 0.48356269559140264,
+    "top1_score": 0.6978678107261658,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0014263",
+    "top1_box_iou": 0.6992527834301134,
+    "top1_score": 0.9764902591705322,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0007087",
+    "top1_box_iou": 0.84023034881943,
+    "top1_score": 0.9977752566337585,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0013637",
+    "top1_box_iou": 0.9247186060219132,
+    "top1_score": 0.994768500328064,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0014912",
+    "top1_box_iou": 0.6799912340278977,
+    "top1_score": 0.989179253578186,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0014077",
+    "top1_box_iou": 0.648393954599394,
+    "top1_score": 0.993608832359314,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0011083",
+    "top1_box_iou": 0.9276269287863309,
+    "top1_score": 0.9938836693763733,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0010327",
+    "top1_box_iou": 0.8617901322697324,
+    "top1_score": 0.9970566034317017,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0009897",
+    "top1_box_iou": 0.958149244310535,
+    "top1_score": 0.9989432692527771,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0014255",
+    "top1_box_iou": 0.7926767025327662,
+    "top1_score": 0.9929976463317871,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0010335",
+    "top1_box_iou": 0.9493364204689861,
+    "top1_score": 0.9970334768295288,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0009869",
+    "top1_box_iou": 0.882152107052779,
+    "top1_score": 0.9880466461181641,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0015443",
+    "top1_box_iou": 0.915835296808595,
+    "top1_score": 0.9974697828292847,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0009910",
+    "top1_box_iou": 0.9362143062345727,
+    "top1_score": 0.9973052740097046,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0015946",
+    "top1_box_iou": 0.8813630682131455,
+    "top1_score": 0.9722208380699158,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0010215",
+    "top1_box_iou": 0.8785546008339875,
+    "top1_score": 0.9958233833312988,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0009921",
+    "top1_box_iou": 0.9470825011309146,
+    "top1_score": 0.9960392713546753,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0014664",
+    "top1_box_iou": 0.9793086784509946,
+    "top1_score": 0.9972032308578491,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0015179",
+    "top1_box_iou": 0.829315117541882,
+    "top1_score": 0.9960930943489075,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0013767",
+    "top1_box_iou": 0.8946504334551441,
+    "top1_score": 0.9983144998550415,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0015284",
+    "top1_box_iou": 0.9435080474603862,
+    "top1_score": 0.9215739965438843,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0008406",
+    "top1_box_iou": 0.786030268991401,
+    "top1_score": 0.9087263941764832,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0015412",
+    "top1_box_iou": 0.863191438870441,
+    "top1_score": 0.9977387189865112,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0011115",
+    "top1_box_iou": 0.41015290823843653,
+    "top1_score": 0.9176756739616394,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0011117",
+    "top1_box_iou": 0.2958561202054954,
+    "top1_score": 0.9653894901275635,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0010596",
+    "top1_box_iou": 0.9386861118849797,
+    "top1_score": 0.9974588751792908,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0012966",
+    "top1_box_iou": 0.9519028492647443,
+    "top1_score": 0.9596975445747375,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0014685",
+    "top1_box_iou": 0.8776150292363271,
+    "top1_score": 0.9951099753379822,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0013173",
+    "top1_box_iou": 0.7852003565399854,
+    "top1_score": 0.8404733538627625,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0014441",
+    "top1_box_iou": 0.7940438433688473,
+    "top1_score": 0.9913731217384338,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0010863",
+    "top1_box_iou": 0.9429402475549175,
+    "top1_score": 0.9967441558837891,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0012823",
+    "top1_box_iou": 0.780893743263052,
+    "top1_score": 0.8975287675857544,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0009884",
+    "top1_box_iou": 0.870492833244032,
+    "top1_score": 0.9973674416542053,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0013558",
+    "top1_box_iou": 0.8853114211110699,
+    "top1_score": 0.9975827932357788,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0003728",
+    "top1_box_iou": 0.6656806480490008,
+    "top1_score": 0.9664106965065002,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0012697",
+    "top1_box_iou": 0.8348514601460775,
+    "top1_score": 0.9945427179336548,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0002093",
+    "top1_box_iou": 0.9258675789330368,
+    "top1_score": 0.9954741597175598,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0010330",
+    "top1_box_iou": 0.838194371678797,
+    "top1_score": 0.9966148734092712,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0010860",
+    "top1_box_iou": 0.9333717046870273,
+    "top1_score": 0.998382568359375,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0013140",
+    "top1_box_iou": 0.7818257419068027,
+    "top1_score": 0.991430938243866,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0014081",
+    "top1_box_iou": 0.7020043325775105,
+    "top1_score": 0.9892033934593201,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0014132",
+    "top1_box_iou": 0.7681452002872841,
+    "top1_score": 0.9568987488746643,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0014730",
+    "top1_box_iou": 0.949352356310451,
+    "top1_score": 0.9962713718414307,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0011339",
+    "top1_box_iou": 0.910461808361512,
+    "top1_score": 0.9976996779441833,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0015035",
+    "top1_box_iou": 0.908083168147923,
+    "top1_score": 0.9955568909645081,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0015313",
+    "top1_box_iou": 0.9484049282768581,
+    "top1_score": 0.996898889541626,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0010361",
+    "top1_box_iou": 0.9496937055348936,
+    "top1_score": 0.9934899806976318,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0010443",
+    "top1_box_iou": 0.9197324216664471,
+    "top1_score": 0.993934690952301,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0012271",
+    "top1_box_iou": 0.8215942214640856,
+    "top1_score": 0.9988722205162048,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0013437",
+    "top1_box_iou": 0.8804170669799917,
+    "top1_score": 0.9970972537994385,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0012758",
+    "top1_box_iou": 0.9529351207352343,
+    "top1_score": 0.9952865242958069,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0010182",
+    "top1_box_iou": 0.6720869699325541,
+    "top1_score": 0.9913443326950073,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0010584",
+    "top1_box_iou": 0.6187964623820863,
+    "top1_score": 0.973478376865387,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0009994",
+    "top1_box_iou": 0.840603853877462,
+    "top1_score": 0.9985553622245789,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0013562",
+    "top1_box_iou": 0.6755075305867055,
+    "top1_score": 0.9979362487792969,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0010599",
+    "top1_box_iou": 0.9460230887309966,
+    "top1_score": 0.9963796734809875,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0011223",
+    "top1_box_iou": 0.9056321494757162,
+    "top1_score": 0.9965362548828125,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0009919",
+    "top1_box_iou": 0.9321280771011469,
+    "top1_score": 0.9973993301391602,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0010264",
+    "top1_box_iou": 0.8848077737568862,
+    "top1_score": 0.995635449886322,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0009949",
+    "top1_box_iou": 0.9676112117867065,
+    "top1_score": 0.9982554316520691,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0014937",
+    "top1_box_iou": 0.9752220619147499,
+    "top1_score": 0.9975807666778564,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0009035",
+    "top1_box_iou": 0.9149491946699745,
+    "top1_score": 0.9978882670402527,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0001262",
+    "top1_box_iou": 0.7893915167003795,
+    "top1_score": 0.9810754060745239,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0006193",
+    "top1_box_iou": 0.8981587696102925,
+    "top1_score": 0.9972363710403442,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0014974",
+    "top1_box_iou": 0.92786941165205,
+    "top1_score": 0.9969056248664856,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0012442",
+    "top1_box_iou": 0.8792199802261468,
+    "top1_score": 0.9976271986961365,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0015026",
+    "top1_box_iou": 0.7943688985292156,
+    "top1_score": 0.978926956653595,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0013229",
+    "top1_box_iou": 0.7882958780864595,
+    "top1_score": 0.9651874303817749,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0014684",
+    "top1_box_iou": 0.8225372646746849,
+    "top1_score": 0.9949499368667603,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0012957",
+    "top1_box_iou": 0.8110723663199242,
+    "top1_score": 0.7519968152046204,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0013962",
+    "top1_box_iou": 0.6722337327536347,
+    "top1_score": 0.9952113032341003,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0009344",
+    "top1_box_iou": 0.897363283156285,
+    "top1_score": 0.9889389276504517,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0012986",
+    "top1_box_iou": 0.7669223664623499,
+    "top1_score": 0.9210215210914612,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0012273",
+    "top1_box_iou": 0.6072664954746733,
+    "top1_score": 0.5929600596427917,
+    "num_preds_above_thresh": 0
+  },
+  {
+    "key": "isic_0014663",
+    "top1_box_iou": 0.9009348688860154,
+    "top1_score": 0.9975169897079468,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000900",
+    "top1_box_iou": 0.8110197887375641,
+    "top1_score": 0.9973042011260986,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0002251",
+    "top1_box_iou": 0.9411867303001527,
+    "top1_score": 0.9962544441223145,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0010476",
+    "top1_box_iou": 0.9575361867123983,
+    "top1_score": 0.9930446743965149,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0011383",
+    "top1_box_iou": 0.9012647321851722,
+    "top1_score": 0.9982913136482239,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0012351",
+    "top1_box_iou": 0.7531080140313117,
+    "top1_score": 0.8813371062278748,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0014440",
+    "top1_box_iou": 0.5381820096798656,
+    "top1_score": 0.9531083703041077,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0014028",
+    "top1_box_iou": 0.7683358959567544,
+    "top1_score": 0.9986729621887207,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0016044",
+    "top1_box_iou": 0.8094580293687401,
+    "top1_score": 0.992271900177002,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0012681",
+    "top1_box_iou": 0.7587808238846537,
+    "top1_score": 0.9927374720573425,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0010357",
+    "top1_box_iou": 0.8672965656542659,
+    "top1_score": 0.9883610606193542,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0013271",
+    "top1_box_iou": 0.7712009756342554,
+    "top1_score": 0.9974411725997925,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0010479",
+    "top1_box_iou": 0.9058557350585028,
+    "top1_score": 0.9983533620834351,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0010585",
+    "top1_box_iou": 0.8491243172711932,
+    "top1_score": 0.9890726208686829,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0012434",
+    "top1_box_iou": 0.9506264118539913,
+    "top1_score": 0.9968024492263794,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0013982",
+    "top1_box_iou": 0.6146442747014798,
+    "top1_score": 0.6890594363212585,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0010554",
+    "top1_box_iou": 0.9334542975245373,
+    "top1_score": 0.9958274960517883,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0014666",
+    "top1_box_iou": 0.9186998444643627,
+    "top1_score": 0.9953605532646179,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0014913",
+    "top1_box_iou": 0.8569154871607164,
+    "top1_score": 0.9979104399681091,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0013473",
+    "top1_box_iou": 0.8175218383951073,
+    "top1_score": 0.9793660640716553,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0012250",
+    "top1_box_iou": 0.9242127294483913,
+    "top1_score": 0.9989416003227234,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0001140",
+    "top1_box_iou": 0.950934141351594,
+    "top1_score": 0.9991956353187561,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0011357",
+    "top1_box_iou": 0.9077837413816608,
+    "top1_score": 0.9948357343673706,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000539",
+    "top1_box_iou": 0.9589679090202696,
+    "top1_score": 0.9925898313522339,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0013500",
+    "top1_box_iou": 0.858414045301227,
+    "top1_score": 0.9934403300285339,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000111",
+    "top1_box_iou": 0.9390388456597276,
+    "top1_score": 0.9959945678710938,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0015146",
+    "top1_box_iou": 0.9415967808752149,
+    "top1_score": 0.9974937438964844,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000517",
+    "top1_box_iou": 0.5459864996210867,
+    "top1_score": 0.9879265427589417,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000182",
+    "top1_box_iou": 0.9516067559616596,
+    "top1_score": 0.9991117119789124,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000190",
+    "top1_box_iou": 0.9772801421822864,
+    "top1_score": 0.997718095779419,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000162",
+    "top1_box_iou": 0.8950054125388229,
+    "top1_score": 0.9977704286575317,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0015161",
+    "top1_box_iou": 0.923358463662863,
+    "top1_score": 0.9981042146682739,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000043",
+    "top1_box_iou": 0.9674117007235208,
+    "top1_score": 0.9973516464233398,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0013673",
+    "top1_box_iou": 0.8830961633638649,
+    "top1_score": 0.7312207221984863,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000017",
+    "top1_box_iou": 0.8841213268789828,
+    "top1_score": 0.996884286403656,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000201",
+    "top1_box_iou": 0.9502693532837656,
+    "top1_score": 0.9972746968269348,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0015203",
+    "top1_box_iou": 0.9679309286237281,
+    "top1_score": 0.9972635507583618,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000465",
+    "top1_box_iou": 0.9343117546177218,
+    "top1_score": 0.9991006851196289,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000229",
+    "top1_box_iou": 0.8944837493040715,
+    "top1_score": 0.9977803826332092,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0011382",
+    "top1_box_iou": 0.9449799674110142,
+    "top1_score": 0.9949296712875366,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0016036",
+    "top1_box_iou": 0.025092722737364796,
+    "top1_score": 0.12365514039993286,
+    "num_preds_above_thresh": 0
+  },
+  {
+    "key": "isic_0000535",
+    "top1_box_iou": 0.9251337231783452,
+    "top1_score": 0.9986214637756348,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0016024",
+    "top1_box_iou": 0.757628511883783,
+    "top1_score": 0.905375063419342,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000520",
+    "top1_box_iou": 0.4886415252633403,
+    "top1_score": 0.995649516582489,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000036",
+    "top1_box_iou": 0.8573352737608078,
+    "top1_score": 0.9968746900558472,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0014904",
+    "top1_box_iou": 0.8935943535801603,
+    "top1_score": 0.9972071051597595,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0009860",
+    "top1_box_iou": 0.9057410159139624,
+    "top1_score": 0.8325581550598145,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000326",
+    "top1_box_iou": 0.9265435428171218,
+    "top1_score": 0.9974712133407593,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0003056",
+    "top1_box_iou": 0.872836151601662,
+    "top1_score": 0.4501022696495056,
+    "num_preds_above_thresh": 0
+  },
+  {
+    "key": "isic_0015127",
+    "top1_box_iou": 0.8576356835191491,
+    "top1_score": 0.9956187605857849,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000349",
+    "top1_box_iou": 0.8521161448356819,
+    "top1_score": 0.9960659146308899,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000503",
+    "top1_box_iou": 0.9307612214478119,
+    "top1_score": 0.9986788630485535,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0013997",
+    "top1_box_iou": 0.7346460584896927,
+    "top1_score": 0.9692213535308838,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000042",
+    "top1_box_iou": 0.9361824573648603,
+    "top1_score": 0.9961147308349609,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000345",
+    "top1_box_iou": 0.8252604691612601,
+    "top1_score": 0.961754560470581,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0002879",
+    "top1_box_iou": 0.7252907882034968,
+    "top1_score": 0.985101044178009,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0014762",
+    "top1_box_iou": 0.9367315454456704,
+    "top1_score": 0.9968780279159546,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000391",
+    "top1_box_iou": 0.9086745017275086,
+    "top1_score": 0.9985620379447937,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000181",
+    "top1_box_iou": 0.8545914789686788,
+    "top1_score": 0.9986724853515625,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0013425",
+    "top1_box_iou": 0.7666098395718135,
+    "top1_score": 0.9981305003166199,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0010557",
+    "top1_box_iou": 0.8852159275330218,
+    "top1_score": 0.9927523136138916,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000323",
+    "top1_box_iou": 0.33446081500698827,
+    "top1_score": 0.8762516975402832,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000325",
+    "top1_box_iou": 0.9383274723182381,
+    "top1_score": 0.99815434217453,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000383",
+    "top1_box_iou": 0.9567007495202057,
+    "top1_score": 0.9974095225334167,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0014637",
+    "top1_box_iou": 0.9242366325679875,
+    "top1_score": 0.9928915500640869,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000258",
+    "top1_box_iou": 0.9279409527437187,
+    "top1_score": 0.9967413544654846,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000226",
+    "top1_box_iou": 0.876719576852452,
+    "top1_score": 0.9981106519699097,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000260",
+    "top1_box_iou": 0.785686081124789,
+    "top1_score": 0.9989029169082642,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000281",
+    "top1_box_iou": 0.9013401426632546,
+    "top1_score": 0.9985472559928894,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000265",
+    "top1_box_iou": 0.9416588514554292,
+    "top1_score": 0.9966099858283997,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0012216",
+    "top1_box_iou": 0.7189053802064854,
+    "top1_score": 0.9800571203231812,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0009252",
+    "top1_box_iou": 0.7342021376467777,
+    "top1_score": 0.9936290383338928,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000011",
+    "top1_box_iou": 0.9142348264549119,
+    "top1_score": 0.9978681802749634,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000268",
+    "top1_box_iou": 0.9041331963467663,
+    "top1_score": 0.995690643787384,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000471",
+    "top1_box_iou": 0.8653930724464179,
+    "top1_score": 0.9961379170417786,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000064",
+    "top1_box_iou": 0.9607085323361502,
+    "top1_score": 0.9986224174499512,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000228",
+    "top1_box_iou": 0.9567842632843991,
+    "top1_score": 0.998293936252594,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000493",
+    "top1_box_iou": 0.8612038961104482,
+    "top1_score": 0.9966219663619995,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000358",
+    "top1_box_iou": 0.7061958510090017,
+    "top1_score": 0.9963817596435547,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0015232",
+    "top1_box_iou": 0.8096901129644346,
+    "top1_score": 0.9880782961845398,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0016061",
+    "top1_box_iou": 0.8850166239362169,
+    "top1_score": 0.9378107190132141,
+    "num_preds_above_thresh": 2
+  },
+  {
+    "key": "isic_0016019",
+    "top1_box_iou": 0.8048463092735211,
+    "top1_score": 0.8932604789733887,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0015211",
+    "top1_box_iou": 0.8126716210241114,
+    "top1_score": 0.9891307353973389,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0010061",
+    "top1_box_iou": 0.8836489025573355,
+    "top1_score": 0.9947591423988342,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000544",
+    "top1_box_iou": 0.9331830481197178,
+    "top1_score": 0.9984489679336548,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000279",
+    "top1_box_iou": 0.9274313311531751,
+    "top1_score": 0.9969632029533386,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000495",
+    "top1_box_iou": 0.9215867632537297,
+    "top1_score": 0.998784601688385,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000245",
+    "top1_box_iou": 0.9237963760380262,
+    "top1_score": 0.9968764781951904,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0013495",
+    "top1_box_iou": 0.7465076670303178,
+    "top1_score": 0.9861180186271667,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000489",
+    "top1_box_iou": 0.7966548964561275,
+    "top1_score": 0.9896422028541565,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000477",
+    "top1_box_iou": 0.9083280328494177,
+    "top1_score": 0.9900293946266174,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0014185",
+    "top1_box_iou": 0.9197260539740136,
+    "top1_score": 0.9963104128837585,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0010320",
+    "top1_box_iou": 0.8965257095973301,
+    "top1_score": 0.9850108027458191,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000141",
+    "top1_box_iou": 0.9150737805595525,
+    "top1_score": 0.998076319694519,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000321",
+    "top1_box_iou": 0.9151946010605314,
+    "top1_score": 0.998344898223877,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000269",
+    "top1_box_iou": 0.8997790584509201,
+    "top1_score": 0.9979245662689209,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000338",
+    "top1_box_iou": 0.9201574823539235,
+    "top1_score": 0.994607150554657,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000032",
+    "top1_box_iou": 0.9024650208328625,
+    "top1_score": 0.9964444041252136,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0016046",
+    "top1_box_iou": 0.9232821104510207,
+    "top1_score": 0.9970132112503052,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0010473",
+    "top1_box_iou": 0.9042155666065035,
+    "top1_score": 0.9972199201583862,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000095",
+    "top1_box_iou": 0.8789791567914934,
+    "top1_score": 0.9920883774757385,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000300",
+    "top1_box_iou": 0.968595652826496,
+    "top1_score": 0.9962490200996399,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0013128",
+    "top1_box_iou": 0.8121734152658564,
+    "top1_score": 0.9648302793502808,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0010256",
+    "top1_box_iou": 0.8726373852252469,
+    "top1_score": 0.9965503215789795,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000328",
+    "top1_box_iou": 0.8274218143910957,
+    "top1_score": 0.994300127029419,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000418",
+    "top1_box_iou": 0.9172011086894732,
+    "top1_score": 0.9974307417869568,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0016015",
+    "top1_box_iou": 0.7764010419410763,
+    "top1_score": 0.9989853501319885,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000263",
+    "top1_box_iou": 0.9539380703559762,
+    "top1_score": 0.9977099895477295,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000087",
+    "top1_box_iou": 0.9134377786687615,
+    "top1_score": 0.9984082579612732,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000003",
+    "top1_box_iou": 0.9329781280639586,
+    "top1_score": 0.9991323351860046,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0016051",
+    "top1_box_iou": 0.9469652360234476,
+    "top1_score": 0.9980819225311279,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000532",
+    "top1_box_iou": 0.8995651668184199,
+    "top1_score": 0.9972099661827087,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000016",
+    "top1_box_iou": 0.9467601478981917,
+    "top1_score": 0.998635470867157,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0013749",
+    "top1_box_iou": 0.6738586455617974,
+    "top1_score": 0.9642183184623718,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0016072",
+    "top1_box_iou": 0.808752898021931,
+    "top1_score": 0.8829363584518433,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0016038",
+    "top1_box_iou": 0.9605587520533934,
+    "top1_score": 0.9935471415519714,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000051",
+    "top1_box_iou": 0.8944690735745805,
+    "top1_score": 0.998530387878418,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0011099",
+    "top1_box_iou": 0.6997148718309338,
+    "top1_score": 0.9943110942840576,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000298",
+    "top1_box_iou": 0.9222563561970992,
+    "top1_score": 0.9976711869239807,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0009881",
+    "top1_box_iou": 0.9450079636424541,
+    "top1_score": 0.9973551034927368,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000213",
+    "top1_box_iou": 0.9210369608320232,
+    "top1_score": 0.9972096085548401,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000456",
+    "top1_box_iou": 0.9465634228813032,
+    "top1_score": 0.9978852868080139,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0014486",
+    "top1_box_iou": 0.5675477575284459,
+    "top1_score": 0.9852170348167419,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0010348",
+    "top1_box_iou": 0.8932886399182445,
+    "top1_score": 0.9528058171272278,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0013015",
+    "top1_box_iou": 0.9084508363033955,
+    "top1_score": 0.9957369565963745,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0013676",
+    "top1_box_iou": 0.9063633475475308,
+    "top1_score": 0.998830258846283,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0016066",
+    "top1_box_iou": 0.8124292317703032,
+    "top1_score": 0.9052058458328247,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0015089",
+    "top1_box_iou": 0.8632049659542977,
+    "top1_score": 0.9963926672935486,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000315",
+    "top1_box_iou": 0.9643755024076794,
+    "top1_score": 0.9984936714172363,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0011220",
+    "top1_box_iou": 0.8559790685300075,
+    "top1_score": 0.980554461479187,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000145",
+    "top1_box_iou": 0.9086692136865403,
+    "top1_score": 0.9986466765403748,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000254",
+    "top1_box_iou": 0.9399289962257381,
+    "top1_score": 0.9976196885108948,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0011294",
+    "top1_box_iou": 0.7721219258966822,
+    "top1_score": 0.9929672479629517,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0009904",
+    "top1_box_iou": 0.9492068122390281,
+    "top1_score": 0.9979567527770996,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000340",
+    "top1_box_iou": 0.9522192420874093,
+    "top1_score": 0.9972813129425049,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0011214",
+    "top1_box_iou": 0.9385264146554573,
+    "top1_score": 0.9947546720504761,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0013958",
+    "top1_box_iou": 0.665600032871728,
+    "top1_score": 0.5785151124000549,
+    "num_preds_above_thresh": 0
+  },
+  {
+    "key": "isic_0016037",
+    "top1_box_iou": 0.8828143993596372,
+    "top1_score": 0.9967774748802185,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0016029",
+    "top1_box_iou": 0.6454128207486943,
+    "top1_score": 0.4332408905029297,
+    "num_preds_above_thresh": 0
+  },
+  {
+    "key": "isic_0000507",
+    "top1_box_iou": 0.928012511081223,
+    "top1_score": 0.9977796673774719,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000381",
+    "top1_box_iou": 0.9551385373017365,
+    "top1_score": 0.996631920337677,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000208",
+    "top1_box_iou": 0.9433478906060822,
+    "top1_score": 0.9963527917861938,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000329",
+    "top1_box_iou": 0.933973002493428,
+    "top1_score": 0.9969969987869263,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0012179",
+    "top1_box_iou": 0.38656226125009896,
+    "top1_score": 0.6121261715888977,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000377",
+    "top1_box_iou": 0.8838788199360225,
+    "top1_score": 0.9983665347099304,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000198",
+    "top1_box_iou": 0.9164043269836614,
+    "top1_score": 0.9984756112098694,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0011202",
+    "top1_box_iou": 0.8139131211348382,
+    "top1_score": 0.9877293705940247,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000488",
+    "top1_box_iou": 0.9250815006849901,
+    "top1_score": 0.997063934803009,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000466",
+    "top1_box_iou": 0.9365272270173014,
+    "top1_score": 0.995123565196991,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000513",
+    "top1_box_iou": 0.8973199777879758,
+    "top1_score": 0.9981271624565125,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000029",
+    "top1_box_iou": 0.9287513482146473,
+    "top1_score": 0.998571515083313,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0014915",
+    "top1_box_iou": 0.8890322398377458,
+    "top1_score": 0.9938767552375793,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0015021",
+    "top1_box_iou": 0.8827056009738737,
+    "top1_score": 0.9987722039222717,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000120",
+    "top1_box_iou": 0.9332187693291827,
+    "top1_score": 0.9975146055221558,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0015593",
+    "top1_box_iou": 0.8161120027494134,
+    "top1_score": 0.9929706454277039,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0010488",
+    "top1_box_iou": 0.8762033521486063,
+    "top1_score": 0.9964150190353394,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000473",
+    "top1_box_iou": 0.8834717179176168,
+    "top1_score": 0.996960461139679,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000135",
+    "top1_box_iou": 0.9666845759861071,
+    "top1_score": 0.9970146417617798,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000143",
+    "top1_box_iou": 0.8090922587684505,
+    "top1_score": 0.9968596696853638,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000426",
+    "top1_box_iou": 0.9078121133810569,
+    "top1_score": 0.9960055947303772,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000514",
+    "top1_box_iou": 0.8347367337512168,
+    "top1_score": 0.9963517189025879,
+    "num_preds_above_thresh": 1
+  },
+  {
+    "key": "isic_0000112",
+    "top1_box_iou": 0.8841600047258971,
+    "top1_score": 0.9964659214019775,
+    "num_preds_above_thresh": 1
+  }
+]

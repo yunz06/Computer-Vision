@@ -56,11 +56,11 @@ Nếu chương trình nhận diện được GPU và các thư viện cần thi�
 ## 2. Chuẩn bị dữ liệu
 
 Sử dụng bộ dữ liệu **ISIC 2018 Task 1** gồm ảnh gốc và segmentation mask tương ứng.
-1. Training Images – Ảnh gốc
+1. Training Images - Ảnh gốc
 
 https://isic-archive.s3.amazonaws.com/challenges/2018/ISIC2018_Task1-2_Training_Input.zip
 
-2. Training Ground Truth – Segmentation Masks
+2. Training Ground Truth - Segmentation Masks
 
 https://isic-archive.s3.amazonaws.com/challenges/2018/ISIC2018_Task1_Training_GroundTruth.zip
 

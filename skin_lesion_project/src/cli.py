@@ -102,7 +102,8 @@ def main():
             cfg['split']['val'],
             mask_threshold=cfg['data']['mask_threshold'],
             min_area_ratio=cfg['data']['min_box_area_ratio'],
-            use_phash=cfg['data']['use_phash_grouping'],
+            metadata_path=args.metadata,
+            use_phash=use_phash,
             phash_max_distance=cfg['data']['phash_max_distance'],
         )
         print({k: len(v) for k, v in r.items() if isinstance(v, list)})

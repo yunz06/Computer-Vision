@@ -1,10 +1,13 @@
+from pathlib import Path
 import numpy as np
 import pytest
 import torch
 from PIL import Image
+
 from src.integration import validate_input_image, run_integration
 from src.visualization import render_panels
-from src.demo import infer, format_status, save_result_files, build_app
+from src.demo import format_status, build_report_text, save_result_files, build_app
+import src.demo as demo_module
 
 
 class DummySeg(torch.nn.Module):
@@ -45,44 +48,49 @@ def _cfg(tmp_path):
         'image_size': 64,
         'detection_size': 128,
         'segmentation': {'threshold': 0.5, 'largest_component': False, 'hole_filling': False},
-        'detection': {'score_threshold': 0.5},
+        'detection': {'score_threshold': 0.5, 'model': 'fasterrcnn_mobilenet_v3_large_fpn'},
         'evaluation': {'consistency_iou_threshold': 0.5},
-        'paths': {'demo': str(tmp_path)},
+        'paths': {'demo': str(tmp_path), 'results': str(tmp_path / 'results'), 'checkpoints': str(tmp_path / 'checkpoints')},
     }
 
 
-def test_demo_inference_and_saving(tmp_path):
+def _result(tmp_path):
     cfg = _cfg(tmp_path)
-    arr = np.full((100, 200, 3), 120, dtype=np.uint8)
-    image = Image.fromarray(arr.copy())
-    overlay, mask, status = infer(image, DummySeg(), DummyDet(), torch.device('cpu'), cfg)
-    assert overlay.size == image.size
-    assert mask.size == image.size
-    assert 'Confidence' in status and 'Box–Mask IoU' in status
-    assert np.array_equal(np.asarray(image), arr)  # original image untouched
-    assert len(list(tmp_path.glob('*.png'))) == 3  # combined, overlay, mask
+    image = Image.fromarray(np.full((100, 200, 3), 120, dtype=np.uint8))
+    return image, run_integration(image, DummySeg(), DummyDet(), torch.device('cpu'), cfg)
+
+
+def test_demo_report_and_file_export(tmp_path):
+    image, result = _result(tmp_path)
+    status = format_status(result)
+    report = build_report_text(result)
+    assert 'Confidence' in status and 'IoU bbox Detection' in status
+    assert 'BÁO CÁO PHÂN TÍCH HÌNH ẢNH' in report
+    assert 'không phải pixel IoU' in report
+    assert np.asarray(image).shape == (100, 200, 3)
+
+    saved = save_result_files(result, tmp_path / 'exported')
+    assert len(saved) == 7
+    assert sum(p.endswith('.png') for p in saved) == 5
+    pdfs = [p for p in saved if p.endswith('.pdf')]
+    assert len(pdfs) == 1 and (tmp_path / 'exported' / Path(pdfs[0]).name).stat().st_size > 1000
+    assert any(p.endswith('_report.txt') for p in saved)
 
 
 def test_integration_standard_output_and_panels(tmp_path):
-    cfg = _cfg(tmp_path)
-    image = Image.fromarray(np.full((100, 200, 3), 120, dtype=np.uint8))
-    res = run_integration(image, DummySeg(), DummyDet(), torch.device('cpu'), cfg)
-    for k in (
+    _, result = _result(tmp_path)
+    for key in (
         'original_image', 'boxes', 'labels', 'scores', 'prob_map',
         'binary_mask', 'mask_bbox', 'box_mask_iou', 'consistency_status', 'inference_time_ms',
     ):
-        assert k in res
-    assert res['prob_map'].shape == (100, 200)
-    assert res['binary_mask'].shape == (100, 200)
-    assert res['box_mask_iou'] is not None
-    orig_p, det_p, mask_p, ov_p, comb_p = render_panels(res)
-    assert orig_p.size == (200, 100)
-    assert det_p.size == (200, 100)
-    assert mask_p.size == (200, 100)
-    assert ov_p.size == (200, 100)
-    assert comb_p.size == (400, 200)
-    saved = save_result_files(res, tmp_path / 'explicit_save')
-    assert len(saved) == 3
+        assert key in result
+    assert result['prob_map'].shape == (100, 200)
+    assert result['binary_mask'].shape == (100, 200)
+    assert result['box_mask_iou'] is not None
+    orig, det, mask, overlay, combined = render_panels(result)
+    assert orig.size == (200, 100)
+    assert det.size == mask.size == overlay.size == (200, 100)
+    assert combined.size == (400, 200)
 
 
 def test_empty_and_broken_branches_and_invalid_inputs(tmp_path):
@@ -114,8 +122,8 @@ def test_empty_and_broken_branches_and_invalid_inputs(tmp_path):
         validate_input_image(tiny)
 
 
-def test_gradio_app_builds(tmp_path):
+def test_gradio_app_builds(tmp_path, monkeypatch):
     cfg = _cfg(tmp_path)
-    cfg['paths']['checkpoints'] = str(tmp_path / 'checkpoints')
+    monkeypatch.setattr(demo_module, '_load_integration_models', lambda _cfg: (DummySeg(), DummyDet(), torch.device('cpu'), {}))
     app = build_app(cfg)
     assert app is not None

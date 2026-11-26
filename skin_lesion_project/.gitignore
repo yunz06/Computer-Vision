@@ -8,3 +8,7 @@ outputs/checkpoints/*
 outputs/results/*
 outputs/figures/*
 outputs/demo/*
+*.log
+*.tmp
+.DS_Store
+Thumbs.db

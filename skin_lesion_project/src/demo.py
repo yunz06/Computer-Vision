@@ -80,11 +80,28 @@ def _export_pdf(result, path):
     from reportlab.lib.pagesizes import A4
     from reportlab.lib.units import mm
     from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
+    from reportlab.pdfbase import pdfmetrics
+    from reportlab.pdfbase.ttfonts import TTFont
     from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, Image as PDFImage
+    import matplotlib
     path = Path(path); path.parent.mkdir(parents=True, exist_ok=True)
     doc = SimpleDocTemplate(str(path), pagesize=A4, rightMargin=15*mm, leftMargin=15*mm, topMargin=14*mm, bottomMargin=14*mm)
+    font_dir = Path(matplotlib.get_data_path()) / 'fonts' / 'ttf'
+    regular_font = font_dir / 'DejaVuSans.ttf'
+    bold_font = font_dir / 'DejaVuSans-Bold.ttf'
+    if regular_font.exists() and bold_font.exists():
+        pdfmetrics.registerFont(TTFont('DejaVu', str(regular_font)))
+        pdfmetrics.registerFont(TTFont('DejaVu-Bold', str(bold_font)))
+        body_font, heading_font = 'DejaVu', 'DejaVu-Bold'
+    else:
+        body_font, heading_font = 'Helvetica', 'Helvetica-Bold'
     styles = getSampleStyleSheet()
-    styles.add(ParagraphStyle(name='SmallNote', parent=styles['BodyText'], fontSize=8, leading=11))
+    styles['Normal'].fontName = body_font
+    styles['BodyText'].fontName = body_font
+    styles['Title'].fontName = heading_font
+    styles['Heading2'].fontName = heading_font
+    styles['Heading3'].fontName = heading_font
+    styles.add(ParagraphStyle(name='SmallNote', parent=styles['BodyText'], fontName=body_font, fontSize=8, leading=11))
     w, h, pixels, total, area, rows = _stats(result)
     iou = result.get('box_mask_iou')
     data = [['Hạng mục', 'Kết quả'], ['Kích thước ảnh', f'{w} x {h} px' if w and h else 'Không rõ'],
@@ -96,7 +113,8 @@ def _export_pdf(result, path):
             ['Thời gian suy luận', f"{float(result.get('inference_time_ms', 0)):.2f} ms"]]
     table = Table(data, colWidths=[65*mm, 105*mm], repeatRows=1)
     table.setStyle(TableStyle([('BACKGROUND',(0,0),(-1,0),colors.HexColor('#263746')),('TEXTCOLOR',(0,0),(-1,0),colors.white),
-        ('FONTNAME',(0,0),(-1,0),'Helvetica-Bold'),('GRID',(0,0),(-1,-1),.35,colors.HexColor('#C8D0D8')),
+        ('FONTNAME',(0,0),(-1,0),heading_font),('FONTNAME',(0,1),(-1,-1),body_font),
+        ('GRID',(0,0),(-1,-1),.35,colors.HexColor('#C8D0D8')),
         ('FONTSIZE',(0,0),(-1,-1),8),('VALIGN',(0,0),(-1,-1),'MIDDLE'),('PADDING',(0,0),(-1,-1),6)]))
     story = [Paragraph('BÁO CÁO PHÂN TÍCH HÌNH ẢNH', styles['Title']),
              Paragraph('ISIC 2018 – Detection &amp; Segmentation', styles['Heading2']),
@@ -106,7 +124,7 @@ def _export_pdf(result, path):
         box_data = [['Box','Score','x1','y1','x2','y2']]
         box_data += [[str(i),f'{s:.4f}',f'{x1:.1f}',f'{y1:.1f}',f'{x2:.1f}',f'{y2:.1f}'] for i,s,x1,y1,x2,y2 in rows]
         bt = Table(box_data, colWidths=[15*mm,25*mm,25*mm,25*mm,25*mm,25*mm], repeatRows=1)
-        bt.setStyle(TableStyle([('GRID',(0,0),(-1,-1),.3,colors.grey),('BACKGROUND',(0,0),(-1,0),colors.HexColor('#E7EDF2')),('FONTSIZE',(0,0),(-1,-1),7),('PADDING',(0,0),(-1,-1),5)]))
+        bt.setStyle(TableStyle([('GRID',(0,0),(-1,-1),.3,colors.grey),('BACKGROUND',(0,0),(-1,0),colors.HexColor('#E7EDF2')),('FONTNAME',(0,0),(-1,0),heading_font),('FONTNAME',(0,1),(-1,-1),body_font),('FONTSIZE',(0,0),(-1,-1),7),('PADDING',(0,0),(-1,-1),5)]))
         story += [Paragraph('2. DANH SÁCH BOUNDING BOX', styles['Heading2']), bt, Spacer(1,8)]
     story.append(Paragraph('3. HÌNH ẢNH KẾT QUẢ', styles['Heading2']))
     panels = render_panels(result)

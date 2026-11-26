@@ -90,13 +90,13 @@ Chương trình hỗ trợ tìm kiếm ảnh và mask đệ quy trong các thư 
 
 ### Metadata
 
-Nếu có file metadata chứa thông tin liên kết giữa ảnh và tổn thương, có thể truyền đường dẫn khi chuẩn bị dữ liệu:
+Nếu có file metadata CSV chứa hai cột `image_id` và `lesion_id`, có thể truyền đường dẫn khi chuẩn bị dữ liệu:
 
 ```cmd
 D:\Python\.venv\Scripts\python.exe -m src.cli prepare --metadata <duong_dan_csv>
 ```
 
-Chỉ sử dụng metadata khi đã xác minh được ánh xạ giữa ID ảnh và thông tin tổn thương. Metadata HAM10000 không mặc nhiên tương ứng với ID ảnh của ISIC 2018 Task 1.
+Chỉ sử dụng metadata khi đã xác minh được ánh xạ giữa ID ảnh và thông tin tổn thương. Metadata HAM10000 không mặc nhiên tương ứng với ID ảnh của ISIC 2018 Task 1. Nếu không truyền `--metadata`, chương trình cũng tự tìm file có tên chứa `metadata` trong thư mục dữ liệu gốc.
 
 Nếu không có metadata phù hợp, chương trình sử dụng pHash để hỗ trợ phát hiện ảnh gần trùng. Phương pháp này không chứng minh được các ảnh thuộc cùng một tổn thương.
 
@@ -198,7 +198,7 @@ Mô hình Faster R-CNN được sử dụng để dự đoán Bounding Box của
 
 Checkpoint được lựa chọn dựa trên kết quả đánh giá Validation, mặc định ưu tiên mAP@0.5:0.95.
 
-Với GPU VRAM khoảng 4 GB, có thể sử dụng ảnh 512 px, batch size 1–2 và AMP tùy theo cấu hình phần cứng.
+Cấu hình hiện tại sử dụng ảnh 384 × 384, batch size 2 và AMP. Với GPU VRAM khoảng 4 GB, nếu thiếu bộ nhớ có thể giảm batch size xuống 1.
 
 ### Bước 7. Lựa chọn ngưỡng trên Validation
 

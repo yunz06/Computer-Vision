@@ -134,8 +134,6 @@ def _export_pdf(result, path):
         im = PDFImage(buf); scale = min((82*mm)/im.imageWidth, (65*mm)/im.imageHeight)
         im.drawWidth *= scale; im.drawHeight *= scale
         story += [Paragraph(label, styles['Heading3']), im, Spacer(1,5)]
-    story += [Paragraph('4. GHI CHÚ VÀ GIỚI HẠN', styles['Heading2']),
-              Paragraph('Confidence là điểm số của mô hình Detection, không phải xác suất mắc bệnh. IoU là IoU giữa bbox Detection và bbox bao quanh Mask, không phải pixel IoU giữa bounding box và mask. Công cụ chỉ phục vụ học tập/nghiên cứu, không dùng để chẩn đoán hoặc quyết định điều trị.', styles['SmallNote'])]
     doc.build(story)
     return str(path)
 
